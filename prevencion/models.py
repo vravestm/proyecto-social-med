@@ -3,8 +3,8 @@ from django.db import models
 
 class Prevencion(models.Model):
     titulo = models.CharField(
-        max_length=80, verbose_name="Nombre de la charla")
-    presentacion = models.TextField(verbose_name="Presentación de la charla")
+        max_length=80, verbose_name="Nombre del curso")
+    presentacion = models.TextField(verbose_name="Presentación del curso")
     competencias = models.TextField(
         verbose_name="Competencias que vas a adquirir")
     objetivos = models.TextField(verbose_name="Objetivos ")
@@ -16,6 +16,7 @@ class Prevencion(models.Model):
 
     class Meta:
         verbose_name = "Prevención"
+        verbose_name_plural = "Prevención"
         ordering = ["-created"]
 
     # para que en el admin se le coloquen los titulos de las noticias
