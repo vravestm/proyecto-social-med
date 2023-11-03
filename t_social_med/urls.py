@@ -10,7 +10,7 @@ urlpatterns = [
     path('contacto/', core_views.contacto, name='contacto'),
     path('docentes/', core_views.docentes, name='docentes'),
     path('cursos/', cursos_views.cursos, name='cursos'),
-    path('talleres/', charlas_views.talleres, name='talleres'),
+    path('talleres/', talleres_views.talleres, name='talleres'),
     path('prevencion/', prevencion_views.prevencion, name='prevencion'),
     path('admin/', admin.site.urls),
 ]

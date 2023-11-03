@@ -11,7 +11,3 @@ def contacto(request):
 
 def docentes(request):
     return render(request, 'core/docentes.html')
-
-
-def oferta_formativa(request):
-    return render(request, 'core/oferta_formativa.html')
