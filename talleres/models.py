@@ -7,10 +7,10 @@ class Talleres(models.Model):
     presentacion = models.TextField(verbose_name="Presentación del taller")
     competencias = models.TextField(
         verbose_name="Competencias que vas a adquirir")
-    objetivos = models.TextField(verbose_name="Objetivos ")
+    objetivos = models.TextField(verbose_name="Objetivo")
     dirigido = models.TextField(verbose_name="Dirigido a")
     mod_dur_valor = models.TextField(
-        verbose_name="Modalidad, duracion y valor")
+        verbose_name="Modalidad, duración y valor")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -21,4 +21,4 @@ class Talleres(models.Model):
 
     # para que en el admin se le coloquen los titulos de las noticias
     def __str__(self):
-        return self.title
+        return self.titulo
