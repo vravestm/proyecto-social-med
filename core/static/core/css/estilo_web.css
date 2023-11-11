@@ -271,7 +271,6 @@ input {
     margin-bottom: 10px;
 }
 
-
 #btn_eliminar_cuenta {
     background-color: var(--naranja_principal);
     border-radius: 25px;
@@ -281,6 +280,10 @@ input {
     font-family: 'Glacial Indifference', sans-serif;
     font-size: 15px;
     border-color: var(--naranja_principal);
+}
+
+.foto_perfil {
+    border-radius: 50%;
 }
 
 /*-- FIN PERFIL DE USUARIO --*/
