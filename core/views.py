@@ -25,3 +25,8 @@ def inicio_sesion(request):
 def form_registro(request):
     var1 = time.time()
     return render(request, 'core/form_registro.html', {'var1': var1})
+
+
+def perfil_usuario(request):
+    var1 = time.time()
+    return render(request, 'core/perfil_usuario.html', {'var1': var1})
