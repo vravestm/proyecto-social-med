@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido%}
+
+<body>
+    <div class="login">
+        <div class="login-screen">
+            <div>
+                <div class="contact-form-wrapper d-flex justify-content-center">
+                    <form action="#" class="contact-form">
+                        <div class="contenedor_contacto">
+                            <div class="contenedor_logo">
+                                <img src="{% static 'core/img/logo.png' %}" class="img-fluid img_logo_is" alt="logo">
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-user icon_is"></i>
+                                <input type="text" class="txt_box" id="name" placeholder="Usuario" required>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-lock icon_is"></i>
+                                <input type="password" class="txt_box" placeholder="Contraseña" required>
+                            </div>
+                            <div class="contenedor_boton">
+                                <input type="submit" value="ACCEDER" class="btn_ingresar">
+                            </div>
+                            <div class="contendor_txt_sub">
+                                <span class="txt_is">¿Es la primera vez que usas T-Social Med?</span>
+                            </div>
+                            <div class="contendor_link_sub">
+                                <span><a href="/form_registro/" class="txt_is">Regístrate</a></span>
+
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+</body>
+{% endblock %}

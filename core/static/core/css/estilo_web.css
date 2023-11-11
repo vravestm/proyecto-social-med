@@ -2,11 +2,13 @@
 @import url('https://fonts.cdnfonts.com/css/montserrat');
 
 :root {
-    --primario-green: #146448;
-    --secundario-green: #4E7B6B;
-    --texto-primario: black;
-    --texto-secundario: #F1862A;
-    --texto-terciario: white;
+    --verde-principal: #146448;
+    --verde-footer: #4E7B6B;
+    --negro: black;
+    --naranja_principal: #F1862A;
+    --blanco: white;
+    --gris: #7F8C8D;
+    --navbar: #F4F0F0;
 }
 
 /*-- NAV BAR --*/
@@ -18,7 +20,7 @@
 }
 
 .icon_user {
-    color: #F1862A;
+    color: var(--naranja_principal);
 }
 
 .navbar-expand-lg {
@@ -38,11 +40,11 @@
 #mainNav {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color: #F4F0F0;
+    background-color: var(--navbar);
 }
 
 .sub_menu {
-    background-color: #F4F0F0;
+    background-color: var(--navbar);
     width: 150px !important;
 }
 
@@ -52,12 +54,12 @@
 /*-- FOOTER --*/
 
 footer {
-    background-color: var(--secundario-green);
+    background-color: var(--verde-footer);
 
 }
 
 .texto_footer {
-    color: var(--texto-terciario);
+    color: var(--blanco);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -93,7 +95,7 @@ footer {
 }
 
 .color_lupa {
-    color: var(--texto-secundario)
+    color: var(--naranja_principal)
 }
 
 #button-addon2:hover {
@@ -103,63 +105,92 @@ footer {
 /*-- FIN BARRA DE BUSQUEDA --*/
 
 
-/*-- FORMULARIO DE CONTACTO --*/
+/*-- FORMULARIO INICIO DE SESION --*/
+
+input {
+    text-align: left;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 200;
+    padding: 8px 0;
+    width: 250px;
+    transition: border .5s;
+}
+
+.img_logo_is {
+    width: 120px;
+    height: 70px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.contenedor_logo {
+    text-align: center;
+}
+
+.contenedor_contacto {
+    max-width: 500px;
+}
+
+.contact-form-wrapper {
+    padding: 50px 0;
+}
+
 .contact-form {
-    background: #fff;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    width: 70%;
+    padding: 30px 40px;
+    border: 2px solid var(--verde-principal);
+    border-radius: 25px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
 }
 
-.contact-form .form-control {
-    border-radius: 20px;
+.txt_box {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--verde-principal);
+    padding-left: 5px;
 }
 
-.contact-image {
+.btn_ingresar {
+    background-color: var(--naranja_principal);
+    border-radius: 25px;
+    text-align: center;
+    color: var(--blanco);
+    font-weight: bold;
+    width: 150px;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 15px;
+}
+
+.contenedor_boton {
     text-align: center;
 }
 
-.contact-image img {
-    border-radius: 6rem;
-    width: 11%;
-    margin-top: -3%;
-    transform: rotate(29deg);
+.icon_is {
+    width: 20px;
+    height: 22px;
+    color: var(--naranja_principal);
 }
 
-.contact-form form {
-    padding: 14%;
+.txt_is {
+    font-size: 12px;
+    color: var(--gris);
+    font-family: 'Montserrat', sans-serif;
 }
 
-.contact-form form .row {
-    margin-bottom: -7%;
-}
-
-.contact-form h3 {
-    margin-bottom: 8%;
-    margin-top: -10%;
+.contendor_txt_sub {
     text-align: center;
-    color: #0062cc;
+    margin-top: 10px;
+
 }
 
-.contact-form .btnContact {
-    width: 50%;
-    border: none;
-    border-radius: 1rem;
-    padding: 1.5%;
-    background: #dc3545;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
+.contendor_link_sub {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.btnContactSubmit {
-    width: 50%;
-    border-radius: 1rem;
-    padding: 1.5%;
-    color: #fff;
-    background-color: #0062cc;
-    border: none;
-    cursor: pointer;
-}
-
-/*-- FIN FORMULARIO DE CONTACTO --*/
+/*-- FIN FORMULARIO INICIO DE SESION --*/

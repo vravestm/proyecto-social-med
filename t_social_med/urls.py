@@ -7,6 +7,8 @@ from prevencion import views as prevencion_views
 
 urlpatterns = [
     path('', core_views.home, name='Home'),
+    path('inicio_sesion/', core_views.inicio_sesion, name='inicio_sesion'),
+    path('form_registro/', core_views.form_registro, name='form_registro'),
     path('contacto/', core_views.contacto, name='contacto'),
     path('docentes/', core_views.docentes, name='docentes'),
     path('cursos/', cursos_views.cursos),
