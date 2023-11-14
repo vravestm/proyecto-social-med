@@ -422,3 +422,69 @@ footer {
 
 
 /*-- FIN PERFIL DE USUARIO --*/
+
+
+/*-- CONTENIDO DE INICIO --*/
+.pagina-inicio {
+    height: 100vh;
+    background-image: url('../img/inicio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 68px; 
+}
+
+.fondo {
+    text-align: right;
+    position: absolute;
+    right: 50px;
+    margin-top: -250px;
+}
+
+.fondo h1 {
+    font-size: 60px;
+    font-family: 'Glacial Indifference', sans-serif;
+    color: var(--naranja_principal);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.fondo h5 {
+    font-size: 24px;
+    color: var(--verde-principal);
+    font-family: 'Glacial Indifference', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.descripcion {
+    text-align: left;
+    color: var(--texto-primario);
+    max-width: 680px; 
+    margin-left: 140px;
+    text-align: justify;
+}
+
+.btn-inscripcion {
+    display: inline-block;
+    margin-top: 10px;  
+    padding: 10px 20px;  
+    background-color: var(--naranja_principal);  
+    color: var(--navbar);  
+    text-decoration: none;  
+    border-radius: 25px;  
+    text-transform: uppercase;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
+}
+
+.btn-inscripcion:hover{
+    background-color: var(--verde-principal);
+    color: var(--navbar);
+}
+
+/* FIN PAGINA DE INICIO */
