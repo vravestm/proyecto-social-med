@@ -377,10 +377,6 @@ footer {
 
 }
 
-
-/*-- FIN PERFIL DE USUARIO --*/
-
-
 /* Global style */
 .btn-tertiary {
     color: #555;
@@ -423,3 +419,6 @@ footer {
     content: "";
     color: #5aac7b;
 }
+
+
+/*-- FIN PERFIL DE USUARIO --*/
