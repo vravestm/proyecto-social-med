@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User #aca se importa el username interno de django
+from datetime import datetime 
 
 
 class Cursos(models.Model):
@@ -21,3 +23,15 @@ class Cursos(models.Model):
     # para que en el admin se le coloquen los titulos de las noticias
     def __str__(self):
         return self.titulo
+    
+class Inscripcion(models.Model):
+    id = models.AutoField(primary_key=True)
+    date = models.DateTimeField(verbose_name="Fecha de inscripcion",default=datetime.now, blank=True)
+    user = models.ForeignKey(User,verbose_name="Usuario",on_delete=models.CASCADE,null=False)
+    curso = models.ForeignKey(Cursos,verbose_name="Curso",on_delete=models.CASCADE,null=False)
+
+    def __str__(self):
+        return self.id
+    class Meta:
+        verbose_name="Inscripcion"
+        verbose_name_plural="Inscripciones"
