@@ -201,6 +201,16 @@ footer {
     margin-bottom: 10px;
 }
 
+.contenedor_contrasena_olvidada {
+    text-align: center;
+    font-weight:400;
+    margin-top: 10%;
+}
+
+.contenedor_contrasena_olvidada:hover{
+    color: #737373;
+    border-bottom: 0em solid #737373;
+}
 /*-- FIN FORMULARIO INICIO DE SESION --*/
 
 
@@ -488,3 +498,141 @@ footer {
 }
 
 /* FIN PAGINA DE INICIO */
+
+
+/*** INICIO CSS OLVIDAR_CONTRASENA***/
+/**/
+
+.body-forgot-password {
+    background: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.olvidaste_contrasena_txt h1{
+    font-size: 1.275rem;
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container__logo {
+    width: 40%;
+    max-width: 100%;
+    max-height: 30vh;
+    margin: auto;
+    margin-top: 2.5em;
+}
+
+.container__prime {
+    width: 66vh;
+    height: 81vh;
+    padding: 0.5em;
+    background: hsl(0, 0%, 100%);
+    border-radius: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid var(--verde-principal);
+    margin: auto;
+    margin-top: 5.5em;
+    margin-bottom: 1.25em;
+    margin-left: 35.57%;
+}
+
+/* CONTAINER INGRESAR CORREO */
+
+.correo {
+    width: 100%;
+    padding: 0.75em;
+    outline: none;
+    border: 1px solid var(--verde-principal); 
+    border-radius: 0.75em;
+    margin-top: -5%;
+}
+
+.correo-container input{
+    display: flex;
+    align-items:center;
+    margin-right: 10px;
+}
+
+.form__correo {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: -2%;
+    margin-bottom: 8%;
+}
+
+.carta-icon {
+    width: 10%;
+    margin-right: 0.75em; 
+    margin-left: 0.4em;
+    margin-top: -5%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BOTÓN ENVIAR */
+
+.myButton {
+	background-color: var(--naranja_principal);
+	border-radius:2.3em;
+	display:inline-block;
+	cursor:pointer;
+	color: var(--blanco);
+	font-size:1.1em;
+	padding: 0.75em 3.75em 0.5em;
+	text-decoration:none;
+    font-family: 'League Spartan', sans-serif;
+    border: none;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 1%;
+
+}
+.myButton:hover {
+	background-color: var(--verde-principal);
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* BOTÓN VOLVER */
+
+.volver-inicio {
+    text-decoration: none;
+    color: #737373;
+    cursor: pointer;
+    padding-left: 1.5em;
+    background-position: left center;
+    background-size: 1.1em 1.1em; 
+    border-bottom: 0.2em solid transparent;
+    transition: border-color 0.3s;
+    margin: auto;
+    margin-top: 4.5em;
+    margin-left: 27%;
+}
+.backButton{
+    /* background-image: url("{% static 'core/img/flecha_volver.png' %}"); Ruta de la imagen */
+    background-repeat: no-repeat; /* Evitar repetición de la imagen */
+}
+.volver:hover {
+    color: #737373;
+    border-bottom: 0em solid #737373;
+}
+
+/* FIN BOTÓN VOLVER */
+
+/**/
+/*** FIN CSS OLVIDAR_CONTRASENA***/
+

@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido%}
+
+<div class="forgotPassword">
+    <div class="forgotPassword-screen">
+        <div>
+            <div class="contact-form-wrapper d-flex justify-content-center">
+                <form action="#" class="contact-form">
+                    <div class="contenedor_contacto">
+                        <div class="contenedor_logo">
+                            <img src="{% static 'core/img/logo.png' %}" class="img-fluid img_logo_is" alt="logo">
+                        </div>
+                        <!-- <h1 class="olvidaste_contrasena_txt">¿OLVIDASTE TU CONTRASEÑA?</h1> -->
+                        <div class="contenedor_txt_contrasena">
+                            <span class="olvidaste_contrasena_txt">
+                                <h1>¿OLVIDASTE TU CONTRASEÑA?</h1>
+                            </span>
+                        </div>
+
+                        <div class="correo__container">
+                            <!-- <i class="fa-solid fa-user icon_is"></i> -->
+                            <!-- <img src="{% static 'core/img/correo.png' %}" alt="carta" class="carta-icon"> -->
+                            <input type="text" class="txt_box input_is" id="name" placeholder="Ingresa tu correo electrónico" required>
+                        </div>
+                    
+                        <div class="contenedor_boton">
+                            <input type="submit" value="ENVIAR" class="btn_ingresar">
+                        </div>
+                        <div class="volver-inicio">
+                            <span><a href="/" class="volver">Volver al Inicio</a></span>
+
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+

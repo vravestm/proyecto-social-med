@@ -7,13 +7,13 @@ from t_social_med.enviarCorreo import funcionEnviarCorreo
 def home(request):
     var1 = time.time()
 
-    data = {
-        'titulo': 'titulo correo',
-        'correoDestino': ['vravest@gmail.com'],
-        'curso': 'manejo de la ira',
-    }
-    # cometnar despues de la prueba
-    funcionEnviarCorreo(data)
+    # data = {
+    #     'titulo': 'titulo correo',
+    #     'correoDestino': ['vravest@gmail.com'],
+    #     'curso': 'manejo de la ira',
+    # }
+    # # cometnar despues de la prueba
+    # funcionEnviarCorreo(data)
 
     return render(request, 'core/home.html', {'var1': var1})
 
@@ -31,6 +31,10 @@ def docentes(request):
 def inicio_sesion(request):
     var1 = time.time()
     return render(request, 'core/inicio_sesion.html', {'var1': var1})
+
+def olvidar_contrasena(request):
+    var1 = time.time()
+    return render(request, 'core/olvidar_contrasena.html', {'var1': var1})
 
 
 def form_registro(request):
