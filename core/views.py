@@ -7,12 +7,12 @@ from t_social_med.enviarCorreo import funcionEnviarCorreo
 def home(request):
     var1 = time.time()
 
-    # data = {
-    #     'titulo': 'titulo correo',
-    #     'correoDestino': ['vravest@gmail.com'],
-    #     'curso': 'manejo de la ira',
-    # }
-    # # cometnar despues de la prueba
+    data = {
+        'titulo': 'titulo correo',
+        'correoDestino': ['vravest@gmail.com'],
+        'curso': 'manejo de la ira',
+    }
+    # cometnar despues de la prueba
     # funcionEnviarCorreo(data)
 
     return render(request, 'core/home.html', {'var1': var1})

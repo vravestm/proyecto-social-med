@@ -6,8 +6,8 @@ from datetime import datetime
 class Cursos(models.Model):
     titulo = models.CharField(max_length=80, verbose_name="Nombre del curso")
     presentacion = models.TextField(verbose_name="Presentación del curso")
-    competencias = models.TextField(
-        verbose_name="Competencias que vas a adquirir")
+    image=models.ImageField(upload_to='media/',verbose_name="Imagen",default='assets/default.jpg', null=True)
+    competencias = models.TextField(verbose_name="Competencias que vas a adquirir")
     objetivos = models.TextField(verbose_name="Objetivo")
     dirigido = models.TextField(verbose_name="Dirigido a")
     mod_dur_valor = models.TextField(

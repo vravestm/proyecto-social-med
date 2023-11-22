@@ -5,6 +5,9 @@ from cursos import views as cursos_views
 from talleres import views as talleres_views
 from prevencion import views as prevencion_views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('', core_views.home, name='Home'),
     path('inicio_sesion/', core_views.inicio_sesion, name='inicio_sesion'),
@@ -17,4 +20,4 @@ urlpatterns = [
     path('talleres/', talleres_views.talleres, name='talleres'),
     path('prevencion/', prevencion_views.prevencion, name='prevencion'),
     path('admin/', admin.site.urls),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

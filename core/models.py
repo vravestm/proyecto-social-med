@@ -9,7 +9,7 @@ class Usuarios(models.Model):
     apellido1 = models.CharField(max_length=20,verbose_name="Primer Apellido",null=False)
     apellido2 = models.CharField(max_length=20,verbose_name="Segundo Apellido",null=False)
     edad = models.IntegerField(verbose_name="Edad",null=False)
-    zona = models.CharField(max_length=20,verbose_name="Ciudad",null=False)
+    zona = models.CharField(max_length=20,verbose_name="Ciudad",default='zona',null=False)
     correo = models.EmailField(max_length=30,verbose_name="Direccion de correo",null=False)
     telefono = models.CharField(max_length=20,verbose_name="Numero Telefonico",null=False)
     imagen = models.ImageField(upload_to='media/',verbose_name="Imagen", null=True)
