@@ -92,6 +92,7 @@ footer {
 .barra_busqueda {
     width: 400px;
     padding-right: 10px !important;
+    border-radius: 25px !important;
 }
 
 .color_lupa {
