@@ -1,1 +1,73 @@
 {% extends 'core/base.html' %}
+{% load static %}
+{% block contenido%}
+
+<!-- DOCENTE GEMA -->
+
+<div class="containerG">
+    <!-- Parte izquierda del contenedor -->
+    <div class="left-g">
+        <img src="{% static 'core/img/gema1.jpg' %}" alt="Tu Foto" class="profile-image">
+        <p class="texto_frase">“El Trabajo Social ha estado presente en toda mi vida.”</p>
+        <a href="https://es.linkedin.com/in/gemacamara" class="linkedin-link" target="_blank">
+            <img src="{% static 'core/img/linkedin1.png' %}" alt="LinkedIn Icon">
+        </a>
+    </div>
+
+    <!-- Parte derecha del contenedor -->
+    <div class="right-g">
+
+        <div class="section">
+            <h4 class="titulo_docente">DOCENTE</h4>
+            <h1 class="titulo_nombre">GEMA CÁMARA LÓPEZ</h1>
+            <p class="texto_1_docente">Trabajadora Social Clínica, Terapeuta Familiar y Terapeuta del Modelo Centrado en Soluciones.</p>
+            <h5 class="titulo_fundadora">SOCIA FUNDADORA</h5>
+        </div>
+
+        <div class="section-g">
+            <h5 class="titulo_sobre_mi">SOBRE MÍ</h5>
+            <p class="texto_2_docente">Soy una persona muy observadora, creo importante estar en el aquí y ahora. Ser consciente de cómo te sientes y a dónde quieres ir. Tengo la habilidad de ver más allá, como si pudiera leer entre líneas, las conductas humanas están influenciadas por el contexto social, estamos en constante CAMBIO.</br>
+            </br>
+
+                Diplomada en Trabajo Social por la Universidad Complutense de Madrid. Especialista en Trabajo Social Clínico, Máster en Mediación Familiar otorgados por la Universidad Miguel de Cervantes.
+                Coordinadora de Parentalidad realizado en el Colegio de Trabajo Social de Madrid.
+                Especialista en Intervención Familiar Sistémica y en Terapia Breve Centrada en Soluciones.
+                Miembro de la junta directiva de la Asociación Española de Trabajo Social Clínico (AETSC) y miembro de la Asociación Nacional de Trabajo Social en Ejercicio Libre (ATSEL).</p>
+        </div>
+    </div>
+</div>
+
+<!-- DOCENTE ALICIA -->
+
+<div class="containerA">
+    <!-- Parte izquierda del contenedor -->
+    <div class="left-A">
+        <!-- Sección 1 -->
+        <div class="section-A1">
+            <h4 class="titulo_docente">DOCENTE</h4>
+            <h1 class="titulo_nombre">ALICIA BERLINCHES FERNÁNDEZ</h1>
+            <p class="texto_1_docente">Trabajo Social Clínico, Terapia Breve Centrada en Soluciones, Criminología y  Prácticas Restaurativas. </p>
+            <h5 class="titulo_fundadora">SOCIA FUNDADORA</h5>
+        </div>
+
+        <!-- Sección 2 -->
+        <div class="section-A">
+            <h5 class="titulo_sobre_mi">SOBRE MÍ</h5>
+            <p class="texto_2_docente">Diplomada en Trabajo Social por la Universidad Complutense de Madrid. Especialista en Trabajo Social Clínico, Máster en Mediación Familiar, Máster en Intervención familiar del menor y la familia, todos ellos otorgados por la Universidad Miguel de Cervantes.
+                Máster Oficial en Criminología, Delincuencia y Victimología por la Universidad Internacional de Valencia (VIU).</br></br>
+                Coordinadora de Parentalidad y experta en Prácticas Restaurativas.
+                Especialista en Intervención Familiar Sistémica y en Terapia Breve Centrada en Soluciones.
+                Miembro de la junta directiva de la Asociación Española de Trabajo Social Clínico (AETSC) y miembro de la Asociación Nacional de Trabajo Social en Ejercicio Libre (ATSEL)</p>
+        </div>
+    </div>
+
+    <!-- Parte derecha del contenedor -->
+    <div class="right-A">
+        <img src="{% static 'core/img/alicia1.jpg' %}" alt="Tu Foto" class="profile-image">
+        <p class="texto_frase">“La influencia de los factores sociales en el malestar de las personas guio mi futuro profesional”</p>
+        <a href="https://es.linkedin.com/in/alicia-berlinches-fernández-302543b3" class="linkedin-link" target="_blank">
+            <img src="{% static 'core/img/linkedin1.png' %}" alt="LinkedIn Icon">
+        </a>
+    </div>
+</div>
+{% endblock %}
