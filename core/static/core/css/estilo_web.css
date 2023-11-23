@@ -584,9 +584,7 @@ footer {
 
 .carta-icon {
     width: 10%;
-    /* margin-right: 0.75em; */
     margin-left: 0.4em;
-    /* margin-top: -5%; */
 }
 
 
@@ -645,7 +643,6 @@ footer {
 }
 
 .flecha_volver {
-    /* background-image: url("{% static 'core/img/flecha_volver.png' %}"); */
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
