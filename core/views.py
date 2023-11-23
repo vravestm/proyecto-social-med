@@ -32,6 +32,7 @@ def inicio_sesion(request):
     var1 = time.time()
     return render(request, 'core/inicio_sesion.html', {'var1': var1})
 
+
 def olvidar_contrasena(request):
     var1 = time.time()
     return render(request, 'core/olvidar_contrasena.html', {'var1': var1})

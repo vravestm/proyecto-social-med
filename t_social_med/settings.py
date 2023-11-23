@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ar'
 
 TIME_ZONE = 'UTC'
 
@@ -129,10 +129,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#CONFIGURACION SMTP PARA CORREO
+# CONFIGURACION SMTP PARA CORREO
 
 EMAIL_HOST = 'smtp.googlemail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'tsocialmed@gmail.com'
-EMAIL_HOST_PASSWORD ='wmvwdmjpketbcahs'
+EMAIL_HOST_PASSWORD = 'wmvwdmjpketbcahs'
 EMAIL_USE_TLS = True
