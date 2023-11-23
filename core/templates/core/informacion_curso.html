@@ -1,0 +1,121 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6">
+                <img class="card-img-top mb-5 mb-md-0" src="{% static 'core/img/gestion.png' %}" alt="..." style="width: 110%; margin-left: -10%;border-radius:59% 41% 39% 61% / 61% 50% 50% 39%;"/>
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder" style="font-size: 2rem;text-align: right;">GESTIÓN DE CONFLICTOS DESDE LA TERAPIA CENTRADA EN SOLUCIONES</h1>
+                
+                <div class="capsula" onclick="toggleDesplegable('capsula1')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #ccc;padding: 10px;width: 100%;cursor: pointer;">
+                    PRESENTACIÓN DEL CURSO
+                    <div class="contenido-desplegable" id="capsula1" style="display: none;text-align: left;">
+                      <p>Desde hace mucho tiempo la creencia negativa del conflicto sigue estando presente. Lo vemos como una guerra y /o enfrentamiento sin pensar que ,en realidad, es un crecimiento grupal y /o personal. En este taller unimos la gestión de los conflictos con la terapia centrada en soluciones. Modelo terapéutico creado a comienzos de los años 70 por un grupo de trabajadores sociales. Steve de Shazer e Insoo Kim Berg fueron las figuras centrales de la terapia breve centrada en soluciones.</p>
+                    </div>
+                </div>
+
+                <div class="capsula" onclick="toggleDesplegable('capsula2')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #ccc;padding: 10px;width: 100%;cursor: pointer;">
+                    COMPETENCIAS QUE VAS A ADQUIRIR
+                    <div class="contenido-desplegable" id="capsula2" style="display: none;text-align: left;">
+                      <p>
+                        <li>
+                            Búsqueda de acuerdos y/o soluciones en situaciones conflictivas.
+                        </li>
+                        <li>
+                            Detección de habilidades personales para la gestión de conflictos.
+                        </li>
+                      </p>
+                    </div>
+                </div>
+
+                <div class="capsula" onclick="toggleDesplegable('capsula3')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #ccc;padding: 10px;width: 100%;cursor: pointer;">
+                    OBJETIVOS
+                    <div class="contenido-desplegable" id="capsula3" style="display: none;text-align: left;">
+                        <p>
+                            <li>
+                                Poner en contacto al profesional con el enfoque.
+                            </li>
+                            <li>
+                                Ofrecer pautas para evitar la escalada del conflicto y para su gestión. 
+                            </li>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="capsula" onclick="toggleDesplegable('capsula4')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #ccc;padding: 10px;width: 100%;cursor: pointer;">
+                    DIRIGIDO A
+                    <div class="contenido-desplegable" id="capsula4" style="display: none;text-align: left;">
+                      <p>¿Eres profesional de cualquier ámbito que estés en contacto con personas? Este curso es para ti.</p>
+                    </div>
+                </div>
+
+                <div class="capsula" onclick="toggleDesplegable('capsula5')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #ccc;padding: 10px;width: 100%;cursor: pointer;">
+                    MODALIDAD, DURACIÓN Y PRECIO
+                    <div class="contenido-desplegable" id="capsula5" style="display: none;text-align: left;">
+                        <p>
+                            <li>
+                                Modalidad: Online
+                            </li>
+                            <li> 
+                                Duración: 2 horas 
+                            </li>
+                            <li>
+                                Precio: € 30 
+                            </li>
+                        </p>                    
+                    </div>
+                </div>
+
+                <div class="d-flex" style="text-align: right;">
+                    <button class="btn btn-outline-dark flex-shrink-0" type="button" style="border-radius: 10px;width: 100%;text-align: right;padding: 10px;">
+                        INSCRIBIRME
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+    // function mostrarTexto(numero) {
+    //         var textoDesplegadoActual = document.getElementById("textoDesplegado" + numero);
+    //         var textoDesplegadoOtro = numero === 1 ? document.getElementById("textoDesplegado2") : document.getElementById("textoDesplegado1");
+
+    //         if (textoDesplegadoOtro.style.display === "block") {
+    //             textoDesplegadoOtro.style.display = "none";
+    //         }
+
+    //         textoDesplegadoActual.style.display = (textoDesplegadoActual.style.display === "none" || textoDesplegadoActual.style.display === "") ? "block" : "none";
+    // }
+        
+    function toggleDesplegable(id) {
+    var desplegable = document.getElementById(id);
+
+    // Cerrar todas las capsulas antes de abrir la actual
+    var capsulas = document.querySelectorAll('.contenido-desplegable');
+    capsulas.forEach(function(capsula) {
+      if (capsula.id !== id) {
+        capsula.style.display = 'none';
+      }
+    });
+
+    // Toggle para abrir/cerrar la capsula actual
+    desplegable.style.display = (desplegable.style.display === 'none') ? 'block' : 'none';
+
+    // Revertir estilos al hacer clic
+    desplegable.classList.remove('capsula-clicked');
+    setTimeout(function() {
+      desplegable.classList.add('capsula-clicked');
+    }, 10);
+  }
+</script>
+
+
+
+{% endblock %}

@@ -665,3 +665,44 @@ footer {
 
 /**/
 /*** FIN CSS OLVIDAR_CONTRASENA***/
+
+/* INICIO CSS INFORMACION_CURSO */
+
+.col-md-6 {
+    font-family: 'League Spartan', sans-serif;
+    color: var(--verde-principal);
+}
+
+.capsula {
+    border: 2px solid var(--naranja_principal);
+    background-color: var(--blanco);
+    color: var(--negro);
+    transition: all 0.3s;
+    /* border: 2px solid #ff1919; NO CAMBIA DE COLOR EL BORDE */
+}
+
+.capsula p, li{
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+}
+
+.btn-outline-dark{
+    background-color: var(--naranja_principal);
+    color: var(--blanco);
+    border-color: var(--naranja_principal);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--verde-principal);
+  }
+
+.capsula:hover {
+    background-color: var(--naranja_principal);
+    color: var(--blanco);
+}
+
+.contenido-desplegable {
+    display: none;
+}
+
+/* FIN CSS INFORMACION_CURSO */

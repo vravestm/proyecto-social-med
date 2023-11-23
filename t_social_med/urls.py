@@ -20,4 +20,7 @@ urlpatterns = [
     path('talleres/', talleres_views.talleres, name='talleres'),
     path('prevencion/', prevencion_views.prevencion, name='prevencion'),
     path('admin/', admin.site.urls),
+
+    path('informacion_curso/', core_views.informacion_curso, name='informacion_curso'),
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

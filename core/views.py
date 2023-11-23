@@ -46,3 +46,7 @@ def form_registro(request):
 def perfil_usuario(request):
     var1 = time.time()
     return render(request, 'core/perfil_usuario.html', {'var1': var1})
+
+def informacion_curso(request):
+    var1 = time.time()
+    return render(request, 'core/informacion_curso.html', {'var1': var1})
