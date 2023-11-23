@@ -566,10 +566,12 @@ footer {
     margin-top: -5%;
 }
 
-.correo-container input {
+.correo__container input{
     display: flex;
     align-items: center;
-    margin-right: 10px;
+    margin-left: 15%;
+    margin-top: -10%;
+    width: 85%;
 }
 
 .form__correo {
@@ -582,10 +584,11 @@ footer {
 
 .carta-icon {
     width: 10%;
-    margin-right: 0.75em;
+    /* margin-right: 0.75em; */
     margin-left: 0.4em;
-    margin-top: -5%;
+    /* margin-top: -5%; */
 }
+
 
 .form {
     display: flex;
@@ -608,8 +611,7 @@ footer {
     border: none;
     margin: auto;
     margin-top: 2em;
-    margin-bottom: 1%;
-
+    margin-bottom: 100%;
 }
 
 .myButton:hover {
@@ -621,31 +623,45 @@ footer {
     top: 1px;
 }
 
+.btn_ingresar:hover {
+    background-color: var(--verde-principal);
+}
+
 /* BOTÓN VOLVER */
 
-.volver-inicio {
+.contenedor-volver a{
     text-decoration: none;
-    color: #737373;
+    color: var(--gris);
     cursor: pointer;
-    padding-left: 1.5em;
     background-position: left center;
     background-size: 1.1em 1.1em;
-    border-bottom: 0.2em solid transparent;
-    transition: border-color 0.3s;
-    margin: auto;
-    margin-top: 4.5em;
-    margin-left: 27%;
+    margin-top: 10%;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: bold;
 }
 
-.backButton {
-    /* background-image: url("{% static 'core/img/flecha_volver.png' %}"); Ruta de la imagen */
+.flecha_volver {
+    /* background-image: url("{% static 'core/img/flecha_volver.png' %}"); */
     background-repeat: no-repeat;
-    /* Evitar repetición de la imagen */
+    width: 20px;
+    height: 20px;
+    margin-left: 32%;
+    padding: 0.5%;
 }
 
-.volver:hover {
-    color: #737373;
-    border-bottom: 0em solid #737373;
+.contenedor-volver span:hover .volver,
+.contenedor-volver span:hover .flecha_volver {
+    text-decoration: underline;
+    color: var(--gris);
+    cursor: pointer;
+}
+
+.volver:hover, .flecha_volver:hover {
+    text-decoration: underline;
 }
 
 /* FIN BOTÓN VOLVER */

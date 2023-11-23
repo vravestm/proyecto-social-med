@@ -20,18 +20,34 @@
                         </div>
 
                         <div class="correo__container">
-                            <!-- <i class="fa-solid fa-user icon_is"></i> -->
-                            <!-- <img src="{% static 'core/img/correo.png' %}" alt="carta" class="carta-icon"> -->
+                            <i class="fa-regular fa-envelope fa-2xl" style="color: #000000;"></i>
                             <input type="text" class="txt_box input_is" id="name" placeholder="Ingresa tu correo electrónico" required>
                         </div>
                     
                         <div class="contenedor_boton">
                             <input type="submit" value="ENVIAR" class="btn_ingresar">
                         </div>
-                        <div class="volver-inicio">
-                            <span><a href="/" class="volver">Volver al Inicio</a></span>
 
+                        <div>
+                            <p style="padding: 10%;"> </p>
                         </div>
+
+                        <!-- <div class="volver-inicio contenedor-volver">
+                            <span>
+                                <img src="{% static 'core/img/flecha_volver.png' %}" alt="Flecha Volver" class="flecha_volver">
+                                <a href="/" class="volver">Volver al Inicio</a>
+                            </span>
+                        </div> -->
+
+                        <div class="volver-inicio contenedor-volver">
+                            <a href="/" class="volver">
+                                <span>
+                                    <img src="{% static 'core/img/flecha_volver.png' %}" alt="Flecha Volver" class="flecha_volver">
+                                    Volver al Inicio
+                                </span>
+                            </a>
+                        </div>
+                        
 
                     </div>
                 </form>
