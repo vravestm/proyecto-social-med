@@ -4,7 +4,7 @@ from django.contrib.auth.models import User #aca se importa el username interno 
 
 
 class Usuarios(models.Model):
-    username = models.ForeignKey(User,verbose_name="username",on_delete=models.CASCADE,null=False)
+    username = models.OneToOneField(User,verbose_name="username",on_delete=models.CASCADE,null=False)
     nombre = models.CharField(max_length=40,verbose_name="Nombre",null=False)
     apellido = models.CharField(max_length=40,verbose_name="Apellidos",default="Apellido",null=False)
     edad = models.IntegerField(verbose_name="Edad",null=False)
