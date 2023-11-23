@@ -450,7 +450,7 @@ footer {
 
 /*-- CONTENIDO DE INICIO --*/
 .pagina-inicio {
-    height: 100vh;
+    height: 110vh;
     background-image: url('../img/inicio.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -459,7 +459,7 @@ footer {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 68px;
+
 }
 
 .fondo {
@@ -1044,7 +1044,7 @@ footer {
     display: flex;
     align-items:center;
     margin-right: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 47px;
 }
 .contraseña-container {
     display: flex;
