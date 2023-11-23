@@ -529,6 +529,7 @@ footer {
     padding: 1rem;
     margin: auto;
     font-family: 'League Spartan', sans-serif;
+    margin-bottom: 3%;
 }
 
 .container__logo {
@@ -621,6 +622,9 @@ footer {
     top: 1px;
 }
 
+.btn_ingresar {
+    margin-top: 5%;
+}
 .btn_ingresar:hover {
     background-color: var(--verde-principal);
 }
@@ -639,7 +643,7 @@ footer {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-weight: bold;
+    font-weight:normal;
 }
 
 .flecha_volver {
