@@ -4,14 +4,19 @@ from django.shortcuts import render
 from t_social_med.enviarCorreo import funcionEnviarCorreo
 
 
+
+
+
+
+
 def home(request):
     var1 = time.time()
 
-    data = {
-        'titulo': 'titulo correo',
-        'correoDestino': ['vravest@gmail.com'],
-        'curso': 'manejo de la ira',
-    }
+    # data = {
+    #     'titulo': 'titulo correo',
+    #     'correoDestino': ['vravest@gmail.com'],
+    #     'curso': 'manejo de la ira',
+    # }
     # cometnar despues de la prueba
     # funcionEnviarCorreo(data)
 
@@ -46,3 +51,8 @@ def form_registro(request):
 def perfil_usuario(request):
     var1 = time.time()
     return render(request, 'core/perfil_usuario.html', {'var1': var1})
+
+
+def oferta_formativa(request):
+    var1 = time.time()
+    return render(request, 'core/oferta_formativa.html', {'var1': var1})
