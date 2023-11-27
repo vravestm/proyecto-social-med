@@ -1,7 +1,7 @@
 import time
 
 from django.shortcuts import render
-from t_social_med.enviarCorreo import funcionEnviarCorreo
+from t_social_med.enviarCorreo import funcionEnviarCorreo, enviarCorreoContacto
 
 
 def home(request):
@@ -51,3 +51,15 @@ def perfil_usuario(request):
 # def informacion_curso(request):
 #     var1 = time.time()
 #     return render(request, 'core/informacion_curso.html', {'var1': var1})
+
+def enviar_correo_contacto(request):
+    if request.method == 'POST':
+        datos_formulario = {
+            'nombre': request.POST.get('txtName', ''),
+            'email': request.POST.get('txtEmail', ''),
+            'mensaje': request.POST.get('txtMsg', ''),
+        }
+        enviarCorreoContacto(datos_formulario)
+        return HttpResponse("Correo enviado correctamente. Gracias por contactarnos.")
+    else:
+        return render(request, 'core/contacto.html')

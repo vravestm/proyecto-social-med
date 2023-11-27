@@ -900,262 +900,104 @@ footer {
 }
 /* FIN CSS DOCENTES */
 
-<<<<<<< HEAD
-/* INICIO FORMULARIO DOCENTE*/
+/* INICIO CSS COMENTARIOS */
 
-/* CONTENEDOR FORM_REGISTER */
 
-.container__logo {
-    width: 150px;
-    height: auto;
-    margin: auto;
-    margin-top: 2%;
+/* INICIO CURSOS*/
+.container {
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+
+.container .card {
+    border: 2px solid var(--naranja_principal); 
+    border-radius: 15px;
     margin-bottom: 20px;
 }
 
-.container__prime {
-    width: 30%;
+.container .card-img-top {
+    max-width: 100%;
     height: auto;
-    padding: 20px;
-    background: hsl(0, 0%, 100%);
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 3px solid #1C8962;
-    margin: auto;
-    margin-top: 7%;
+    display: block;
+    padding: 15px; 
+    border-radius: 30px;
 }
 
+.btn-primary{
+    color: #ffffff;
+    background-color: var(--naranja_principal);
+    border-color: var(--naranja_principal);
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: center;
 
-.form__register {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 10px;
 }
 
-.carta-icon {
-    width: 29px;
-    height: auto;
-    margin-right: 10px; 
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* CONTAINER CLASS FORM_REGISTER */
-
-.form__register .correo {
-    width: 310px;
-    padding: 10px;
-    outline: none;
-    border: 1px solid #1C8962; 
-    border-radius: 10px;
-    height: auto;
-    color: #A6A6A6;
-    font-family: 'Glacial Indifference', sans-serif;
-}
-
-.form__register .text {
-    width: 310px;
-    padding: 10px;
-    outline: none;
-    border: 1px solid #1C8962; 
-    border-radius: 10px;
-    color: #A6A6A6;
-    font-family: 'Glacial Indifference', sans-serif;
-}
-.form__register .number {
-    width: 310px;
-    padding: 10px;
-    outline: none;
-    border: 1px solid #1C8962; 
-    border-radius: 10px;
-    color: #A6A6A6;
-    font-family: 'Glacial Indifference', sans-serif;
-}
-.form__register .password {
-    width: 310px;
-    padding: 10px;
-    outline: none;
-    border: 1px solid #1C8962; 
-    border-radius: 10px;
-    color: #A6A6A6;
-    font-family: 'Glacial Indifference', sans-serif;
-}
-.form__register .date {
-    width: 310px;
-    padding: 10px;
-    outline: none;
-    border: 1px solid #1C8962; 
-    border-radius: 10px;
-    color: #A6A6A6;
-    font-family: 'Glacial Indifference', sans-serif;
-}
-
-/* Estilos dropdowns*/
-
-#provincias{
-    width: 310px;
-    padding: 10px;
-    outline: none;
-    border: 1px solid #1C8962;
-    border-radius: 10px;
-    color: #A6A6A6;
-    font-family: 'Glacial Indifference', sans-serif;
-}
-#profesiones {
-    width: 310px;
-    padding: 10px;
-    outline: none;
-    border: 1px solid #1C8962;
-    border-radius: 10px;
-    color: #A6A6A6;
-    font-family: 'Glacial Indifference', sans-serif;
-}
-
-
-/* CONTENEDORES FORM_REGISTER */
-
-
-.user-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
+.btn-primary:hover{
+    background-color: var(--verde-principal);
+    border-color: var(--verde-principal);
     
 }
-.nombre-container {
+
+/* FIN CURSOS*/
+
+/* INICIO CONTACTO */
+.contenedor-flex {
     display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
+    padding: 40px;
+
 }
-.apellido-container {
+  
+#container1 {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+}
+  
+#container1 h1 {
+    color: var(--naranja_principal);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+#container2 {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 40px;
     display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: flex-start; 
 }
-.nacimiento-container {
+
+.col-md-6 {
     display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 47px;
-}
-.contraseña-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: flex-start; 
 }
 
-.correo-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
-}
-
-.telefono-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
-}
-
-.ciudad-container {
-    display: flex;
-    align-items: center;
-    margin-right: 0px;
-    margin-bottom: 30px;
-}
-
-.ocupacion-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 10px;
-}
-
-
-
-/* Textos FORM_REGISTER */
-
-.container__form p{
-    color: #A6A6A6;
-    font-size: 11px;
-    text-align: left;
-    margin-left: 30px;
-    
-}
-.container__form p1{
-    color: #A6A6A6;
-    font-size: 13px;
-    text-align: auto;
-    margin: 0.5rem;
-    
-}
-.text_register{
-    color: #A6A6A6;
-    font-size: 13px;
-    margin: 0.2rem;
-    text-align: justify;
-}
-
-/* BOTÓN ENVIAR */
-
-.myButton {
-	background-color:#F1862A;
-	border-radius:23px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:17px;
-	padding:10px 60px;
-	text-decoration:none;
-    font-family: 'League Spartan', sans-serif;
-    border: none;
-    margin: auto;
+.btnContact {
     margin-top: 10px;
-
-}
-.myButton:hover {
-	background-color: #1C8962;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-
-/* BOTÓN VOLVER */
-
-.volver {
-    text-decoration: none;
-    color: #A6A6A6;
+    margin-left: auto; 
+    background-color: var(--naranja_principal);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
-    padding-left: 5px;
-    background-position: left center;
-    background-size: 16px 16px; 
-    border-bottom: 2px solid transparent;
-    margin: auto;
-    margin-top: 20%;
+    display: block;
 }
-
-.volver:hover {
-    color: #A6A6A6;
-
+  
+.form-group {
+    margin-bottom: 1rem;
+    width: 350px;
 }
+  
+#container2 input[type="text"],
+#container2 textarea {
+    border-color: var(--verde-principal);
+    border-radius: 15px;
+    padding: 8px;
+}
+/-- FIN PAGINA DE CONTACTO --/
 
-/*   FIN FORMULARIO REGISTRO  */
-/* INICIO CSS COMENTARIOS */
-=======
-/* INICIO CSS COMENTARIOS */
-
->>>>>>> efd8854e5de530e09a9b996adac4262b60b23885
