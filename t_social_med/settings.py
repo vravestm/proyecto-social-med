@@ -147,3 +147,45 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'tsocialmed@gmail.com'
 EMAIL_HOST_PASSWORD = 'wmvwdmjpketbcahs'
 EMAIL_USE_TLS = True
+
+JAZZMIN_SETTINGS = {
+    "site_title": "T-Social Med",
+    'site_header': "T-Social Med",
+    'site_logo': "core/img/logominiatura.png",
+    "show_ui_builder": False,
+    "site_logo_classes": "img-circle",
+    "welcome_sign": "Panel de Administración",
+    "copyright": "T-Social Med",
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": False,
+    "accent": "accent-navy",
+    "navbar": "navbar-orange navbar-light",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-orange",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": True,
+    "sidebar_nav_compact_style": True,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": False,
+    "theme": "litera",
+    "dark_mode_theme": None,
+    "button_classes": {
+        "primary": "btn-outline-primary",
+        "secondary": "btn-outline-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
+}

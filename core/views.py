@@ -4,11 +4,6 @@ from django.shortcuts import render
 from t_social_med.enviarCorreo import funcionEnviarCorreo
 
 
-
-
-
-
-
 def home(request):
     var1 = time.time()
 
@@ -56,3 +51,8 @@ def perfil_usuario(request):
 def oferta_formativa(request):
     var1 = time.time()
     return render(request, 'core/oferta_formativa.html', {'var1': var1})
+
+
+def informacion_curso(request):
+    var1 = time.time()
+    return render(request, 'core/informacion_curso.html', {'var1': var1})

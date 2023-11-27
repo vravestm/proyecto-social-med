@@ -27,5 +27,8 @@ urlpatterns = [
     # path('buscar-cursos/', cursos_views.buscar_cursos, name='buscar_cursos'),
     path('prevencion/', prevencion_views.prevencion, name='prevencion'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('informacion_curso/', core_views.informacion_curso,
+         name='informacion_curso'),
     path('admin/', admin.site.urls),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

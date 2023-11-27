@@ -1,13 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User #aca se importa el username interno de django
+from datetime import datetime 
 
 
 
 class Usuarios(models.Model):
-    username = models.ForeignKey(User,verbose_name="username",on_delete=models.CASCADE,null=False)
+    username = models.OneToOneField(User,verbose_name="username",on_delete=models.CASCADE,null=False)
     nombre = models.CharField(max_length=40,verbose_name="Nombre",null=False)
     apellido = models.CharField(max_length=40,verbose_name="Apellidos",default="Apellido",null=False)
-    edad = models.IntegerField(verbose_name="Edad",null=False)
+    nac = models.DateField(verbose_name="Fecha de Nacimiento",default=datetime.now, null=False)
     zona = models.CharField(max_length=20,verbose_name="Ciudad",default='zona',null=False)
     correo = models.EmailField(max_length=30,verbose_name="Direccion de correo",null=False)
     telefono = models.CharField(max_length=20,verbose_name="Numero Telefonico",null=False)
