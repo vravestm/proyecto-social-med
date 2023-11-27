@@ -959,6 +959,7 @@ footer {
     height: auto;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
 }
 
 .form__register .text {
@@ -969,6 +970,7 @@ footer {
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
 }
 .form__register .number {
     width: 310px;
@@ -978,6 +980,7 @@ footer {
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
 }
 .form__register .password {
     width: 310px;
@@ -987,6 +990,7 @@ footer {
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
 }
 .form__register .date {
     width: 310px;
@@ -996,27 +1000,38 @@ footer {
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
 }
 
 /* Estilos dropdowns*/
 
-#provincias{
+.ciudad-container #provincias{
     width: 310px;
     padding: 10px;
     outline: none;
     border: 1px solid #1C8962;
     border-radius: 10px;
+
+}
+
+#provincias{
     color: #A6A6A6;
+    font-weight: bold;
     font-family: 'Glacial Indifference', sans-serif;
 }
-#profesiones {
+.ocupacion-container #profesiones {
     width: 310px;
     padding: 10px;
     outline: none;
     border: 1px solid #1C8962;
     border-radius: 10px;
+
+}
+
+#profesiones {
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
 }
 
 
