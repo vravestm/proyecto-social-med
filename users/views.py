@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.hashers import make_password
 from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
+import time
 
 from .forms import UserLoginForm, UserSignUpForm
 
@@ -57,15 +58,9 @@ def logout_view(request):
 
 @login_required(login_url='Home')
 def profile_view(request):
-    return render(request, 'core:home')
+    return render(request, 'Home')
 
 
-@login_required(login_url='Home')
-def follow(request, slug):
-    to_follow = get_object_or_404(get_user_model(), slug=slug)
-    if to_follow.is_follower(request.user):
-        to_follow.followers.remove(request.user)
-    else:
-        to_follow.followers.add(request.user)
-    to_follow.save
-    return redirect(to_follow)
+def perfil_usuario(request):
+    var1 = time.time()
+    return render(request, 'core/perfil_usuario.html', {'var1': var1})

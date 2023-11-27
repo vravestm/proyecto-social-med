@@ -29,24 +29,11 @@ def docentes(request):
     return render(request, 'core/docentes.html', {'var1': var1})
 
 
-def inicio_sesion(request):
-    var1 = time.time()
-    return render(request, 'core/inicio_sesion.html', {'var1': var1})
-
-
 def olvidar_contrasena(request):
     var1 = time.time()
     return render(request, 'core/olvidar_contrasena.html', {'var1': var1})
 
 
-def form_registro(request):
-    var1 = time.time()
-    return render(request, 'core/form_registro.html', {'var1': var1})
-
-
-def perfil_usuario(request):
-    var1 = time.time()
-    return render(request, 'core/perfil_usuario.html', {'var1': var1})
 
 # def informacion_curso(request):
 #     var1 = time.time()
