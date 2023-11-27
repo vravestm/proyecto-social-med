@@ -899,3 +899,102 @@ footer {
 
 /* INICIO CSS COMENTARIOS */
 
+
+/* INICIO CURSOS*/
+.container {
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+
+.container .card {
+    border: 2px solid var(--naranja_principal); 
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.container .card-img-top {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 15px; 
+    border-radius: 30px;
+}
+
+.btn-primary{
+    color: #ffffff;
+    background-color: var(--naranja_principal);
+    border-color: var(--naranja_principal);
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: center;
+
+}
+
+.btn-primary:hover{
+    background-color: var(--verde-principal);
+    border-color: var(--verde-principal);
+    
+}
+
+/* FIN CURSOS*/
+
+/* INICIO CONTACTO */
+.contenedor-flex {
+    display: flex;
+    padding: 40px;
+
+}
+  
+#container1 {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+}
+  
+#container1 h1 {
+    color: var(--naranja_principal);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+#container2 {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.btnContact {
+    margin-top: 10px;
+    margin-left: auto; 
+    background-color: var(--naranja_principal);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+}
+  
+.form-group {
+    margin-bottom: 1rem;
+    width: 350px;
+}
+  
+#container2 input[type="text"],
+#container2 textarea {
+    border-color: var(--verde-principal);
+    border-radius: 15px;
+    padding: 8px;
+}
+/-- FIN PAGINA DE CONTACTO --/
+
