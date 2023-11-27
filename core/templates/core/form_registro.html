@@ -1,0 +1,110 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido%}
+<div class="container__prime">
+    <img src="{% static 'core/img/logo.png' %}" class="container__logo" alt="logo">
+    <div class="container__form">
+        <form action="" class="form">
+            <div class="form__register">
+                <div class="user-container">
+                    <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
+                    <input type="text" placeholder="Ingrese nombre usuario" class="text" required>
+                </div>
+
+                <div class="nombre-container">
+                    <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
+                    <input type="text" placeholder="Ingrese nombres" class="text" required>
+                </div>
+
+                <div class="apellido-container">
+                    <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
+                    <input type="text" placeholder="Ingrese apellidos" class="text" required>
+                </div>
+
+                <div class="nacimiento-container">
+                    <img src="{% static 'core/img/edad1.png' %}" alt="carta" class="carta-icon">
+                    <input type="date" placeholder="Ingrese fecha de nacimiento" class="date" required>
+                </div>
+
+                <div class="correo-container">
+                    <img src="{% static 'core/img/correo1.png' %}" alt="carta" class="carta-icon">
+                    <input type="email" placeholder="Ingrese correo electrónico" class="correo" required>
+                </div>
+                <div class="contraseña-container">
+                    <img src="{% static 'core/img/candado1.png' %}" alt="carta" class="carta-icon">
+                    <input type="password" placeholder="Ingrese contraseña" class="password" required>
+                </div>
+
+                <div class="telefono-container">
+                    <img src="{% static 'core/img/telefono1.png' %}" alt="carta" class="carta-icon">
+                    <input type="number" placeholder="Ingrese numero de telefono" class="number" required>
+                </div>
+
+                <div class="ciudad-container">
+                    <img src="{% static 'core/img/localizador1.png' %}" alt="carta" class="carta-icon">
+                    <div id="provinciaDropdownContainer">
+                        <select id="provincias"required>
+                        </select>
+                    </div>
+                </div>
+                <div class="ocupacion-container">
+                    <img src="{% static 'core/img/portafolio1.png' %}" alt="carta" class="carta-icon">
+                    <div id="ocupacionDropdownContainer">
+                        <select id="profesiones"required>
+                        </select>
+                    </div>
+                </div>
+                <p class="text_register">Al registrarme acepto que t-social/med trate mis datos personales para la gestión de la inscripción, así como enviarme información relativa a la misma y cualquier otro relacionado con acciones formativas de mi interés.</p>
+                <button class="myButton">REGISTRARSE</button>
+    
+                <p1>¿Ya estás registrado?<a class="volver" href="/">Iniciar sesión</a></p1>
+    
+            
+                
+        </form>
+       <!-- Script JS-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            fetch("{% static 'core/img/provincias.json' %}")
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(provincias) {
+                    let placeholder = document.getElementById("provincias");
+                    let out = "<option value=''>Selecciona una ciudad</option>"; 
+                    for (let provincia of provincias) {
+                        out += `<option value="${provincia.code}">${provincia.label}</option>`;
+                    }
+                    placeholder.innerHTML = out;
+                })
+                .catch(function(error) {
+                    console.log("Error al obtener las ciudades:", error);
+                });
+        });
+
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch("{% static 'core/img/profesiones.json' %}")
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(ocupaciones) {
+                        let placeholder = document.getElementById("profesiones");
+                        let out = "<option value=''>Selecciona una ocupación</option>"; 
+                        for (let ocupacion of ocupaciones.ocupaciones) {
+                            out += `<option value="${ocupacion.code}">${ocupacion.label}</option>`;
+                        }
+                        placeholder.innerHTML = out;
+                    })
+                    .catch(function(error) {
+                        console.log("Error al obtener las ocupaciones:", error);
+                    });
+            });
+        </script>
+
+
+    </div>
+
+</div>
+{% endblock %}
