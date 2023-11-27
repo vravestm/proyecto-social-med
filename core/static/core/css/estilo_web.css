@@ -901,11 +901,11 @@ footer {
 
 
 /* INICIO CURSOS*/
-.container {
+/* .container {
     display:flex;
     flex-wrap: wrap; 
     justify-content: space-between; 
-}
+} */
 
 
 .container .card {
@@ -996,5 +996,5 @@ footer {
     border-radius: 15px;
     padding: 8px;
 }
-/-- FIN PAGINA DE CONTACTO --/
+/* FIN PAGINA DE CONTACTO */
 
