@@ -10,12 +10,12 @@
                 <img class="card-img-top mb-5 mb-md-0" src="{% static 'core/img/gestion.png' %}" alt="..." style="width: 110%; margin-left: -10%;border-radius:59% 41% 39% 61% / 61% 50% 50% 39%;"/>
             </div>
             <div class="col-md-6">
-                <h1 class="display-5 fw-bolder" style="font-size: 2rem;text-align: right;">GESTIÓN DE CONFLICTOS DESDE LA TERAPIA CENTRADA EN SOLUCIONES</h1>
+                <h1 class="display-5 fw-bolder" style="font-size: 2rem;text-align: right;">{{ object }}</h1>
                 
                 <div class="capsula" onclick="toggleDesplegable('capsula1')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #F1862A;padding: 10px;width: 100%;cursor: pointer;">
                     PRESENTACIÓN DEL CURSO
                     <div class="contenido-desplegable" id="capsula1" style="display: none;text-align: left;">
-                      <p>Desde hace mucho tiempo la creencia negativa del conflicto sigue estando presente. Lo vemos como una guerra y /o enfrentamiento sin pensar que ,en realidad, es un crecimiento grupal y /o personal. En este taller unimos la gestión de los conflictos con la terapia centrada en soluciones. Modelo terapéutico creado a comienzos de los años 70 por un grupo de trabajadores sociales. Steve de Shazer e Insoo Kim Berg fueron las figuras centrales de la terapia breve centrada en soluciones.</p>
+                      <p>{{object.presentacion}}</p>
                     </div>
                 </div>
 
@@ -23,13 +23,7 @@
                     COMPETENCIAS QUE VAS A ADQUIRIR
                     <div class="contenido-desplegable" id="capsula2" style="display: none;text-align: left;">
                       <p>
-                        <li>
-                            Búsqueda de acuerdos y/o soluciones en situaciones conflictivas.
-                        </li>
-                        <li>
-                            Detección de habilidades personales para la gestión de conflictos.
-                        </li>
-                      </p>
+                        {{object.competencias}}
                     </div>
                 </div>
 
@@ -37,12 +31,7 @@
                     OBJETIVOS
                     <div class="contenido-desplegable" id="capsula3" style="display: none;text-align: left;">
                         <p>
-                            <li>
-                                Poner en contacto al profesional con el enfoque.
-                            </li>
-                            <li>
-                                Ofrecer pautas para evitar la escalada del conflicto y para su gestión. 
-                            </li>
+                            {{object.objetivos}}
                         </p>
                     </div>
                 </div>
@@ -50,7 +39,7 @@
                 <div class="capsula" onclick="toggleDesplegable('capsula4')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #F1862A;padding: 10px;width: 100%;cursor: pointer;">
                     DIRIGIDO A
                     <div class="contenido-desplegable" id="capsula4" style="display: none;text-align: left;">
-                      <p>¿Eres profesional de cualquier ámbito que estés en contacto con personas? Este curso es para ti.</p>
+                      <p>{{object.dirigido}}</p>
                     </div>
                 </div>
 
@@ -59,19 +48,18 @@
                     <div class="contenido-desplegable" id="capsula5" style="display: none;text-align: left;">
                         <p>
                             <li>
-                                Modalidad: Online
-                            </li>
-                            <li> 
-                                Duración: 2 horas 
-                            </li>
-                            <li>
-                                Precio: € 30 
+                                {{object.mod_dur_valor}}
                             </li>
                         </p>                    
                     </div>
                 </div>
 
+                <center><a name="" id="" class="btn btn-primary" href="/confirmacion_curso?valor={{object.id}}" role="button">Inscribirme</a></center>
+
                 <div class="d-flex" style="text-align: right;">
+                    
+
+
                     <button class="btn btn-outline-dark flex-shrink-0" type="button" style="border-radius: 10px;width: 100%;text-align: right;padding: 10px;">
                         INSCRIBIRME
                     </button>
@@ -81,19 +69,136 @@
     </div>
 </section>
 
-<script>
+<section>
+    <div class="col-md-6">
+        <h1 class="display-5 fw-bolder" style="font-size: 2rem;text-align:left;margin-left: 13%;">COMENTARIOS</h1>
+    </div>
+    <div class="container mt-5">
 
-    // function mostrarTexto(numero) {
-    //         var textoDesplegadoActual = document.getElementById("textoDesplegado" + numero);
-    //         var textoDesplegadoOtro = numero === 1 ? document.getElementById("textoDesplegado2") : document.getElementById("textoDesplegado1");
-
-    //         if (textoDesplegadoOtro.style.display === "block") {
-    //             textoDesplegadoOtro.style.display = "none";
-    //         }
-
-    //         textoDesplegadoActual.style.display = (textoDesplegadoActual.style.display === "none" || textoDesplegadoActual.style.display === "") ? "block" : "none";
-    // }
+        <div class="row">
+            <div class="col-md-6 mx-auto">
         
+                <div class="cards">
+                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
+
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="card-title mb-0" style="color: black;">Calificar</h5>
+        
+                            <div class="d-flex align-items-center" style="margin-right: 80%; margin-bottom: 0.5%;">
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star text-warning" ></i>
+                            </div>
+                        </div>
+
+                        <div class="form-check" style="text-align: left; color: black;">
+                            <input class="form-check-input" type="checkbox" value="" id="publicarNombre">
+                            <label class="form-check-label" for="publicarNombre">
+                                ¿Desea publicar su nombre?
+                            </label>
+                        </div>
+
+                        <div class="form-group mt-2">
+                            <textarea class="form-control" id="comentario" rows="3" maxlength="150" placeholder="Ingrese su comentario..."></textarea>
+                            <small class="text-muted" id="contadorCaracteres">0/150</small>
+                        </div>
+
+                        <button class="btn btn-primary" href="" onclick="publicarComentario()" style="background-color: #F1862A; border-radius: 2.3em;; border: none; width: 15%;">PUBLICAR</button>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+        
+                <div class="cards">
+                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
+            
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="card-title mb-0" style="color: black;">Calificación</h5>
+        
+                            <div class="d-flex align-items-center" style="margin-right:77%; margin-bottom: 0.5%;">
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="2"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="3"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="4"></i>
+                                <i class="fas fa-star text-warning" data-rating="5" ></i>
+                            </div>
+                        </div>
+
+                        <div class="published_by" style="text-align: left; color: black;">
+                            <p>Publicado por:</p>
+                        </div>
+
+                        <div class="form-group mt-2">
+                            <textarea class="form-control" id="comentario" rows="3" maxlength="150" placeholder="Ingrese su comentario..."></textarea>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+        
+                <div class="cards">
+                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
+            
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="card-title mb-0" style="color: black;">Calificación</h5>
+        
+                            <div class="d-flex align-items-center" style="margin-right: 77%; margin-bottom: 0.5%;">
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star text-warning" ></i>
+                            </div>
+                        </div>
+
+                        <div class="published_by" style="text-align: left; color: black;">
+                            <p>Publicado por:</p>
+                        </div>
+
+                        <div class="form-group mt-2">
+                            <textarea class="form-control" id="comentario" rows="3" maxlength="150" placeholder="Ingrese su comentario..."></textarea>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="d-flex justify-content-center mt-3">
+    <a href="/" class="btn btn-outline-dark" style="border-radius: 10px; font-family: 'League Spartan', sans-serif;">
+        <i class="fas fa-arrow-left mr-1"></i>VOLVER
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+ 
     function toggleDesplegable(id) {
     var desplegable = document.getElementById(id);
 
@@ -114,7 +219,30 @@
       desplegable.classList.add('capsula-clicked');
     }, 10);
   }
+
+  // Contador de caracteres
+  var textarea = document.getElementById('comentario');
+    var contador = document.getElementById('contadorCaracteres');
+
+    textarea.addEventListener('input', function () {
+        var conteo = textarea.value.length;
+        contador.innerText = conteo + '/150';
+    });
+
+    function publicarComentario() {
+        var comentario = textarea.value;
+        var publicarNombre = document.getElementById('publicarNombre').checked;
+
+        console.log('Comentario:', comentario);
+        console.log('¿Publicar Nombre?', publicarNombre);
+    }
+
 </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 
 

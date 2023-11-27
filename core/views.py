@@ -5,6 +5,7 @@ from t_social_med.enviarCorreo import funcionEnviarCorreo
 
 
 def home(request):
+    request.session['usuario']=request.user.id #capturamos la id del usuario que se logee en la pagina
     var1 = time.time()
 
     data = {
@@ -47,6 +48,6 @@ def perfil_usuario(request):
     var1 = time.time()
     return render(request, 'core/perfil_usuario.html', {'var1': var1})
 
-def informacion_curso(request):
-    var1 = time.time()
-    return render(request, 'core/informacion_curso.html', {'var1': var1})
+# def informacion_curso(request):
+#     var1 = time.time()
+#     return render(request, 'core/informacion_curso.html', {'var1': var1})

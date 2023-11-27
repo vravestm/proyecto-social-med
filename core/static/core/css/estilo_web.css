@@ -135,10 +135,11 @@ footer {
 
 .contenedor_contacto {
     max-width: 500px;
+    margin-bottom: 30px;
 }
 
 .contact-form-wrapper {
-    padding: 50px 0;
+    padding: 0;
 }
 
 .contact-form {
@@ -779,6 +780,7 @@ footer {
     font-size: 2.5rem; 
     color: #F1862A; 
     font-family: 'League Spartan', sans-serif; 
+    font-weight: bold;
 }
 
 .texto_1_docente {
@@ -1151,3 +1153,4 @@ footer {
 }
 
 /*   FIN FORMULARIO REGISTRO  */
+/* INICIO CSS COMENTARIOS */
