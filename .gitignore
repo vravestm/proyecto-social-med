@@ -159,9 +159,17 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+t_social_med/core/_pycache_/
 
-t_social_med/core/__pycache__/
-t_social_med/__pycache__/
-t_social_med/cursos/__pycache__/
-t_social_med/core/__pycache__/
+t_social_med/cursos/_pycache_/
+t_social_med/core/_pycache_/
 
+cursos/_pycache_/
+t_social_med/core/templates/core
+t_social_med/prevencion/_pycache_/
+prevencion/_pycache_/
+cursos/_pycache_/
+core/_pycache_/
+t_social_med/_pycache_/
+cursos/_pycache_
+prevencion/_pycache_/
