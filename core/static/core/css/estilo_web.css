@@ -53,6 +53,46 @@
 /*-- FIN NAV BAR --*/
 
 
+
+/* INICIO BTN INICIO SESION NAVBAR */
+
+.user-button {
+    margin-left: 20px;
+}
+
+.rounded-button {
+    border-radius: 20px;
+    background-color: var(--naranja_principal);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    margin-right: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
+
+.img_usuario {
+    width: 30px;
+    height: 30px;
+}
+
+.text-inicio-sesion {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none !important;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+/* FIN INICIO BTN INICIO SESION NAVBAR */
+
 /*-- FOOTER --*/
 
 footer {
@@ -570,7 +610,7 @@ footer {
     margin-top: -5%;
 }
 
-.correo__container input{
+.correo__container input {
     display: flex;
     align-items: center;
     margin-left: 15%;
@@ -628,13 +668,14 @@ footer {
 .btn_ingresar {
     margin-top: 5%;
 }
+
 .btn_ingresar:hover {
     background-color: var(--verde-principal);
 }
 
 /* BOTÓN VOLVER */
 
-.contenedor-volver a{
+.contenedor-volver a {
     text-decoration: none;
     color: var(--gris);
     cursor: pointer;
@@ -646,7 +687,7 @@ footer {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-weight:normal;
+    font-weight: normal;
 }
 
 .flecha_volver {
@@ -688,12 +729,12 @@ footer {
     /* border: 2px solid #ff1919; NO CAMBIA DE COLOR EL BORDE */
 }
 
-.capsula p, li{
+.capsula p, li {
     font-family: 'Montserrat', sans-serif;
     font-size: small;
 }
 
-.btn-outline-dark{
+.btn-outline-dark {
     background-color: var(--naranja_principal);
     color: var(--blanco);
     border-color: var(--naranja_principal);
@@ -701,7 +742,7 @@ footer {
 
 .btn-outline-dark:hover {
     background-color: var(--verde-principal);
-  }
+}
 
 .capsula:hover {
     background-color: var(--naranja_principal);
@@ -727,7 +768,7 @@ footer {
 
 /* contenedor izquierdo */
 .left-g {
-    flex: 0 0 40%; 
+    flex: 0 0 40%;
     padding: 20px;
     text-align: center;
 }
@@ -736,14 +777,14 @@ footer {
 .right-g {
     flex: 1;
     padding: 30px;
-    margin-left: 10px; 
+    margin-left: 10px;
 }
 
 /* imagen*/
 .profile-image {
     width: 75%;
     height: 400px;
-    border-radius: 37% 63% 52% 48% / 65% 57% 43% 35% ;
+    border-radius: 37% 63% 52% 48% / 65% 57% 43% 35%;
     margin-top: 60px;
 }
 
@@ -763,8 +804,9 @@ footer {
     color: #006699;
     font-weight: bold;
 }
+
 .linkedin-link img {
-    width: 30px; 
+    width: 30px;
     height: auto;
 }
 
@@ -773,44 +815,43 @@ footer {
 .titulo_docente {
     font-size: 1.5rem;
     color: #000000;
-    font-family: 'League Spartan', sans-serif; 
+    font-family: 'League Spartan', sans-serif;
 }
 
 .titulo_nombre {
-    font-size: 2.5rem; 
-    color: #F1862A; 
-    font-family: 'League Spartan', sans-serif; 
-    font-weight: bold;
+    font-size: 2.5rem;
+    color: #F1862A;
+    font-family: 'League Spartan', sans-serif;
 }
 
 .texto_1_docente {
-    font-size: 1rem; 
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
-    margin: 0px 70px 15px 0px; 
+    margin: 0px 70px 15px 0px;
 
     text-align: justify;
 }
 
 
 .titulo_fundadora {
-    font-size: 1.2rem; 
-    color: #000000; 
-    font-family: 'League Spartan', sans-serif; 
+    font-size: 1.2rem;
+    color: #000000;
+    font-family: 'League Spartan', sans-serif;
 }
 
 /* sección 2 parte derecha */
 .titulo_sobre_mi {
-    font-family: 'League Spartan', sans-serif; 
-    font-size: 1.4rem; 
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.4rem;
     margin-top: 40px;
     color: #146448;
 }
 
 .texto_2_docente {
-    font-size: 1rem; 
-    line-height: 1.5; 
+    font-size: 1rem;
+    line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
-    margin: 0px 30px 10px 0px; 
+    margin: 0px 30px 10px 0px;
     text-align: justify;
 
 }
@@ -837,7 +878,7 @@ footer {
 
 /* Estilo parte derecha contenedor A */
 .right-A {
-    flex: 0 0 40%; 
+    flex: 0 0 40%;
     padding: 20px;
     text-align: center;
 
@@ -852,7 +893,7 @@ footer {
 .right-A .profile-image {
     width: 75%;
     height: 400px;
-    border-radius: 37% 63% 52% 48% / 65% 57% 43% 35% ;
+    border-radius: 37% 63% 52% 48% / 65% 57% 43% 35%;
     margin-top: 30px;
 }
 
@@ -864,7 +905,7 @@ footer {
     color: #000000;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
 /*LinkedIn derecha contenedor A */
@@ -879,25 +920,28 @@ footer {
 .section-A {
     margin-bottom: 20px;
 }
-.section-A .titulo_sobre_mi{
-    font-size: 1.4rem; 
+
+.section-A .titulo_sobre_mi {
+    font-size: 1.4rem;
     margin-top: 40px;
     color: #146448;
 }
+
 .section-A1 .texto_1_docente {
-    font-size: 1rem; 
-    line-height: 1.5; 
+    font-size: 1rem;
+    line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
-    margin: 0px 130px 15px 0px; 
+    margin: 0px 130px 15px 0px;
     text-align: justify;
 }
 
 .section-A .texto_2_docente {
-    font-size: 1rem; 
-    line-height: 1.5; 
+    font-size: 1rem;
+    line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
 }
+
 /* FIN CSS DOCENTES */
 
 /* INICIO FORMULARIO DOCENTE*/
@@ -1169,3 +1213,102 @@ footer {
 
 /*   FIN FORMULARIO REGISTRO  */
 /* INICIO CSS COMENTARIOS */
+
+
+/* INICIO CURSOS*/
+/* .container {
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+} */
+
+
+.container .card {
+    border: 2px solid var(--naranja_principal); 
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.container .card-img-top {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 15px; 
+    border-radius: 30px;
+}
+
+.btn-primary{
+    color: #ffffff;
+    background-color: var(--naranja_principal);
+    border-color: var(--naranja_principal);
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: center;
+
+}
+
+.btn-primary:hover{
+    background-color: var(--verde-principal);
+    border-color: var(--verde-principal);
+    
+}
+
+/* FIN CURSOS*/
+
+/* INICIO CONTACTO */
+.contenedor-flex {
+    display: flex;
+    padding: 40px;
+
+}
+  
+#container1 {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+}
+  
+#container1 h1 {
+    color: var(--naranja_principal);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+#container2 {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.btnContact {
+    margin-top: 10px;
+    margin-left: auto; 
+    background-color: var(--naranja_principal);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+}
+  
+.form-group {
+    margin-bottom: 1rem;
+    width: 350px;
+}
+  
+#container2 input[type="text"],
+#container2 textarea {
+    border-color: var(--verde-principal);
+    border-radius: 15px;
+    padding: 8px;
+}
+/* FIN PAGINA DE CONTACTO */
