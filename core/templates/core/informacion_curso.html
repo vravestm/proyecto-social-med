@@ -81,19 +81,136 @@
     </div>
 </section>
 
-<script>
+<section>
+    <div class="col-md-6">
+        <h1 class="display-5 fw-bolder" style="font-size: 2rem;text-align:left;margin-left: 13%;">COMENTARIOS</h1>
+    </div>
+    <div class="container mt-5">
 
-    // function mostrarTexto(numero) {
-    //         var textoDesplegadoActual = document.getElementById("textoDesplegado" + numero);
-    //         var textoDesplegadoOtro = numero === 1 ? document.getElementById("textoDesplegado2") : document.getElementById("textoDesplegado1");
-
-    //         if (textoDesplegadoOtro.style.display === "block") {
-    //             textoDesplegadoOtro.style.display = "none";
-    //         }
-
-    //         textoDesplegadoActual.style.display = (textoDesplegadoActual.style.display === "none" || textoDesplegadoActual.style.display === "") ? "block" : "none";
-    // }
+        <div class="row">
+            <div class="col-md-6 mx-auto">
         
+                <div class="cards">
+                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
+
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="card-title mb-0" style="color: black;">Calificar</h5>
+        
+                            <div class="d-flex align-items-center" style="margin-right: 80%; margin-bottom: 0.5%;">
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star text-warning" ></i>
+                            </div>
+                        </div>
+
+                        <div class="form-check" style="text-align: left; color: black;">
+                            <input class="form-check-input" type="checkbox" value="" id="publicarNombre">
+                            <label class="form-check-label" for="publicarNombre">
+                                ¿Desea publicar su nombre?
+                            </label>
+                        </div>
+
+                        <div class="form-group mt-2">
+                            <textarea class="form-control" id="comentario" rows="3" maxlength="150" placeholder="Ingrese su comentario..."></textarea>
+                            <small class="text-muted" id="contadorCaracteres">0/150</small>
+                        </div>
+
+                        <button class="btn btn-primary" href="" onclick="publicarComentario()" style="background-color: #F1862A; border-radius: 2.3em;; border: none; width: 15%;">PUBLICAR</button>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+        
+                <div class="cards">
+                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
+            
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="card-title mb-0" style="color: black;">Calificación</h5>
+        
+                            <div class="d-flex align-items-center" style="margin-right:77%; margin-bottom: 0.5%;">
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="2"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="3"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="4"></i>
+                                <i class="fas fa-star text-warning" data-rating="5" ></i>
+                            </div>
+                        </div>
+
+                        <div class="published_by" style="text-align: left; color: black;">
+                            <p>Publicado por:</p>
+                        </div>
+
+                        <div class="form-group mt-2">
+                            <textarea class="form-control" id="comentario" rows="3" maxlength="150" placeholder="Ingrese su comentario..."></textarea>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+        
+                <div class="cards">
+                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
+            
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="card-title mb-0" style="color: black;">Calificación</h5>
+        
+                            <div class="d-flex align-items-center" style="margin-right: 77%; margin-bottom: 0.5%;">
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
+                                <i class="fas fa-star text-warning" ></i>
+                            </div>
+                        </div>
+
+                        <div class="published_by" style="text-align: left; color: black;">
+                            <p>Publicado por:</p>
+                        </div>
+
+                        <div class="form-group mt-2">
+                            <textarea class="form-control" id="comentario" rows="3" maxlength="150" placeholder="Ingrese su comentario..."></textarea>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="d-flex justify-content-center mt-3">
+    <a href="/" class="btn btn-outline-dark" style="border-radius: 10px; font-family: 'League Spartan', sans-serif;">
+        <i class="fas fa-arrow-left mr-1"></i>VOLVER
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+ 
     function toggleDesplegable(id) {
     var desplegable = document.getElementById(id);
 
@@ -114,7 +231,30 @@
       desplegable.classList.add('capsula-clicked');
     }, 10);
   }
+
+  // Contador de caracteres
+  var textarea = document.getElementById('comentario');
+    var contador = document.getElementById('contadorCaracteres');
+
+    textarea.addEventListener('input', function () {
+        var conteo = textarea.value.length;
+        contador.innerText = conteo + '/150';
+    });
+
+    function publicarComentario() {
+        var comentario = textarea.value;
+        var publicarNombre = document.getElementById('publicarNombre').checked;
+
+        console.log('Comentario:', comentario);
+        console.log('¿Publicar Nombre?', publicarNombre);
+    }
+
 </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 
 
