@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 
+
+AUTH_USER_MODEL = 'users.UserProfile'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -44,6 +47,7 @@ INSTALLED_APPS = [
     'cursos',
     'talleres',
     'prevencion',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                ## 'users.context_processors.login_form',
+                'users.context_processors.login_form',
             ],
         },
     },
@@ -84,7 +88,7 @@ WSGI_APPLICATION = 't_social_med.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.tsocialmed',
     }
 }
 
@@ -109,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # LOGIN
-LOGIN_REDIRECT_URL = '/perfil_usuario/'
+LOGIN_REDIRECT_URL = '/oferta_formativa/'
 LOGOUT_REDIRECT_URL = '/'
 
 
@@ -148,6 +152,8 @@ EMAIL_HOST_USER = 'tsocialmed@gmail.com'
 EMAIL_HOST_PASSWORD = 'wmvwdmjpketbcahs'
 EMAIL_USE_TLS = True
 
+
+# TEMPLATE ADMIN
 JAZZMIN_SETTINGS = {
     "site_title": "T-Social Med",
     'site_header': "T-Social Med",

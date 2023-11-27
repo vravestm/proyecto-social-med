@@ -4,8 +4,6 @@ from .models import Cursos
 from .models import Inscripcion
 
 
-
-
 def cursos(request):
     cur=Cursos.objects.all()
     return render(request, 'core/cursos.html',{'cur':cur})

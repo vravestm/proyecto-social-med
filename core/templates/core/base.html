@@ -79,9 +79,32 @@
 
                 </ul>
             </div>
-            <span class="float-right">
-                <a href="/inicio_sesion/"><i class="fa-solid fa-circle-user fa-2x icon_user"></i></a>
-            </span>
+                <!-- Botón inicio de sesion-->
+                <div class="user-button">
+                    {% if user.is_authenticated %}
+                    <!-- Menú desplegable para usuarios autenticados -->
+                    <div class="dropdown">
+                        <button class="rounded-button orange-button dropdown-toggle" type="button" id="userDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="{{ user.profile_pic.url }}" class="img_usuario"
+                                style="color: #fff; font-size: 30px;" loading="lazy">
+                            <span class="text-inicio-sesion">{{ user.first_name }}</span>
+                        </button>
+                        <ul class="dropdown-menu mask-custom" aria-labelledby="userDropdown">
+
+                            <li><a class="dropdown-item nav-link-2" href="{% url 'users:logout' %}">Cerrar
+                                    Sesión</a></li>
+                        </ul>
+                    </div>
+                    {% else %}
+                    <!-- Botón de inicio de sesión para usuarios no autenticados -->
+                    <button class="rounded-button orange-button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="fas fa-circle-user user-icon"></i>
+                        <p class="text-inicio-sesion">Iniciar Sesión</p>
+                    </button>
+                    {% endif %}
+                </div>
+                <!-- Fin botón inicio de sesion-->
         </div>
     </nav>
     <!-- Fin Nav Bar-->
