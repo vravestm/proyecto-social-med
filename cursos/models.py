@@ -31,7 +31,7 @@ class Inscripcion(models.Model):
     curso = models.ForeignKey(Cursos,verbose_name="Curso",on_delete=models.CASCADE,null=False)
 
     def __str__(self):
-        return self.id
+        return str(self.id)
     class Meta:
         verbose_name="Inscripcion"
         verbose_name_plural="Inscripciones"

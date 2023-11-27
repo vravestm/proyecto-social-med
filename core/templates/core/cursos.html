@@ -8,9 +8,11 @@
         <div class="card my-3" style="width: 18rem;">
                 <img class="card-img-top" src="{{ c.image.url }}" alt="Card image cap">
                 <div class="card-body">
-                <h5 class="card-title">{{ c.titulo }}</h5>              
+                <h5 class="card-title">{{ c.titulo }}</h5>
+                <a name="" id="" class="btn btn-primary" href="{% url 'informacion_curso' c.id %}" role="button">Informacion</a>            
             </div>
         </div>
+        
     </div>
 </div>
 {% endfor %}
