@@ -1,0 +1,23 @@
+{
+  "ocupaciones": [
+    {"code": "01", "label": "Estudiante de secundaria"},
+    {"code": "02", "label": "Estudiante universitario"},
+    {"code": "03", "label": "Estudiante de posgrado"},
+    {"code": "04", "label": "Empleado dependiente"},
+    {"code": "05", "label": "Empleado independiente"},
+    {"code": "06", "label": "Empleado del gobierno"},
+    {"code": "07", "label": "Empresario"},
+    {"code": "08", "label": "Ingeniero"},
+    {"code": "09", "label": "Abogado"},
+    {"code": "10", "label": "Contador"},
+    {"code": "11", "label": "Cuidador"},
+    {"code": "12", "label": "Consultor independiente"},
+    {"code": "13", "label": "Desempleado"},
+    {"code": "14", "label": "Dueño de un negocio"},
+    {"code": "15", "label": "Retirado"},
+    {"code": "16", "label": "Padre/Madre"},
+    {"code": "17", "label": "Profesional de la salud"},
+    {"code": "18", "label": "Trabajador en una organización sin fines de lucro"},
+    {"code": "19", "label": "Freelancer en diseño"}
+  ]
+}

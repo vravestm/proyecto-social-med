@@ -24,3 +24,28 @@ def funcionEnviarCorreo(data:dict):
         print(f'Correo enviado exitosamente a { destinatario[0]}')
     else:
         print(f'Error al enviar el correo a {destinatario[0]}')
+
+def enviarCorreoContacto(datos_formulario: dict):
+    try:
+        subject = 'Asunto del Correo' 
+        template = get_template('core/enviarCorreoContacto.html') 
+
+        contenido = template.render({
+            'datos_formulario': datos_formulario,
+        })
+
+        destinatario = 'yenerix.a@gmail.com'  
+        message = EmailMultiAlternatives(
+            subject=subject,
+            body='',  
+            from_email=settings.EMAIL_HOST_USER,
+            to=[destinatario],
+        )
+        message.attach_alternative(contenido, 'text/html')
+        message.send()
+
+        print(f'Correo enviado exitosamente a {destinatario}')
+
+    except Exception as e:
+        print(f'Error al enviar el correo: {str(e)}')
+        raise e

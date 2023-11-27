@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    <div class="">
+        <label for="usuario"></label>
+        <input type="hidden" class="field" name="usuario" value="{{ request.session.usuario }}">
+    </div>
+
+    <div class="form-group">
+        {% for n in variable %}
+        <label for="utilitario"></label>
+        <input type="hidden" class="field" name="cur" value="{{ n }}">
+        {% endfor %}
+    </div>
+    <a href="">
+        <button class="btn btn-outline-dark flex-shrink-0" type="submit"  >
+            Confirmar Inscripción
+        </button>
+    </a>
+</form> 
+
+{% endblock %}
