@@ -755,14 +755,18 @@ footer {
 
 /*               DOCENTES              */
 
-/*DOCENTE GEMA*/
-
-/* contenedor G */
+/* contenedor G Gema */
 .containerG {
     display: flex;
     width: 100%;
 }
+/* contenedor A Alicia */
+.containerA {
+    margin-top: 70px;
+    display: flex;
+    width: 100%;
 
+}
 
 /* contenedor izquierdo */
 .left-g {
@@ -771,13 +775,25 @@ footer {
     text-align: center;
 }
 
+.left-A {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    margin-left: 30px;
+
+}
 /* contenedor derecho*/
 .right-g {
     flex: 1;
     padding: 30px;
     margin-left: 10px;
 }
+.right-A {
+    flex: 0 0 40%;
+    padding: 20px;
+    text-align: center;
 
+}
 /* imagen*/
 .profile-image-G {
     width: 75%;
@@ -798,8 +814,15 @@ footer {
     font-style: italic;
     text-align: center;
     color: #000000;
-    font-weight: bold;
     font-family: 'Montserrat', sans-serif;
+}
+.right-A .texto_frase {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 /*enlace LinkedIn */
@@ -828,107 +851,13 @@ footer {
     font-family: 'League Spartan', sans-serif; 
 }
 
+/* Texto 1 docentes*/
 .texto_1_docente {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     margin: 0px 70px 15px 0px;
-
-    text-align: justify;
-}
-
-
-.titulo_fundadora {
-    font-size: 1.2rem;
     color: #000000;
-    font-family: 'League Spartan', sans-serif;
-}
-
-/* sección 2 parte derecha */
-.titulo_sobre_mi {
-    font-family: 'League Spartan', sans-serif;
-    font-size: 1.4rem;
-    margin-top: 40px;
-    color: #146448;
-}
-
-.texto_2_docente {
-    font-size: 1rem;
-    line-height: 1.5;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px 30px 10px 0px;
     text-align: justify;
-
-}
-
-
-/*DOCENTE ALICIA*/
-
-/* Estilo para el contenedor principal A */
-.containerA {
-    margin-top: 70px;
-    display: flex;
-    width: 100%;
-
-}
-
-/* Estilo parte izquierda  contenedor A */
-.left-A {
-    flex: 1;
-    padding: 20px;
-    position: relative;
-    margin-left: 30px;
-
-}
-
-/* Estilo parte derecha contenedor A */
-.right-A {
-    flex: 0 0 40%;
-    padding: 20px;
-    text-align: center;
-
-}
-
-/* sección 2 del contenedor A */
-.section-A {
-    margin-bottom: 20px;
-}
-
-/* imagen del contenedor A */
-.right-A .profile-image {
-    width: 75%;
-    height: 400px;
-    border-radius: 37% 63% 52% 48% / 65% 57% 43% 35%;
-    margin-top: 30px;
-}
-
-/* texto frase contenedor A */
-.right-A .texto_frase {
-    margin-top: 20px;
-    font-style: italic;
-    text-align: center;
-    color: #000000;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-
-}
-
-/*LinkedIn derecha contenedor A */
-.right-A .linkedin-link {
-    text-decoration: none;
-    color: #006699;
-    font-weight: bold;
-}
-
-
-/* sección 2 del contenedor A */
-.section-A {
-    margin-bottom: 20px;
-}
-
-.section-A .titulo_sobre_mi {
-    font-size: 1.4rem;
-    margin-top: 40px;
-    color: #146448;
 }
 
 .section-A1 .texto_1_docente {
@@ -936,14 +865,46 @@ footer {
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
     margin: 0px 130px 15px 0px;
+    color: #000000;
     text-align: justify;
 }
 
+/* Titulo fundadora*/
+
+.titulo_fundadora {
+    font-size: 1.2rem;
+    color: #000000;
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* Titulo Sobre_mi*/
+.titulo_sobre_mi {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.4rem;
+    margin-top: 40px;
+    color: #146448;
+}
+/* Titulo 2 Docentes */
+
+.texto_2_docente {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px 30px 10px 0px;
+    color: #000000;
+    text-align: justify;
+
+}
 .section-A .texto_2_docente {
     font-size: 1rem;
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
+    color: #000000;
     text-align: justify;
+}
+/* sección 2*/
+.section-A {
+    margin-bottom: 20px;
 }
 
 /* FIN CSS DOCENTES */
