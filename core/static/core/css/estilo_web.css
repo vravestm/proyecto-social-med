@@ -942,39 +942,38 @@ footer {
 
 /* FIN CSS DOCENTES */
 
-/* INICIO CSS COMENTARIOS */
+/* INICIO  CSS FORM_REGISTER */
 
-
-/* INICIO CURSOS*/
-/* .container {
-    display:flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-} */
-
-
-.container .card {
-    border: 2px solid var(--naranja_principal); 
-    border-radius: 15px;
+.container__logo {
+    width: 150px;
+    height: auto;
+    margin: auto;
+    margin-top: 2%;
     margin-bottom: 20px;
 }
 
-.container .card-img-top {
-    max-width: 100%;
+.container__prime {
+    width: 30%;
     height: auto;
-    display: block;
-    padding: 15px; 
-    border-radius: 30px;
+    padding: 20px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #1C8962;
+    margin: auto;
+    margin-top: 7%;
 }
 
-.btn-primary{
-    color: #ffffff;
-    background-color: var(--naranja_principal);
-    border-color: var(--naranja_principal);
-    text-transform: uppercase;
-    font-weight: bold;
-    justify-content: center;
 
+.form__register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 10px;
 }
 
 .carta-icon {
@@ -988,7 +987,6 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-
 /* CONTAINER CLASS FORM_REGISTER */
 
 .form__register .correo {
@@ -1086,8 +1084,127 @@ footer {
     margin-bottom: 30px;
     
 }
+.nombre-container {
+    display: flex;
+    align-items:center;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
+.apellido-container {
+    display: flex;
+    align-items:center;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
+.nacimiento-container {
+    display: flex;
+    align-items:center;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
+.contraseña-container {
+    display: flex;
+    align-items:center;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
 
-/* FIN CURSOS*/
+.correo-container {
+    display: flex;
+    align-items:center;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
+
+.telefono-container {
+    display: flex;
+    align-items:center;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
+
+.ciudad-container {
+    display: flex;
+    align-items: center;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
+
+.ocupacion-container {
+    display: flex;
+    align-items:center;
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+
+/* Textos FORM_REGISTER */
+
+.container__form p{
+    color: #A6A6A6;
+    font-size: 11px;
+    text-align: left;
+    margin-left: 30px;
+    
+}
+.container__form p1{
+    color: #A6A6A6;
+    font-size: 13px;
+    text-align: auto;
+    margin: 0.5rem;
+    
+}
+.text_register{
+    color: #A6A6A6;
+    font-size: 13px;
+    margin: 0.2rem;
+    text-align: justify;
+}
+
+/* BOTÓN ENVIAR */
+
+.myButton {
+	background-color:#F1862A;
+	border-radius:23px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:10px 60px;
+	text-decoration:none;
+    font-family: 'League Spartan', sans-serif;
+    border: none;
+    margin: auto;
+    margin-top: 10px;
+
+}
+.myButton:hover {
+	background-color: #1C8962;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* BOTÓN VOLVER */
+
+.volver {
+    text-decoration: none;
+    color: #A6A6A6;
+    cursor: pointer;
+    padding-left: 5px;
+    background-position: left center;
+    background-size: 16px 16px; 
+    border-bottom: 2px solid transparent;
+    margin: auto;
+    margin-top: 20%;
+}
+
+.volver:hover {
+    color: #A6A6A6;
+
+}
+
+/* FIN CSS FORM_REGISTER */
 
 /* INICIO CONTACTO */
 .contenedor-flex {
@@ -1147,8 +1264,6 @@ footer {
 }
 /* FIN PAGINA DE CONTACTO */
 
-/*   FIN FORMULARIO REGISTRO  */
-
 
 
 /* INICIO CSS COMENTARIOS */
@@ -1193,6 +1308,39 @@ footer {
 }
 
 /* FIN CURSOS*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* INICIO CONTACTO */
 .contenedor-flex {
