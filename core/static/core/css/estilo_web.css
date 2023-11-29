@@ -1257,25 +1257,43 @@ footer {
 
 
 /*-- CONTENIDO DE INICIO --*/
-.fondo-inicio{
+.fondo-inicio {
     height: 150vh;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: center;
-    margin-top: 68px;
     position: relative;
     filter: blur(5px);
+    overflow: hidden; 
+}
 
+.fondo-inicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.fondo-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .texto-inicio {
     text-align: right;
     position: absolute;
     right: 50px;
-    margin-top: -850px;
+    bottom: 35%; 
+    width: 55%; 
 }
+
+/* .texto-inicio {
+    text-align: right;
+    position: absolute;
+    right: 50px;
+    margin-top: -850px;
+} */
 
 .texto-inicio h1 {
     font-size: 60px;
