@@ -1,22 +1,20 @@
 {% extends 'core/base.html' %}
 {% block contenido %}
-<div class="container">
+<div class="container-cursos">
     <div class="row">
-{% for c in cur %}
-        <div class="col-md-6 col-12">
-            <div class="col-4">
-                <div class="card my-3" style="width: 15rem;">
-                        <img class="card-img-top" src="{{ c.image.url }}" alt="Card image cap">
-                        <div class="card-body">
-                        <h5 class="card-title">{{ c.titulo }}</h5>      
-                        <a href="{% url 'informacion_curso' c.id %}" class="btn btn-primary">
+        {% for c in cur %}
+            <div class="col-md-4">
+                <div class="card my-3">
+                    <img class="card-img-top" src="{{ c.image.url }}" alt="Card image cap">
+                    <div class="card-body text-center">
+                        <p class="card-title">{{ c.titulo }}</p>
+                        <a href="{% url 'informacion_curso' c.id %}" class="btn btn-primary-cursos">
                             <i class="fa-solid fa-circle-plus"></i> Información
-                        </a>                    
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-{% endfor %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

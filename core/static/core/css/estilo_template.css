@@ -12437,11 +12437,6 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
-aside,
-section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
 
 .app-badge {
   height: 3rem;

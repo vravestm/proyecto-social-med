@@ -496,72 +496,6 @@ footer {
 /*-- FIN PERFIL DE USUARIO --*/
 
 
-/*-- CONTENIDO DE INICIO --*/
-.pagina-inicio {
-    height: 100vh;
-    background-image: url('../img/inicio.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: 68px;
-}
-
-.fondo {
-    text-align: right;
-    position: absolute;
-    right: 50px;
-    margin-top: -250px;
-}
-
-.fondo h1 {
-    font-size: 60px;
-    font-family: 'Glacial Indifference', sans-serif;
-    color: var(--naranja_principal);
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.fondo h5 {
-    font-size: 24px;
-    color: var(--verde-principal);
-    font-family: 'Glacial Indifference', sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.descripcion {
-    text-align: left;
-    color: var(--texto-primario);
-    max-width: 680px;
-    margin-left: 140px;
-    text-align: justify;
-}
-
-.btn-inscripcion {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: var(--naranja_principal);
-    color: var(--navbar);
-    text-decoration: none;
-    border-radius: 25px;
-    text-transform: uppercase;
-    font-family: 'Glacial Indifference', sans-serif;
-    font-weight: bold;
-}
-
-.btn-inscripcion:hover {
-    background-color: var(--verde-principal);
-    color: var(--navbar);
-}
-
-/* FIN PAGINA DE INICIO */
-
-
 /*** INICIO CSS OLVIDAR_CONTRASENA***/
 /**/
 
@@ -1184,64 +1118,6 @@ footer {
 
 /* ****** FIN CSS FORM_REGISTER ******* */
 
-/* INICIO CONTACTO */
-.contenedor-flex {
-    display: flex;
-    padding: 40px;
-
-}
-
-#container1 {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 30px;
-}
-
-#container1 h1 {
-    color: var(--naranja_principal);
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-#container2 {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.col-md-6 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.btnContact {
-    margin-top: 10px;
-    margin-left: auto;
-    background-color: var(--naranja_principal);
-    color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    display: block;
-}
-
-.form-group {
-    margin-bottom: 1rem;
-    width: 350px;
-}
-
-#container2 input[type="text"],
-#container2 textarea {
-    border-color: var(--verde-principal);
-    border-radius: 15px;
-    padding: 8px;
-}
-
-/* FIN PAGINA DE CONTACTO */
 
 /*   FIN FORMULARIO REGISTRO  */
 
@@ -1254,113 +1130,194 @@ footer {
 
 /* INICIO CSS COMENTARIOS */
 
+/* INICIO CURSOS */
+.container-cursos {
+    justify-content: space-around;
+    margin: 0 auto; 
+    max-width: 1200px; 
+    padding-top: 5rem;
+    align-items: center;
+}
 
-/* INICIO CURSOS*/
-/* .container {
-    display:flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-} */
-
-
-
-
-
-/* INICIO CURSOS*/
-/* .container {
-    display:flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-} */
-
-
-.container .card {
+.container-cursos .card {
     border: 2px solid var(--naranja_principal);
     border-radius: 15px;
-    margin-bottom: 20px;
+    width: 250px; 
+    margin: 15px; 
 }
 
-.container .card-img-top {
+.container-cursos .card-img-top {
     max-width: 100%;
     height: auto;
-    display: block;
+    border-radius: 25px; 
     padding: 15px;
-    border-radius: 30px;
 }
 
-.btn-primary {
+.card-body .card-title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.container-cursos .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}
+
+.btn-primary-cursos {
     color: #ffffff;
     background-color: var(--naranja_principal);
     border-color: var(--naranja_principal);
     text-transform: uppercase;
     font-weight: bold;
-    justify-content: center;
-
+    margin-top: 15px; /* Espaciado superior */
+    border-radius: 10px;
 }
 
-.btn-primary:hover {
+.btn-primary-cursos:hover {
     background-color: var(--verde-principal);
-    border-color: var(--verde-principal);
-
+    color: #ffffff;
 }
+/* FIN CURSOS */
 
-/* FIN CURSOS*/
+
+
+
 
 /* INICIO CONTACTO */
 .contenedor-flex {
     display: flex;
-    padding: 40px;
-
+    padding: 90px;
+    justify-content: space-around;
+    padding-top: 11.5rem;
 }
 
-#container1 {
-    flex: 1;
+  
+#container-contacto {
     background-color: #ffffff;
     padding: 30px;
 }
-
-#container1 h1 {
+  
+#container-contacto h1 {
     color: var(--naranja_principal);
     font-weight: bold;
     text-transform: uppercase;
 }
-
-#container2 {
-    flex: 1;
+  
+#container-secundario-contacto {
     background-color: #ffffff;
-    padding: 40px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; 
 }
 
 .col-md-6 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; 
+    padding-right: 80px;
 }
 
 .btnContact {
-    margin-top: 10px;
-    margin-left: auto;
     background-color: var(--naranja_principal);
+    color: var(--navbar);
     color: #ffffff;
+    margin-left: auto; 
     border: none;
-    border-radius: 20px;
     cursor: pointer;
     display: block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
 }
-
+  
 .form-group {
     margin-bottom: 1rem;
     width: 350px;
 }
-
-#container2 input[type="text"],
-#container2 textarea {
+  
+#container-secundario-contacto input[type="text"],
+#container-secundario-contacto textarea {
     border-color: var(--verde-principal);
+    border-width: 2px;
     border-radius: 15px;
     padding: 8px;
 }
-
 /* FIN PAGINA DE CONTACTO */
+
+
+
+
+/*-- CONTENIDO DE INICIO --*/
+.fondo-inicio{
+    height: 130vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 68px;
+    position: relative;
+    filter: blur(5px);
+
+}
+
+.texto-inicio {
+    text-align: right;
+    position: absolute;
+    right: 50px;
+    margin-top: -850px;
+}
+
+.texto-inicio h1 {
+    font-size: 60px;
+    font-family: 'Glacial Indifference', sans-serif;
+    color: var(--naranja_principal);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.texto-inicio h5 {
+    font-size: 24px;
+    color: var(--verde-principal);
+    font-family: 'Glacial Indifference', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.descripcion {
+    text-align: left;
+    color: var(--texto-primario);
+    max-width: 680px;
+    margin-left: 140px;
+    text-align: justify;
+}
+
+.btn-inscripcion {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--naranja_principal);
+    color: var(--navbar);
+    text-decoration: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
+}
+
+.btn-inscripcion:hover {
+    background-color: var(--verde-principal);
+    color: var(--navbar);
+}
+/* FIN PAGINA DE INICIO */
+
+

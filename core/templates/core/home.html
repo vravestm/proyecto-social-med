@@ -1,9 +1,12 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
 {% block contenido %}
-
-<div class="pagina-inicio">
-    <div class="fondo">
+<div >
+    <div class="fondo-inicio">
+        <img src="{% static 'core/img/fondo_inicio.jpg' %}" alt="Tu Imagen" class="img-fluid">
+    </div>
+    <div class="texto-inicio">
         <h1>Trabajo social clínico</h1>
         <h5>Aprende, practica y avanza en tu desarrollo profesional</h5>
         <div class="descripcion">
@@ -11,10 +14,8 @@
             Así, desde T-Social | Med, queremos acompañarte en el aprendizaje a través de casos y formación práctica.</p>
         </div>
 
-        <!-- Botón de registro -->
-        <a href="{% url 'users:form_registro'%}"    class="btn btn-inscripcion">Registrarse</a>
+        
+        <a href="/inscripcion/" class="btn btn-inscripcion">Registrarse</a>
     </div>
 </div>
-
-<!-- <p>holamundo</p> -->
 {% endblock %}
