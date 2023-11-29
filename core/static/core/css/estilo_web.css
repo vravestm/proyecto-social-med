@@ -46,7 +46,10 @@
 .sub_menu {
     background-color: var(--navbar);
     width: 150px !important;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
 }
+
 
 /*-- FIN NAV BAR --*/
 
@@ -56,6 +59,7 @@
 
 .user-button {
     margin-left: 20px;
+    text-decoration: none !important;
 }
 
 .rounded-button {
@@ -67,6 +71,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    text-decoration: none !important;
 }
 
 .user-icon {
@@ -74,11 +79,13 @@
     text-decoration: none;
     color: #fff;
     font-size: 30px;
+    text-decoration: none !important;
 }
 
 .img_usuario {
     width: 30px;
     height: 30px;
+    text-decoration: none !important;
 }
 
 .text-inicio-sesion {
@@ -755,63 +762,18 @@ footer {
     display: none;
 }
 
-/* ajustes adicionales*/
-
-.card_imagen {
-    width: 100%;
-    border-radius: 59% 41% 39% 61% / 61% 50% 50% 39%;
-}
-
-.col-md-5 {
-    font-family: 'League Spartan', sans-serif;
-    color: var(--verde-principal);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    row-gap: 1px;
-}
-
-.display-5, h1{
-    font-size: 2rem;
-    text-align: right;
-}
-
-.capsula {
-    margin-bottom: 10px;
-    border-radius: 10px;
-    text-align: right;
-    border: 1px solid var(--naranja_principal);
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;
-}
-
-.contenido-desplegable{
-    display: none;
-    text-align: left;
-}
-
-.d-flex-inscribirme{
-    text-align: right;
-}
-
-
 /* FIN CSS INFORMACION_CURSO */
 
 /*               DOCENTES              */
 
-/* contenedor G Gema */
+/*DOCENTE GEMA*/
+
+/* contenedor G */
 .containerG {
     display: flex;
     width: 100%;
 }
-/* contenedor A Alicia */
-.containerA {
-    margin-top: 70px;
-    display: flex;
-    width: 100%;
 
-}
 
 /* contenedor izquierdo */
 .left-g {
@@ -820,33 +782,15 @@ footer {
     text-align: center;
 }
 
-.left-A {
-    flex: 1;
-    padding: 20px;
-    position: relative;
-    margin-left: 30px;
-
-}
 /* contenedor derecho*/
 .right-g {
     flex: 1;
     padding: 30px;
     margin-left: 10px;
 }
-.right-A {
-    flex: 0 0 40%;
-    padding: 20px;
-    text-align: center;
 
-}
 /* imagen*/
-.profile-image-G {
-    width: 75%;
-    height: 400px;
-    border-radius: 63% 40% 52% 48% / 65% 57% 43% 35%;
-    margin-top: 60px;
-}
-.profile-image-A {
+.profile-image {
     width: 75%;
     height: 400px;
     border-radius: 37% 63% 52% 48% / 65% 57% 43% 35%;
@@ -859,15 +803,8 @@ footer {
     font-style: italic;
     text-align: center;
     color: #000000;
+    font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-}
-.right-A .texto_frase {
-    margin-top: 20px;
-    font-style: italic;
-    text-align: center;
-    color: #000000;
-    font-family: 'Montserrat', sans-serif;
-
 }
 
 /*enlace LinkedIn */
@@ -891,30 +828,19 @@ footer {
 }
 
 .titulo_nombre {
-    font-size: 2.5rem; 
-    color: #F1862A; 
-    font-family: 'League Spartan', sans-serif; 
+    font-size: 2.5rem;
+    color: #F1862A;
+    font-family: 'League Spartan', sans-serif;
 }
 
-/* Texto 1 docentes*/
 .texto_1_docente {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     margin: 0px 70px 15px 0px;
-    color: #000000;
+
     text-align: justify;
 }
 
-.section-A1 .texto_1_docente {
-    font-size: 1rem;
-    line-height: 1.5;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px 130px 15px 0px;
-    color: #000000;
-    text-align: justify;
-}
-
-/* Titulo fundadora*/
 
 .titulo_fundadora {
     font-size: 1.2rem;
@@ -922,76 +848,150 @@ footer {
     font-family: 'League Spartan', sans-serif;
 }
 
-/* Titulo Sobre_mi*/
+/* sección 2 parte derecha */
 .titulo_sobre_mi {
     font-family: 'League Spartan', sans-serif;
     font-size: 1.4rem;
     margin-top: 40px;
     color: #146448;
 }
-/* Titulo 2 Docentes */
 
 .texto_2_docente {
     font-size: 1rem;
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
     margin: 0px 30px 10px 0px;
-    color: #000000;
     text-align: justify;
 
 }
-.section-A .texto_2_docente {
-    font-size: 1rem;
-    line-height: 1.5;
-    font-family: 'Montserrat', sans-serif;
-    color: #000000;
-    text-align: justify;
+
+
+/*DOCENTE ALICIA*/
+
+/* Estilo para el contenedor principal A */
+.containerA {
+    margin-top: 70px;
+    display: flex;
+    width: 100%;
+
 }
-/* sección 2*/
+
+/* Estilo parte izquierda  contenedor A */
+.left-A {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    margin-left: 30px;
+
+}
+
+/* Estilo parte derecha contenedor A */
+.right-A {
+    flex: 0 0 40%;
+    padding: 20px;
+    text-align: center;
+
+}
+
+/* sección 2 del contenedor A */
 .section-A {
     margin-bottom: 20px;
 }
 
-/* FIN CSS DOCENTES */
+/* imagen del contenedor A */
+.right-A .profile-image {
+    width: 75%;
+    height: 400px;
+    border-radius: 37% 63% 52% 48% / 65% 57% 43% 35%;
+    margin-top: 30px;
+}
 
-/* INICIO  CSS FORM_REGISTER */
+/* texto frase contenedor A */
+.right-A .texto_frase {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 
-.container__logo {
-    width: 150px;
-    height: auto;
-    margin: auto;
-    margin-top: 2%;
+}
+
+/*LinkedIn derecha contenedor A */
+.right-A .linkedin-link {
+    text-decoration: none;
+    color: #006699;
+    font-weight: bold;
+}
+
+
+/* sección 2 del contenedor A */
+.section-A {
     margin-bottom: 20px;
 }
 
-.container__prime {
-    width: 30%;
-    height: auto;
-    padding: 20px;
-    background: hsl(0, 0%, 100%);
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 3px solid #1C8962;
-    margin: auto;
-    margin-top: 7%;
+.section-A .titulo_sobre_mi {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    color: #146448;
 }
 
+.section-A1 .texto_1_docente {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px 130px 15px 0px;
+    text-align: justify;
+}
 
-.form__register {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 10px;
+.section-A .texto_2_docente {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+}
+
+/* FIN CSS DOCENTES */
+
+/* INICIO CSS COMENTARIOS */
+
+
+/* INICIO CURSOS*/
+/* .container {
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+} */
+
+
+.container .card {
+    border: 2px solid var(--naranja_principal);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.container .card-img-top {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: var(--naranja_principal);
+    border-color: var(--naranja_principal);
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: center;
+
 }
 
 .carta-icon {
     width: 29px;
     height: auto;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .form {
@@ -999,13 +999,14 @@ footer {
     flex-direction: column;
     align-items: center;
 }
+
 /* CONTAINER CLASS FORM_REGISTER */
 
 .form__register .correo {
     width: 310px;
     padding: 10px;
     outline: none;
-    border: 1px solid #1C8962; 
+    border: 1px solid #1C8962;
     border-radius: 10px;
     height: auto;
     color: #A6A6A6;
@@ -1017,37 +1018,40 @@ footer {
     width: 310px;
     padding: 10px;
     outline: none;
-    border: 1px solid #1C8962; 
+    border: 1px solid #1C8962;
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
     font-weight: bold;
 }
+
 .form__register .number {
     width: 310px;
     padding: 10px;
     outline: none;
-    border: 1px solid #1C8962; 
+    border: 1px solid #1C8962;
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
     font-weight: bold;
 }
+
 .form__register .password {
     width: 310px;
     padding: 10px;
     outline: none;
-    border: 1px solid #1C8962; 
+    border: 1px solid #1C8962;
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
     font-weight: bold;
 }
+
 .form__register .date {
     width: 310px;
     padding: 10px;
     outline: none;
-    border: 1px solid #1C8962; 
+    border: 1px solid #1C8962;
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
@@ -1056,7 +1060,7 @@ footer {
 
 /* Estilos dropdowns*/
 
-.ciudad-container #provincias{
+.ciudad-container #provincias {
     width: 310px;
     padding: 10px;
     outline: none;
@@ -1065,11 +1069,12 @@ footer {
 
 }
 
-#provincias{
+#provincias {
     color: #A6A6A6;
     font-weight: bold;
     font-family: 'Glacial Indifference', sans-serif;
 }
+
 .ocupacion-container #profesiones {
     width: 310px;
     padding: 10px;
@@ -1091,132 +1096,13 @@ footer {
 
 .user-container {
     display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
-    
-}
-.nombre-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
-}
-.apellido-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
-}
-.nacimiento-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
-}
-.contraseña-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
-}
-
-.correo-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
-}
-
-.telefono-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 30px;
-}
-
-.ciudad-container {
-    display: flex;
     align-items: center;
     margin-right: 0px;
     margin-bottom: 30px;
-}
-
-.ocupacion-container {
-    display: flex;
-    align-items:center;
-    margin-right: 0px;
-    margin-bottom: 10px;
-}
-
-/* Textos FORM_REGISTER */
-
-.container__form p{
-    color: #A6A6A6;
-    font-size: 11px;
-    text-align: left;
-    margin-left: 30px;
-    
-}
-.container__form p1{
-    color: #A6A6A6;
-    font-size: 13px;
-    text-align: auto;
-    margin: 0.5rem;
-    
-}
-.text_register{
-    color: #A6A6A6;
-    font-size: 13px;
-    margin: 0.2rem;
-    text-align: justify;
-}
-
-/* BOTÓN ENVIAR */
-
-.myButton {
-	background-color:#F1862A;
-	border-radius:23px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:17px;
-	padding:10px 60px;
-	text-decoration:none;
-    font-family: 'League Spartan', sans-serif;
-    border: none;
-    margin: auto;
-    margin-top: 10px;
-
-}
-.myButton:hover {
-	background-color: #1C8962;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-
-/* BOTÓN VOLVER */
-
-.volver {
-    text-decoration: none;
-    color: #A6A6A6;
-    cursor: pointer;
-    padding-left: 5px;
-    background-position: left center;
-    background-size: 16px 16px; 
-    border-bottom: 2px solid transparent;
-    margin: auto;
-    margin-top: 20%;
-}
-
-.volver:hover {
-    color: #A6A6A6;
 
 }
 
-/* FIN CSS FORM_REGISTER */
+/* FIN CURSOS*/
 
 /* INICIO CONTACTO */
 .contenedor-flex {
@@ -1224,37 +1110,37 @@ footer {
     padding: 40px;
 
 }
-  
+
 #container1 {
     flex: 1;
     background-color: #ffffff;
     padding: 30px;
 }
-  
+
 #container1 h1 {
     color: var(--naranja_principal);
     font-weight: bold;
     text-transform: uppercase;
 }
-  
+
 #container2 {
     flex: 1;
     background-color: #ffffff;
     padding: 40px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .col-md-6 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .btnContact {
     margin-top: 10px;
-    margin-left: auto; 
+    margin-left: auto;
     background-color: var(--naranja_principal);
     color: #ffffff;
     border: none;
@@ -1262,66 +1148,30 @@ footer {
     cursor: pointer;
     display: block;
 }
-  
+
 .form-group {
     margin-bottom: 1rem;
     width: 350px;
 }
-  
+
 #container2 input[type="text"],
 #container2 textarea {
     border-color: var(--verde-principal);
     border-radius: 15px;
     padding: 8px;
 }
+
 /* FIN PAGINA DE CONTACTO */
+
+/*   FIN FORMULARIO REGISTRO  */
 
 
 
 /* INICIO CSS COMENTARIOS */
 
-.comment-title h1 {
-    font-size: 200%;
-    text-align:center;
-    color: var(--verde-principal);
-}
-
-.informacion-curso{
-    border: 2px solid var(--verde-principal); 
-    border-radius: 10px;
-    font-family: 'League Spartan', sans-serif;
-}
-
-.calificacion-title {
-    color: black;
-}
-
-.stars {
-    margin-right: 80%; 
-    margin-bottom: 0.5%;
-}
-
-.form-check {
-    text-align: left; 
-    color: black;
-}
-
-.custom-btn {
-    background-color: var(--naranja_principal); 
-    border-radius: 2.3em; 
-    border: none;
-}
-
-.published_by {
-    text-align: left; 
-    color: black;
-}
-
-.volver-info-curso-btn {
-    border-radius: 10px; 
-    font-family: 'League Spartan', sans-serif;
-}
 /* FIN CSS COMENTARIOS */
+
+
 
 
 /* INICIO CURSOS*/
@@ -1333,7 +1183,7 @@ footer {
 
 
 .container .card {
-    border: 2px solid var(--naranja_principal); 
+    border: 2px solid var(--naranja_principal);
     border-radius: 15px;
     margin-bottom: 20px;
 }
@@ -1342,11 +1192,11 @@ footer {
     max-width: 100%;
     height: auto;
     display: block;
-    padding: 15px; 
+    padding: 15px;
     border-radius: 30px;
 }
 
-.btn-primary{
+.btn-primary {
     color: #ffffff;
     background-color: var(--naranja_principal);
     border-color: var(--naranja_principal);
@@ -1356,46 +1206,13 @@ footer {
 
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     background-color: var(--verde-principal);
     border-color: var(--verde-principal);
-    
+
 }
 
 /* FIN CURSOS*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* INICIO CONTACTO */
 .contenedor-flex {
@@ -1403,37 +1220,37 @@ footer {
     padding: 40px;
 
 }
-  
+
 #container1 {
     flex: 1;
     background-color: #ffffff;
     padding: 30px;
 }
-  
+
 #container1 h1 {
     color: var(--naranja_principal);
     font-weight: bold;
     text-transform: uppercase;
 }
-  
+
 #container2 {
     flex: 1;
     background-color: #ffffff;
     padding: 40px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .col-md-6 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .btnContact {
     margin-top: 10px;
-    margin-left: auto; 
+    margin-left: auto;
     background-color: var(--naranja_principal);
     color: #ffffff;
     border: none;
@@ -1441,16 +1258,17 @@ footer {
     cursor: pointer;
     display: block;
 }
-  
+
 .form-group {
     margin-bottom: 1rem;
     width: 350px;
 }
-  
+
 #container2 input[type="text"],
 #container2 textarea {
     border-color: var(--verde-principal);
     border-radius: 15px;
     padding: 8px;
 }
+
 /* FIN PAGINA DE CONTACTO */

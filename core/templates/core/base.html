@@ -94,13 +94,14 @@
                     </button>
                     <ul class="dropdown-menu mask-custom" aria-labelledby="userDropdown">
 
-                        <li><a class="dropdown-item nav-link-2" href="{% url 'users:logout' %}">Cerrar
-                                Sesión</a></li>
+                        <li><a class="dropdown-item nav-link-2" href="{% url 'users:perfil_usuario' %}">Perfil de
+                                usuario</a></li>
+                        <li><a class="dropdown-item nav-link-2" href="{% url 'users:logout' %}">Cerrar Sesión</a></li>
                     </ul>
                 </div>
                 {% else %}
                 <!-- Botón de inicio de sesión para usuarios no autenticados -->
-                <a href="/inicio_sesion/">
+                <a href="{% url 'users:inicio_sesion' %}">
                     <button class="rounded-button orange-button">
                         <i class="fas fa-circle-user user-icon"></i>
                         <p class="text-inicio-sesion">Iniciar Sesión</p>
