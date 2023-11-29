@@ -7,45 +7,45 @@
     <div class="container px-4 px-lg-5 my-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-md-6">
-                <img class="card_imagen mb-5 mb-md-0" src="{% static 'core/img/gestion.png' %}" alt="..."/>
+                <img class="card-img-top mb-5 mb-md-0" src="{% static 'core/img/gestion.png' %}" alt="..." style="width: 110%; margin-left: -10%;border-radius:59% 41% 39% 61% / 61% 50% 50% 39%;"/>
             </div>
-            <div class="col-md-5">
-                <h1 class="display-5 fw-bolder">{{ object }}</h1>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder" style="font-size: 2rem;text-align: right;">{{ object }}</h1>
                 
-                <div class="capsula" onclick="toggleDesplegable('capsula1')">
+                <div class="capsula" onclick="toggleDesplegable('capsula1')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #F1862A;padding: 10px;width: 100%;cursor: pointer;">
                     PRESENTACIÓN DEL CURSO
-                    <div class="contenido-desplegable" id="capsula1">
+                    <div class="contenido-desplegable" id="capsula1" style="display: none;text-align: left;">
                       <p>{{object.presentacion}}</p>
                     </div>
                 </div>
 
-                <div class="capsula" onclick="toggleDesplegable('capsula2')">
+                <div class="capsula" onclick="toggleDesplegable('capsula2')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #F1862A;padding: 10px;width: 100%;cursor: pointer;">
                     COMPETENCIAS QUE VAS A ADQUIRIR
-                    <div class="contenido-desplegable" id="capsula2">
+                    <div class="contenido-desplegable" id="capsula2" style="display: none;text-align: left;">
                       <p>
                         {{object.competencias}}
                     </div>
                 </div>
 
-                <div class="capsula" onclick="toggleDesplegable('capsula3')">
+                <div class="capsula" onclick="toggleDesplegable('capsula3')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #F1862A;padding: 10px;width: 100%;cursor: pointer;">
                     OBJETIVOS
-                    <div class="contenido-desplegable" id="capsula3">
+                    <div class="contenido-desplegable" id="capsula3" style="display: none;text-align: left;">
                         <p>
                             {{object.objetivos}}
                         </p>
                     </div>
                 </div>
 
-                <div class="capsula" onclick="toggleDesplegable('capsula4')">
+                <div class="capsula" onclick="toggleDesplegable('capsula4')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #F1862A;padding: 10px;width: 100%;cursor: pointer;">
                     DIRIGIDO A
-                    <div class="contenido-desplegable" id="capsula4">
+                    <div class="contenido-desplegable" id="capsula4" style="display: none;text-align: left;">
                       <p>{{object.dirigido}}</p>
                     </div>
                 </div>
 
-                <div class="capsula" onclick="toggleDesplegable('capsula5')">
+                <div class="capsula" onclick="toggleDesplegable('capsula5')" style="margin-bottom: 10px;border-radius: 10px;text-align: right;border: 1px solid #F1862A;padding: 10px;width: 100%;cursor: pointer;">
                     MODALIDAD, DURACIÓN Y PRECIO
-                    <div class="contenido-desplegable" id="capsula5">
+                    <div class="contenido-desplegable" id="capsula5" style="display: none;text-align: left;">
                         <p>
                             <li>
                                 {{object.mod_dur_valor}}
@@ -54,7 +54,7 @@
                     </div>
                 </div>
 
-                <div class="d-flex-inscribirme">
+                <div class="d-flex" style="text-align: right;">
                     <a href="/confirmacion_curso?valor={{object.id}}">
                         <button class="btn btn-outline-dark flex-shrink-0" type="button"  >
                             INSCRIBIRME
@@ -69,15 +69,15 @@
 
 <section>
     <div class="col-md-6">
-        <h1 class="display-5 fw-bolder" style="font-size: 2rem;text-align:center;margin-left: 13%;">COMENTARIOS</h1>
+        <h1 class="display-5 fw-bolder" style="font-size: 2rem;text-align:left;margin-left: 13%;">COMENTARIOS</h1>
     </div>
     <div class="container mt-5">
 
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-6 mx-auto">
         
                 <div class="cards">
-                    <div class="card-body" style="border: 2px solid #146448; border-radius: 10px;font-family: 'League Spartan', sans-serif;">
+                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
 
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <h5 class="card-title mb-0" style="color: black;">Calificar</h5>
@@ -99,13 +99,12 @@
                         </div>
 
                         <div class="form-group mt-2">
-                            <textarea class="form-control custom-textarea" id="comentario" rows="3" maxlength="150" placeholder="Ingrese su comentario..."></textarea>
+                            <textarea class="form-control" id="comentario" rows="3" maxlength="150" placeholder="Ingrese su comentario..."></textarea>
                             <small class="text-muted" id="contadorCaracteres">0/150</small>
                         </div>
 
-                        <button class="btn btn-primary custom-btn" href="" onclick="publicarComentario()" style="background-color: #F1862A; border-radius: 2.3em; border: none;">
-                            PUBLICAR
-                        </button>        
+                        <button class="btn btn-primary" href="" onclick="publicarComentario()" style="background-color: #F1862A; border-radius: 2.3em;; border: none; width: 15%;">PUBLICAR</button>
+            
                     </div>
                 </div>
             </div>
@@ -114,10 +113,10 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-6 mx-auto">
         
                 <div class="cards">
-                    <div class="card-body"  style="border: 2px solid #146448; border-radius: 10px;font-family: 'League Spartan', sans-serif;">
+                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
             
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <h5 class="card-title mb-0" style="color: black;">Calificación</h5>
@@ -148,10 +147,10 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-6 mx-auto">
         
                 <div class="cards">
-                    <div class="card-body"  style="border: 2px solid #146448; border-radius: 10px;font-family: 'League Spartan', sans-serif;">
+                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
             
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <h5 class="card-title mb-0" style="color: black;">Calificación</h5>
