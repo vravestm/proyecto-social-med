@@ -7,7 +7,7 @@
         <div>
             <div class="contact-form-wrapper d-flex justify-content-center">
 
-                <form method="post" accept-charset="utf-8" action="" class="contact-form">
+                <form method="post" accept-charset="utf-8" action="{% url 'users:login' %}" class="contact-form">
                     {% csrf_token %}
 
                     <div class="contenedor_contacto">
@@ -16,15 +16,19 @@
                         </div>
                         <div>
                             <i class="fa-solid fa-user icon_is"></i>
-                            <input type="text" class="txt_box input_is" id="name" placeholder="Usuario" required>
+                            <input type="text" name="email" class="txt_box input_is" placeholder="Usuario" required>
                         </div>
                         <div>
                             <i class="fa-solid fa-lock icon_is"></i>
-                            <input type="password" class="txt_box input_is" placeholder="Contraseña" required>
+                            <input type="password" name="password" class="txt_box input_is" placeholder="Contraseña" required>
                         </div>
+                
                         <div class="contenedor_boton">
                             <input type="submit" value="ACCEDER" class="btn_ingresar">
                         </div>
+
+
+
                         <div class="contendor_txt_sub">
                             <span class="txt_is">¿Es la primera vez que usas T-Social Med?</span>
                         </div>
