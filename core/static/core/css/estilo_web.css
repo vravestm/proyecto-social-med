@@ -194,6 +194,8 @@ footer {
     max-width: 800px;
     display: flex;
     flex-direction: row;
+    height: 470px;
+    margin-top: 40px;
 }
 
 .txt_box {
