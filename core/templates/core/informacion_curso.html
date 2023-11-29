@@ -69,7 +69,7 @@
 
 <section>
     <div class="col-md-6">
-        <h1 class="display-5 fw-bolder" style="font-size: 2rem;text-align:left;margin-left: 13%;">COMENTARIOS</h1>
+        <h1 class="display-5 fw-bolder" style="font-size: 2rem;text-align:center;margin-left: 13%;">COMENTARIOS</h1>
     </div>
     <div class="container mt-5">
 
@@ -77,12 +77,12 @@
             <div class="col-md-6 mx-auto">
         
                 <div class="cards">
-                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
+                    <div class="card-body" style="border: 2px solid #146448; border-radius: 10px;font-family: 'League Spartan', sans-serif;">
 
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h5 class="card-title mb-0" style="color: black;">Calificar</h5>
+                            <h5 class="card-title mb-0 calificacion-title">Calificar</h5>
         
-                            <div class="d-flex align-items-center" style="margin-right: 80%; margin-bottom: 0.5%;">
+                            <div class="d-flex align-items-center stars">
                                 <i class="fas fa-star mr-1 text-warning mr-1"></i>
                                 <i class="fas fa-star mr-1 text-warning mr-1"></i>
                                 <i class="fas fa-star mr-1 text-warning mr-1"></i>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
 
-                        <div class="form-check" style="text-align: left; color: black;">
+                        <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="publicarNombre">
                             <label class="form-check-label" for="publicarNombre">
                                 ¿Desea publicar su nombre?
@@ -103,8 +103,9 @@
                             <small class="text-muted" id="contadorCaracteres">0/150</small>
                         </div>
 
-                        <button class="btn btn-primary" href="" onclick="publicarComentario()" style="background-color: #F1862A; border-radius: 2.3em;; border: none; width: 15%;">PUBLICAR</button>
-            
+                        <button class="btn btn-primary custom-btn" href="" onclick="publicarComentario()" style="background-color: #F1862A; border-radius: 2.3em; border: none;">
+                            PUBLICAR
+                        </button>        
                     </div>
                 </div>
             </div>
@@ -116,12 +117,12 @@
             <div class="col-md-6 mx-auto">
         
                 <div class="cards">
-                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
+                    <div class="card-body"  style="border: 2px solid #146448; border-radius: 10px;font-family: 'League Spartan', sans-serif;">
             
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h5 class="card-title mb-0" style="color: black;">Calificación</h5>
+                            <h5 class="card-title mb-0 calificacion-title">Calificación</h5>
         
-                            <div class="d-flex align-items-center" style="margin-right:77%; margin-bottom: 0.5%;">
+                            <div class="d-flex align-items-center stars">
                                 <i class="fas fa-star mr-1 text-warning mr-1" data-rating="1"></i>
                                 <i class="fas fa-star mr-1 text-warning mr-1" data-rating="2"></i>
                                 <i class="fas fa-star mr-1 text-warning mr-1" data-rating="3"></i>
@@ -130,7 +131,7 @@
                             </div>
                         </div>
 
-                        <div class="published_by" style="text-align: left; color: black;">
+                        <div class="published_by">
                             <p>Publicado por:</p>
                         </div>
 
@@ -150,12 +151,12 @@
             <div class="col-md-6 mx-auto">
         
                 <div class="cards">
-                    <div class="card-body"  style="width: 180%; margin-left: -56%; border: 2px solid #146448; border-radius: 10px;">
+                    <div class="card-body"  style="border: 2px solid #146448; border-radius: 10px;font-family: 'League Spartan', sans-serif;">
             
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h5 class="card-title mb-0" style="color: black;">Calificación</h5>
+                            <h5 class="card-title mb-0 calificacion-title">Calificación</h5>
         
-                            <div class="d-flex align-items-center" style="margin-right: 77%; margin-bottom: 0.5%;">
+                            <div class="d-flex align-items-center stars">
                                 <i class="fas fa-star mr-1 text-warning mr-1"></i>
                                 <i class="fas fa-star mr-1 text-warning mr-1"></i>
                                 <i class="fas fa-star mr-1 text-warning mr-1"></i>
@@ -164,7 +165,7 @@
                             </div>
                         </div>
 
-                        <div class="published_by" style="text-align: left; color: black;">
+                        <div class="published_by">
                             <p>Publicado por:</p>
                         </div>
 
@@ -182,66 +183,14 @@
 </section>
 
 <div class="d-flex justify-content-center mt-3">
-    <a href="/" class="btn btn-outline-dark" style="border-radius: 10px; font-family: 'League Spartan', sans-serif;">
+    <a href="/" class="btn btn-outline-dark volver-info-curso-btn">
         <i class="fas fa-arrow-left mr-1"></i>VOLVER
     </a>
 </div>
 
-
-
-
-
-
-
-
-
-<script>
- 
-    function toggleDesplegable(id) {
-    var desplegable = document.getElementById(id);
-
-    // Cerrar todas las capsulas antes de abrir la actual
-    var capsulas = document.querySelectorAll('.contenido-desplegable');
-    capsulas.forEach(function(capsula) {
-      if (capsula.id !== id) {
-        capsula.style.display = 'none';
-      }
-    });
-
-    // Toggle para abrir/cerrar la capsula actual
-    desplegable.style.display = (desplegable.style.display === 'none') ? 'block' : 'none';
-
-    // Revertir estilos al hacer clic
-    desplegable.classList.remove('capsula-clicked');
-    setTimeout(function() {
-      desplegable.classList.add('capsula-clicked');
-    }, 10);
-  }
-
-  // Contador de caracteres
-  var textarea = document.getElementById('comentario');
-    var contador = document.getElementById('contadorCaracteres');
-
-    textarea.addEventListener('input', function () {
-        var conteo = textarea.value.length;
-        contador.innerText = conteo + '/150';
-    });
-
-    function publicarComentario() {
-        var comentario = textarea.value;
-        var publicarNombre = document.getElementById('publicarNombre').checked;
-
-        console.log('Comentario:', comentario);
-        console.log('¿Publicar Nombre?', publicarNombre);
-    }
-
-</script>
-
+<script src="{% static 'core/js/informacion_curso.js' %}"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
 
 {% endblock %}

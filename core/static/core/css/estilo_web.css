@@ -716,6 +716,10 @@ footer {
     text-decoration: underline;
 }
 
+.space_password {
+    padding: 10%;
+}
+
 /* FIN BOTÓN VOLVER */
 
 /**/
@@ -1166,6 +1170,10 @@ footer {
 
 
 /* INICIO CSS COMENTARIOS */
+
+/* FIN CSS COMENTARIOS */
+
+
 
 
 /* INICIO CURSOS*/
