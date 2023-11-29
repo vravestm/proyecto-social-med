@@ -1125,6 +1125,49 @@ footer {
 
 /* INICIO CSS COMENTARIOS */
 
+.comment-title h1 {
+    font-size: 200%;
+    text-align:center;
+    color: var(--verde-principal);
+    margin-top: 5%;
+}
+
+.informacion-curso{
+    border: 2px solid var(--verde-principal); 
+    border-radius: 10px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.calificacion-title{
+    color: black;
+    overflow: visible;
+}
+
+.stars {
+    margin-right: 80%; 
+    margin-bottom: 0.5%;
+}
+
+.form-check {
+    text-align: left; 
+    color: black;
+}
+
+.custom-btn {
+    background-color: var(--naranja_principal); 
+    border-radius: 2.3em; 
+    border: none;
+}
+
+.published_by {
+    text-align: left; 
+    color: black;
+}
+
+.volver-info-curso-btn {
+    border-radius: 10px; 
+    font-family: 'League Spartan', sans-serif;
+}
 /* FIN CSS COMENTARIOS */
 
 
@@ -1154,7 +1197,7 @@ footer {
 }
 
 .card-body .card-title {
-    overflow: hidden;
+    /* overflow: hidden; */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
