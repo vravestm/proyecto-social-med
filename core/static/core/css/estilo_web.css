@@ -1467,3 +1467,14 @@ footer {
 }
 
 /* FIN PAGINA DE INICIO */
+
+
+
+.container-confirmacion-cursos{
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+}

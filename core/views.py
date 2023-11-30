@@ -1,6 +1,7 @@
 import time
 
 from django.shortcuts import render
+from django.http import HttpResponse
 from t_social_med.enviarCorreo import funcionEnviarCorreo, enviarCorreoContacto
 
 
@@ -21,6 +22,8 @@ def home(request):
 
 
 def contacto(request):
+    request.session['usuarionombre']=request.user.first_name
+    request.session['usuarioCorreo']=request.user.email
     var1 = time.time()
     return render(request, 'core/contacto.html', {'var1': var1})
 

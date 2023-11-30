@@ -5,6 +5,7 @@ from .models import Inscripcion
 
 
 def cursos(request):
+    request.session['usuario']=request.user.id 
     cur=Cursos.objects.all()
     return render(request, 'core/cursos.html',{'cur':cur})
 
