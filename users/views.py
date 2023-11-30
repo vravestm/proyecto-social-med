@@ -20,6 +20,10 @@ def perfil_usuario(request):
     return render(request, 'users/perfil_usuario.html', {'var1': var1})
 
 
+def registro(request):
+    var1 = time.time()
+    return render(request, 'users/form_registro.html', {'var1': var1})
+
 def login_view(request):
     login_form = UserLoginForm(request.POST or None)
 
@@ -51,6 +55,11 @@ def login_view(request):
 
 
 def signup_view(request):
+
+    if request.method == 'GET':
+        print("entre aqui")
+        return redirect('form_registro')
+
     signup_form = UserSignUpForm(request.POST or None)
     if signup_form.is_valid():
         email = signup_form.cleaned_data.get('email')
