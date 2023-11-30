@@ -704,6 +704,40 @@ footer {
     display: none;
 }
 
+/* ajustes adicionales*/
+.card_imagen {
+    width: 100%;
+    border-radius: 59% 41% 39% 61% / 61% 50% 50% 39%;
+}
+.col-md-5 {
+    font-family: 'League Spartan', sans-serif;
+    color: var(--verde-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    row-gap: 1px;
+}
+.display-5, h1{
+    font-size: 2rem;
+    text-align: right;
+}
+.capsula {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: right;
+    border: 1px solid var(--naranja_principal);
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+.contenido-desplegable{
+    display: none;
+    text-align: left;
+}
+.d-flex-inscribirme{
+    text-align: right;
+}
+
 /* FIN CSS INFORMACION_CURSO */
 
 /*               DOCENTES              */
@@ -1155,7 +1189,6 @@ footer {
 
 .calificacion-title{
     color: black;
-    overflow: visible;
 }
 
 .stars {
@@ -1172,11 +1205,22 @@ footer {
     background-color: var(--naranja_principal); 
     border-radius: 2.3em; 
     border: none;
+    width: 17%;
 }
 
 .published_by {
     text-align: left; 
     color: black;
+    display: flex;
+    align-items: center;
+}
+
+.published_by p {
+    margin-right: 2%;
+}
+
+.publish-person p {
+    font-weight:lighter;
 }
 
 .volver-info-curso-btn {
@@ -1186,9 +1230,6 @@ footer {
     margin-bottom: 4%;
 }
 /* FIN CSS COMENTARIOS */
-
-
-/* INICIO CSS COMENTARIOS */
 
 /* INICIO CURSOS */
 .container-cursos {
