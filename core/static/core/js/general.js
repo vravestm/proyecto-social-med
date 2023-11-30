@@ -8,21 +8,21 @@ $(document).ready(function () {
 });
 
 
-$(".user-button").on("click", function () {
+$(".btn_suscribir").on("click", function () {
     Swal.fire({
-        title: "Desea modificar?",
-        text: "este cambio sera irreversible",
+        title: "¿Desea inscribirse a este curso?",
+        text: "",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
+        confirmButtonColor: "#186A3B",
         cancelButtonColor: "#d33",
         confirmButtonText: "CONFIRMAR"
     }).then((result) => {
         if (result.isConfirmed) {
             //AQUI PONER LA FUNCION JS PARA SUBIR INFORMACION
             Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
+                title: "Inscrito!",
+                text: "Te haz inscrito correctamente.",
                 icon: "success"
             });
         }
