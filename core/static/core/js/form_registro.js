@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("{% static 'core/img/provincias.json' %}")
+    fetch("/static/core/data/provincias.json")
         .then(function(response) {
             return response.json();
         })
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("{% static 'core/img/profesiones.json' %}")
+    fetch("/static/core/data/profesiones.json")
         .then(function(response) {
             return response.json();
         })
