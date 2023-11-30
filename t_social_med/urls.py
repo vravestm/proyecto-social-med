@@ -4,9 +4,8 @@ from core import views as core_views
 from cursos import views as cursos_views
 from talleres import views as talleres_views
 from prevencion import views as prevencion_views
-
 from cursos.views import Detalle
-
+from users.views import inicio_sesion
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,6 +25,7 @@ urlpatterns = [
          name='confirmacion_curso'),
     path('enviar_correo_contacto/', core_views.enviar_correo_contacto,
          name='enviar_correo_contacto'),
+    path('inicio_sesion/', inicio_sesion, name='inicio_sesion'),
     path('admin/', admin.site.urls),
 
 

@@ -174,3 +174,6 @@ t_social_med/_pycache_/
 cursos/_pycache_
 prevencion/_pycache_/
 
+*.pyc
+prevencion/migrations/__pycache__/__init__.cpython-311.pyc
+cursos/migrations/__pycache__/__init__.cpython-311.pyc

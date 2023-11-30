@@ -22,10 +22,17 @@ def perfil_usuario(request):
 
 def login_view(request):
     login_form = UserLoginForm(request.POST or None)
+
+    if request.method == 'GET':
+        print("entre aqui")
+        return redirect('inicio_sesion')
+
     if login_form.is_valid():
         email = login_form.cleaned_data.get('email')
         password = login_form.cleaned_data.get('password')
+        print(email)
         user = authenticate(request, email=email, password=password)
+        print(user)
         print("fin logn 1")
         if user is not None:
             login(request, user)
@@ -36,7 +43,7 @@ def login_view(request):
         else:
             messages.warning(
                 request, 'Correo electrónico o contraseña invalida')
-            return redirect('Home')
+            return redirect('inicio_sesion')
     else:
         messages.error(request, 'Formulario invalido')
         print("entre home 1")

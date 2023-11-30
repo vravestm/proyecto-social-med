@@ -101,7 +101,7 @@
                 </div>
                 {% else %}
                 <!-- Botón de inicio de sesión para usuarios no autenticados -->
-                <a href="{% url 'users:inicio_sesion' %}">
+                <a href="{% url 'users:inicio_sesion' %}" class="user-button2">
                     <button class="rounded-button orange-button">
                         <i class="fas fa-circle-user user-icon"></i>
                         <p class="text-inicio-sesion">Iniciar Sesión</p>
@@ -114,8 +114,16 @@
     </nav>
     <!-- Fin Nav Bar-->
 
+
+
     <!-- Inicio Contenido-->
     <section>
+        {% for message in messages %}
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role='alert'>
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
         {% block contenido%}{% endblock %}
     </section>
     <!-- Fin Contenido-->
@@ -138,6 +146,10 @@
             </div>
         </div>
     </footer>
+    <!-- jquery-3.7.1-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS
@@ -147,6 +159,15 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>-->
+
+    <script>
+        $(document).ready(function () {
+            // show the alert
+            $(".alert").first().hide().slideDown(500).delay(4000).slideUp(500, function () {
+                $(this).remove();
+            });
+        });
+    </script>
 </body>
 
 </html>
