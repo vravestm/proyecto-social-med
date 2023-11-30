@@ -513,6 +513,11 @@ footer {
     min-height: 100vh;
 }
 
+.forgotPassword-screen {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 .olvidaste_contrasena_txt h1 {
     font-size: 1.275rem;
     text-align: center;
@@ -705,9 +710,16 @@ footer {
 }
 
 /* ajustes adicionales*/
+
+.container-info-curso {
+    margin-top: 1%;
+    margin-left: 10%;
+}
 .card_imagen {
-    width: 100%;
+    width: 120%; /* Puedes ajustar este valor según sea necesario */
+    max-width: none;
     border-radius: 59% 41% 39% 61% / 61% 50% 50% 39%;
+    margin-left: -10%;
 }
 .col-md-5 {
     font-family: 'League Spartan', sans-serif;
