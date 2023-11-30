@@ -39,7 +39,7 @@ class Inscripcion(models.Model):
         Cursos, verbose_name="Curso", on_delete=models.CASCADE, null=False)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.curso)
 
     class Meta:
         verbose_name = "Inscripcion"
