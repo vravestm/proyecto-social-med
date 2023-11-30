@@ -67,7 +67,9 @@
                             <li><a class="dropdown-item" href="/prevencion/">Prevención</a></li>
                         </ul>
                     </li>
+                    {% if user.is_authenticated %}
                     <li class="nav-item"><a class="nav-link me-lg-3" href="/contacto/">Contacto</a></li>
+                    {% endif %}
 
                     <!-- Barra de búsqueda-->
                     <li class="nav-item">
