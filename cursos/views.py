@@ -14,11 +14,11 @@ class Detalle(DetailView): #Esta clase permite que se vea el detalle del curso p
     model = Cursos
     template_name = 'core/informacion_curso.html'
 
+
 def confirmacion(request): #Confirmacion para inscribirse dentro del curso
 
     a = request.GET.get('valor')
     v=[a]
-
 
     if request.method == 'POST':
 
