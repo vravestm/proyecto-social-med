@@ -6,6 +6,7 @@ from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 import time
+from core.models import Usuarios
 
 from .forms import UserLoginForm, UserSignUpForm
 
@@ -16,7 +17,10 @@ def inicio_sesion(request):
 
 
 def perfil_usuario(request):
+    request.session['usuarionombre']=request.user.first_name
+    request.session['usuarioap']=request.user.last_name
     var1 = time.time()
+    
     return render(request, 'users/perfil_usuario.html', {'var1': var1})
 
 

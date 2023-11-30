@@ -6,6 +6,7 @@ from t_social_med.enviarCorreo import funcionEnviarCorreo, enviarCorreoContacto
 
 def home(request):
     request.session['usuario']=request.user.id #capturamos la id del usuario que se logee en la pagina
+    
     var1 = time.time()
 
     data = {

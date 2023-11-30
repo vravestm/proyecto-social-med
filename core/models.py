@@ -25,7 +25,7 @@ class Usuarios(models.Model):
         max_length=30, verbose_name="Ocupacion", default="Ocupacion", null=False)
 
     def __str__(self):
-        return self.username
+        return str(self.username)
 
     class Meta:
         verbose_name = "Usuario"
