@@ -24,7 +24,6 @@
                 <div class="nacimiento-container">
                     <img src="{% static 'core/img/edad1.png' %}" alt="carta" class="carta-icon">
                     <input type="date" placeholder="Ingrese fecha de nacimiento" class="date" required>
-                    
                 </div>
                 <div class="correo-container">
                     <img src="{% static 'core/img/correo1.png' %}" alt="carta" class="carta-icon">
@@ -39,7 +38,14 @@
                     <img src="{% static 'core/img/telefono1.png' %}" alt="carta" class="carta-icon">
                     <input type="number" placeholder="Ingrese numero de telefono" class="number" required>
                 </div>
-
+                <div class="nacionalidad-container">
+                    <img src="{% static 'core/img/localizador1.png' %}" alt="carta" class="carta-icon">
+                    <select name="nacionalidad" id="nacionalidad" required>
+                        <option value="" disabled selected>Seleccione su nacionalidad</option>
+                        <option value="española">Española</option>
+                        <option value="extranjera">Extranjera</option>
+                    </select>
+                </div>
                 <div class="ciudad-container">
                     <img src="{% static 'core/img/localizador1.png' %}" alt="carta" class="carta-icon">
                     <div id="provinciaDropdownContainer">
@@ -57,7 +63,7 @@
                 <p class="text_register">Al registrarme acepto que T-Social Med trate mis datos personales para la gestión de la inscripción, así como enviarme información relativa a la misma y cualquier otro relacionado con acciones formativas de mi interés.</p>
                 <button class="myButton">REGISTRARSE</button>
     
-                <p1>¿Ya estás registrado?<a class="volver" href="/">Iniciar sesión</a></p1>                
+                <p1>¿Ya estás registrado?<a class="volver" href="/inicio_sesion/">Iniciar sesión</a></p1>                
         </form>
     </div>
 </div>

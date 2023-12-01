@@ -760,13 +760,14 @@ footer {
 .containerG {
     display: flex;
     width: 100%;
-    padding: 1rem;
+    padding: 5rem;
 }
 
 .containerA {
-    margin-top: 70px;
+    margin-top: 20px;
     display: flex;
     width: 100%;
+    padding-bottom: 5rem;
 }
 
 /* sección 2 del contenedor A */
@@ -805,7 +806,7 @@ footer {
 .profile-image-G {
     width: 75%;
     height: 400px;
-    border-radius: 60% 40% 52% 48% / 65% 57% 43% 35%;
+    border-radius: 63% 43% 52% 48% / 65% 57% 43% 35%;
     margin-top: 60px;
 }
 
@@ -841,6 +842,7 @@ footer {
     color: #F1862A;
     font-family: 'League Spartan', sans-serif;
     font-weight: bold;
+    text-align: left;
 }
 
 .titulo_fundadora {
@@ -931,7 +933,8 @@ footer {
     align-items: center;
     border: 3px solid #1C8962;
     margin: auto;
-    margin-top: 7%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .form__register {
@@ -965,7 +968,7 @@ footer {
     height: auto;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
-    font-weight: bold;
+
 }
 
 .form__register .text {
@@ -976,7 +979,7 @@ footer {
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
-    font-weight: bold;
+
 }
 
 .form__register .number {
@@ -987,7 +990,7 @@ footer {
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
-    font-weight: bold;
+
 }
 
 .form__register .password {
@@ -998,7 +1001,7 @@ footer {
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
-    font-weight: bold;
+
 }
 
 .form__register .date {
@@ -1009,7 +1012,7 @@ footer {
     border-radius: 10px;
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
-    font-weight: bold;
+
 }
 
 /* Estilos dropdowns*/
@@ -1023,7 +1026,6 @@ footer {
 
 #provincias {
     color: #A6A6A6;
-    font-weight: bold;
     font-family: 'Glacial Indifference', sans-serif;
 }
 
@@ -1038,7 +1040,19 @@ footer {
 #profesiones {
     color: #A6A6A6;
     font-family: 'Glacial Indifference', sans-serif;
-    font-weight: bold;
+
+}
+.nacionalidad-container #nacionalidad {
+    width: 310px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #1C8962;
+    border-radius: 10px;
+}
+
+#nacionalidad {
+    color: #A6A6A6;
+    font-family: 'Glacial Indifference', sans-serif;
 }
 
 /* CONTENEDORES FORM_REGISTER */
@@ -1068,14 +1082,7 @@ footer {
     display: flex;
     align-items: center;
     margin-right: 0px;
-    margin-bottom: 30px;
-}
-
-.contraseña-container {
-    display: flex;
-    align-items: center;
-    margin-right: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .correo-container {
@@ -1084,6 +1091,13 @@ footer {
     margin-right: 0px;
     margin-bottom: 30px;
 }
+.contraseña-container {
+    display: flex;
+    align-items: center;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
+
 
 .telefono-container {
     display: flex;
@@ -1091,7 +1105,12 @@ footer {
     margin-right: 0px;
     margin-bottom: 30px;
 }
-
+.nacionalidad-container{
+    display: flex;
+    align-items: center;
+    margin-right: 0px;
+    margin-bottom: 30px; 
+}
 .ciudad-container {
     display: flex;
     align-items: center;
@@ -1124,11 +1143,13 @@ footer {
 
 }
 
-.text_register {
+.form__register .text_register {
     color: #A6A6A6;
     font-size: 13px;
+    padding: 10px;
     margin: 0.2rem;
     text-align: justify;
+    width: 360px;
 }
 
 /* BOTÓN ENVIAR */
