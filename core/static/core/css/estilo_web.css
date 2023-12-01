@@ -191,6 +191,8 @@ footer {
 
 .contact-form-wrapper {
     padding: 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .contact-form {
@@ -1320,15 +1322,14 @@ footer {
 
 
 
-
 /* INICIO CONTACTO */
 .contenedor-flex {
     display: flex;
     padding: 90px;
     justify-content: space-around;
     padding-top: 11.5rem;
+    align-items: flex-start;
 }
-
 
 #container-contacto {
     background-color: #ffffff;
@@ -1339,6 +1340,7 @@ footer {
     color: var(--naranja_principal);
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 3rem;
 }
 
 #container-secundario-contacto {
@@ -1385,7 +1387,12 @@ footer {
     padding: 8px;
 }
 
+#container-secundario-contacto p {
+    white-space: nowrap;  
+}
+
 /* FIN PAGINA DE CONTACTO */
+
 
 
 
