@@ -21,12 +21,14 @@ def home(request):
 
     return render(request, 'core/home.html', {'var1': var1})
 
-@login_required(login_url='inicio_sesion')
+# @login_required(login_url='inicio_sesion')
 def contacto(request):
-    request.session['usuarionombre']=request.user.first_name
-    request.session['usuarioCorreo']=request.user.email
+    if request.user.is_authenticated:
+        request.session['usuarionombre'] = request.user.first_name
+        request.session['usuarioCorreo'] = request.user.email
     var1 = time.time()
     return render(request, 'core/contacto.html', {'var1': var1})
+
 
 
 def docentes(request):
