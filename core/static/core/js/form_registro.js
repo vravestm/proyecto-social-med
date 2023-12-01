@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(function(provincias) {
             let placeholder = document.getElementById("provincias");
-            let out = "<option value=''>Selecciona una ciudad</option>"; 
+            let out = "<option value='' disabled selected>Selecciona una ciudad</option>"; 
             for (let provincia of provincias) {
                 out += `<option value="${provincia.code}">${provincia.label}</option>`;
             }
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(function(ocupaciones) {
             let placeholder = document.getElementById("profesiones");
-            let out = "<option value=''>Selecciona una ocupación</option>"; 
+            let out = "<option value='' disabled selected>Selecciona una ocupación</option>"; 
             for (let ocupacion of ocupaciones.ocupaciones) {
                 out += `<option value="${ocupacion.code}">${ocupacion.label}</option>`;
             }
