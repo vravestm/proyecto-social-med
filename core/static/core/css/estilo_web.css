@@ -146,6 +146,7 @@ footer {
     width: 400px;
     padding-right: 10px !important;
     border-radius: 25px !important;
+    margin-left: 20px;
 }
 
 .color_lupa {
@@ -715,24 +716,28 @@ footer {
     margin-top: 1%;
     margin-left: 10%;
 }
+
 .card_imagen {
     width: 120%;
     max-width: none;
     border-radius: 59% 41% 39% 61% / 61% 50% 50% 39%;
     margin-left: -10%;
 }
+
 .col-md-5 {
     font-family: 'League Spartan', sans-serif;
     color: var(--verde-principal);
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     row-gap: 1px;
 }
-.display-5, h1{
+
+.display-5, h1 {
     font-size: 2rem;
     text-align: right;
 }
+
 .capsula {
     margin-bottom: 10px;
     border-radius: 10px;
@@ -742,16 +747,18 @@ footer {
     width: 100%;
     cursor: pointer;
 }
-.contenido-desplegable{
+
+.contenido-desplegable {
     display: none;
     text-align: justify;
 }
-.d-flex-inscribirme{
+
+.d-flex-inscribirme {
     text-align: right;
     width: 100%;
 }
 
-.boton1{
+.boton1 {
     width: 100%;
     text-align: right;
     border-radius: 10px;
@@ -1196,40 +1203,40 @@ footer {
 
 .comment-title h1 {
     font-size: 200%;
-    text-align:center;
+    text-align: center;
     color: var(--verde-principal);
     margin-top: 5%;
 }
 
-.informacion-curso{
-    border: 1px solid var(--verde-principal); 
+.informacion-curso {
+    border: 1px solid var(--verde-principal);
     border-radius: 10px;
     font-family: 'League Spartan', sans-serif;
 }
 
-.calificacion-title{
+.calificacion-title {
     color: black;
 }
 
 .stars {
-    margin-right: 80%; 
+    margin-right: 80%;
     margin-bottom: 0.5%;
 }
 
 .form-check {
-    text-align: left; 
+    text-align: left;
     color: black;
 }
 
 .custom-btn {
-    background-color: var(--naranja_principal); 
-    border-radius: 2.3em; 
+    background-color: var(--naranja_principal);
+    border-radius: 2.3em;
     border: none;
     width: 17%;
 }
 
 .published_by {
-    text-align: left; 
+    text-align: left;
     color: black;
     display: flex;
     align-items: center;
@@ -1240,7 +1247,7 @@ footer {
 }
 
 .publish-person p {
-    font-weight:lighter;
+    font-weight: lighter;
 }
 
 .volver-info-curso-btn {
@@ -1251,11 +1258,11 @@ footer {
     position: fixed;
     bottom: -20px;
     right: 20px;
-    padding: 15px; 
+    padding: 15px;
 }
 
 .volver-info-curso-btn i {
-    display: block; 
+    display: block;
     font-size: 19px;
 }
 
@@ -1470,7 +1477,7 @@ footer {
 
 
 
-.container-confirmacion-cursos{
+.container-confirmacion-cursos {
     min-height: 100vh;
     margin: 0;
     display: flex;
