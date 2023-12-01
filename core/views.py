@@ -1,11 +1,14 @@
 import time
 
 from django.shortcuts import render
+from django.http import HttpResponse
 from t_social_med.enviarCorreo import funcionEnviarCorreo, enviarCorreoContacto
+from django.contrib.auth.decorators import login_required
 
 
 def home(request):
     request.session['usuario']=request.user.id #capturamos la id del usuario que se logee en la pagina
+    
     var1 = time.time()
 
     data = {
@@ -18,8 +21,10 @@ def home(request):
 
     return render(request, 'core/home.html', {'var1': var1})
 
-
+@login_required(login_url='inicio_sesion')
 def contacto(request):
+    request.session['usuarionombre']=request.user.first_name
+    request.session['usuarioCorreo']=request.user.email
     var1 = time.time()
     return render(request, 'core/contacto.html', {'var1': var1})
 

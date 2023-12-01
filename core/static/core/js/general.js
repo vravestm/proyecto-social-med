@@ -8,7 +8,10 @@ $(document).ready(function () {
 });
 
 
-$(".btn_suscribir").on("click", function () {
+$(".btn_suscribir").on("click", function (event) {
+
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+
     Swal.fire({
         title: "¿Desea inscribirse a este curso?",
         text: "",
@@ -20,6 +23,7 @@ $(".btn_suscribir").on("click", function () {
     }).then((result) => {
         if (result.isConfirmed) {
             //AQUI PONER LA FUNCION JS PARA SUBIR INFORMACION
+            var url = $(this).attr("href");
             Swal.fire({
                 title: "Inscrito!",
                 text: "Te haz inscrito correctamente.",

@@ -52,12 +52,13 @@
                             <span class="txt_subtitulo">Información básica</span>
                         </div>
                     </div>
+                   
                     <div class="row form-group">
                         <div class="col-sm-3 col-xs-2 text-center2">
                             <div class=""><span class="txt_perfil">Nombre</span></div>
                         </div>
                         <div class="col-sm-8 col-xs-10">
-                            <input type="text" class="txt_box_perfil" required>
+                            <input type="text" value="{{ request.session.usuarionombre }}" class="txt_box_perfil" required>
                         </div>
                         <div class="col-sm-1 col-xs-10">
                             <i class="fa-solid fa-pen-to-square btn_modificar"></i>
@@ -69,7 +70,7 @@
                             <div class=""><span class="txt_perfil">Apellido</span></div>
                         </div>
                         <div class="col-sm-8 col-xs-10">
-                            <input type="text" class="txt_box_perfil" required>
+                            <input type="text" value="{{ request.session.usuarioap }}" class="txt_box_perfil" required>
                         </div>
                         <div class="col-sm-1 col-xs-10">
                             <i class="fa-solid fa-pen-to-square btn_modificar"></i>
@@ -97,6 +98,7 @@
                             <i class="fa-solid fa-pen-to-square btn_modificar"></i>
                         </div>
                     </div>
+                   
                     <div style="margin-bottom:30px;"></div>
                 </div>
             </div>

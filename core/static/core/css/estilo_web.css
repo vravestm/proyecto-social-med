@@ -716,7 +716,7 @@ footer {
     margin-left: 10%;
 }
 .card_imagen {
-    width: 120%; /* Puedes ajustar este valor según sea necesario */
+    width: 120%;
     max-width: none;
     border-radius: 59% 41% 39% 61% / 61% 50% 50% 39%;
     margin-left: -10%;
@@ -744,10 +744,18 @@ footer {
 }
 .contenido-desplegable{
     display: none;
-    text-align: left;
+    text-align: justify;
 }
 .d-flex-inscribirme{
     text-align: right;
+    width: 100%;
+}
+
+.boton1{
+    width: 100%;
+    text-align: right;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 /* FIN CSS INFORMACION_CURSO */
@@ -1480,3 +1488,14 @@ footer {
 }
 
 /* FIN PAGINA DE INICIO */
+
+
+
+.container-confirmacion-cursos{
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+}

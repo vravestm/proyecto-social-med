@@ -67,7 +67,9 @@
                             <li><a class="dropdown-item" href="/prevencion/">Prevención</a></li>
                         </ul>
                     </li>
+                    
                     <li class="nav-item"><a class="nav-link me-lg-3" href="/contacto/">Contacto</a></li>
+
 
                     <!-- Barra de búsqueda-->
                     <li class="nav-item">
@@ -99,9 +101,14 @@
                     </button>
                     <ul class="dropdown-menu mask-custom" aria-labelledby="userDropdown">
 
+                        {% if user.is_authenticated and user.is_staff %}
+                        <li><a class="dropdown-item nav-link-2" href="/admin/">Panel de Administración</a></li>
+                        {% endif %}
+
                         <li><a class="dropdown-item nav-link-2" href="{% url 'users:perfil_usuario' %}">Perfil de
                                 usuario</a></li>
                         <li><a class="dropdown-item nav-link-2" href="{% url 'users:logout' %}">Cerrar Sesión</a></li>
+                        
                     </ul>
                 </div>
                 {% else %}
