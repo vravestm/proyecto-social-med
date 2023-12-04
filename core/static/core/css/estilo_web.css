@@ -1255,8 +1255,16 @@ footer {
     background-color: var(--naranja_principal);
     border-radius: 2.3em;
     border: none;
-    width: 17px;
+    width: 17%;
     font-size: 16px;
+}
+
+#btnPublicar:hover {
+    background-color: var(--verde-principal);
+}
+
+#btnPublicar:active {
+    background-color: var(--verde-principal);
 }
 
 .published_by {
