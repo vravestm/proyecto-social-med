@@ -1255,7 +1255,8 @@ footer {
     background-color: var(--naranja_principal);
     border-radius: 2.3em;
     border: none;
-    width: 17%;
+    width: 17px;
+    font-size: 16px;
 }
 
 .published_by {
