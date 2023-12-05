@@ -963,6 +963,17 @@ footer {
     margin-bottom: 10px;
 }
 
+.form__register .icon_is{
+    width: 29px;
+    height: auto;
+
+}
+
+.form__register .fa-envelope{
+    width: 29px;
+    height: 31px;
+
+}
 .carta-icon {
     width: 29px;
     height: auto;

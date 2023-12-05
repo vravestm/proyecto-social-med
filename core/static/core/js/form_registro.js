@@ -1,3 +1,6 @@
+
+//dropdown de provincias-ciudades
+
 document.addEventListener("DOMContentLoaded", function() {
     fetch("/static/core/data/provincias.json")
         .then(function(response) {
@@ -16,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 });
 
+// dropdown de profesiones
+
 document.addEventListener("DOMContentLoaded", function() {
     fetch("/static/core/data/profesiones.json")
         .then(function(response) {
@@ -32,4 +37,19 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(function(error) {
             console.log("Error al obtener las ocupaciones:", error);
         });
+});
+
+
+// Ocultar el contenedor de la ciudad 
+
+$(document).ready(function() {
+    $(".ciudad-container").hide();
+    $("#nacionalidad").change(function() {
+        var nacionalidad = $(this).val();
+        if (nacionalidad === "española") {
+            $(".ciudad-container").show();
+        } else {
+            $(".ciudad-container").hide();
+        }
+    });
 });

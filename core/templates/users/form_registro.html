@@ -7,39 +7,39 @@
         <form action="" class="form">
             <div class="form__register">
                 <div class="user-container">
-                    <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-user icon_is"></i>
                     <input type="text" placeholder="Ingrese nombre usuario" class="text" required>
                 </div>
 
                 <div class="nombre-container">
-                    <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-user icon_is"></i>
                     <input type="text" placeholder="Ingrese nombres" class="text" required>
                 </div>
 
                 <div class="apellido-container">
-                    <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-user icon_is"></i>
                     <input type="text" placeholder="Ingrese apellidos" class="text" required>
                 </div>
 
                 <div class="nacimiento-container">
-                    <img src="{% static 'core/img/edad1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-calendar icon_is"></i>
                     <input type="date" placeholder="Ingrese fecha de nacimiento" class="date" required>
                 </div>
                 <div class="correo-container">
-                    <img src="{% static 'core/img/correo1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-envelope icon_is"></i>
                     <input type="email" placeholder="Ingrese correo electrónico" class="correo" required>
                 </div>
                 <div class="contraseña-container">
-                    <img src="{% static 'core/img/candado1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-lock icon_is"></i>
                     <input type="password" placeholder="Ingrese contraseña" class="password" required>
                 </div>
 
                 <div class="telefono-container">
-                    <img src="{% static 'core/img/telefono1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-phone icon_is" ></i>
                     <input type="number" placeholder="Ingrese numero de telefono" class="number" required>
                 </div>
                 <div class="nacionalidad-container">
-                    <img src="{% static 'core/img/localizador1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-location-dot icon_is"></i>
                     <select name="nacionalidad" id="nacionalidad" required>
                         <option value="" disabled selected>Seleccione su nacionalidad</option>
                         <option value="española">Española</option>
@@ -47,14 +47,14 @@
                     </select>
                 </div>
                 <div class="ciudad-container">
-                    <img src="{% static 'core/img/localizador1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-location-dot icon_is"></i>
                     <div id="provinciaDropdownContainer">
                         <select id="provincias"required>
                         </select>
                     </div>
                 </div>
                 <div class="ocupacion-container">
-                    <img src="{% static 'core/img/portafolio1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-briefcase icon_is"></i>
                     <div id="ocupacionDropdownContainer">
                         <select id="profesiones"required>
                         </select>
@@ -68,6 +68,26 @@
         </form>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Ocultar el contenedor de la ciudad al cargar la página
+        $(".ciudad-container").hide();
+    
+        // Manejar el cambio en la selección de nacionalidad
+        $("#nacionalidad").change(function() {
+            // Obtener el valor seleccionado
+            var nacionalidad = $(this).val();
+    
+            // Mostrar u ocultar el contenedor de la ciudad según la nacionalidad seleccionada
+            if (nacionalidad === "española") {
+                $(".ciudad-container").show();
+            } else {
+                $(".ciudad-container").hide();
+            }
+        });
+    });
+    </script>
 <script src="{% static 'core/js/form_registro.js' %}"></script>
 
 {% endblock %}
