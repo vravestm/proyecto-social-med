@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+
+
+<section>
+    
+    {% for com in object_list %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+        
+                <div class="cards">
+                    <div class="card-body informacion-curso">            
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="card-title mb-0 calificacion-title">Calificación</h5>
+        
+                            <div class="d-flex align-items-center stars">
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="1"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="2"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="3"></i>
+                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="4"></i>
+                                <i class="fas fa-star text-warning" data-rating="5" ></i>
+                            </div>
+                        </div>
+
+                        <div class="published_by d-flex flex-wrap align-items-center justify-content-start">
+                            <p class="mr-3 mb-0">Publicado por:</p>
+                            <p class="mb-0 publish-person">{{ com.user }}</p>
+                        </div>
+
+                        <div class="form-grupo mt-2">
+                            <p> {{ com.comentario }} </p>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    {% endfor %}
+
+    
+
+</section>
+
+
+{% endblock %}
