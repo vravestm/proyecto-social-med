@@ -155,11 +155,12 @@ EMAIL_USE_TLS = True
 
 # TEMPLATE ADMIN
 JAZZMIN_SETTINGS = {
-    "site_title": "T-Social Med",
-    'site_header': "T-Social Med",
-    'site_logo': "core/img/logominiatura.png",
+
+
+    'site_logo': "core/img/logominiatura.png" ,
     "show_ui_builder": False,
-    "site_logo_classes": "img-circle",
+    "site_logo_classes": "img-square no-box-shadow",
+    'custom_css': 'jazzmin/custom.css',
     "welcome_sign": "Panel de Administración",
     "copyright": "T-Social Med",
 }

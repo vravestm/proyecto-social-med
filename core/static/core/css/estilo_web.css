@@ -1322,30 +1322,36 @@ footer {
 /* FIN CSS COMENTARIOS */
 
 /* INICIO CURSOS */
+
 .container-cursos {
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start; 
     margin: 0 auto;
-    max-width: 1200px;
     padding-top: 5rem;
-    align-items: center;
 }
 
 .container-cursos .card {
     border: 2px solid var(--naranja_principal);
     border-radius: 15px;
     width: 250px;
-    margin: 15px;
+    height: 100%; 
+    max-height: 600px;
+    margin: 105px;
+    display: flex; 
+    padding-top: 12px;
+    flex-direction: column; 
 }
 
 .container-cursos .card-img-top {
-    max-width: 100%;
-    height: auto;
-    border-radius: 25px;
-    padding: 15px;
+    max-width: 220px;
+    max-height: 300px; 
+    object-fit: cover; 
+    border-radius: 15px 15px 0 0; 
 }
 
-.card-body .card-title {
-    /* overflow: hidden; */
+.container-cursos .card-title {
+    overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -1355,8 +1361,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
+    padding: 15px; 
 }
 
 .btn-primary-cursos {
@@ -1365,14 +1372,17 @@ footer {
     border-color: var(--naranja_principal);
     text-transform: uppercase;
     font-weight: bold;
-    margin-top: 15px;
-    /* Espaciado superior */
-    border-radius: 10px;
+    margin-top: auto; 
+    border-radius: 0 0 15px 15px; 
 }
 
 .btn-primary-cursos:hover {
     background-color: var(--verde-principal);
     color: #ffffff;
+}
+
+.rowcursos{
+    justify-content: space-evenly;
 }
 
 /* FIN CURSOS */
