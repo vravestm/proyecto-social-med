@@ -9,44 +9,47 @@
             <div class="form__register">
 
                 <div class="nombre-container">
-                    <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-user icon_is"></i>
                     <input type="text" name="{{ signupForm.nombre.name }}" placeholder="Ingrese nombre" class="text" required>
                 </div>
 
                 <div class="apellido-container">
-                    <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-user icon_is"></i>
                     <input type="text" name="{{ signupForm.apellido.name }}" placeholder="Ingrese apellido" class="text" required>
                 </div>
 
                 <div class="nacimiento-container">
-                    <img src="{% static 'core/img/edad1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-calendar icon_is"></i>
                     <input type="date" name="{{ signupForm.fecha_nacimiento.name }}"  class="date" required>
                 </div>
+
                 <div class="correo-container">
-                    <img src="{% static 'core/img/correo1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-envelope icon_is"></i>
                     <input type="email" name="{{ signupForm.email.name }}" placeholder="Ingrese correo electrónico" class="correo" required>
                 </div>
+
                 <div class="contraseña-container">
-                    <img src="{% static 'core/img/candado1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-lock icon_is"></i>
                     <input type="password" name="{{ signupForm.password.name }}" placeholder="Ingrese contraseña" class="password" required>
                 </div>
+
                 <div class="contraseña-container">
-                    <img src="{% static 'core/img/candado1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-lock icon_is"></i>
                     <input type="password" name="{{ signupForm.password2.name }}" placeholder="Confirmar contraseña" class="password" required>
                 </div>
 
                 <div class="telefono-container">
-                    <img src="{% static 'core/img/telefono1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-phone icon_is" ></i>
                     <input type="number" name="{{ signupForm.telefono.name }}" placeholder="Ingrese número de teléfono" class="number" required>
                 </div>
 
                 <div class="nacionalidad-container">
-                    <img src="{% static 'core/img/localizador1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-location-dot icon_is"></i>
                     {{ signupForm.nacionalidad }}
                 </div>
 
                 <div class="ciudad-container" id="divCiudad">
-                    <img src="{% static 'core/img/localizador1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-location-dot icon_is"></i>
                     <select name="{{ signupForm.ciudad.name }}" id="ciudad" required>
                         <option value="" disabled selected>Seleccione su provincia</option>
                         {% for provincia in provincias_data %}
@@ -55,7 +58,7 @@
                     </select>
                 </div>
                 <div class="ocupacion-container" id="divOcupacion">
-                    <img src="{% static 'core/img/portafolio1.png' %}" alt="carta" class="carta-icon">
+                    <i class="fa-solid fa-briefcase icon_is"></i>
                     <select name="{{ signupForm.ocupacion.name }}" id="profesiones" required>
                         <option value="" disabled selected>Seleccione su ocupación</option>
                         {% for ocupacion in ocupaciones_data %}
@@ -64,7 +67,7 @@
                     </select>
                 </div>
                 <p class="text_register">Al registrarme acepto que T-Social Med trate mis datos personales para la gestión de la inscripción, así como enviarme información relativa a la misma y cualquier otro relacionado con acciones formativas de mi interés.</p>
-                <button class="myButton" type="submit">REGISTRARSE</button>             
+                <button class="myButton_registro">REGISTRARSE</button>            
 
                 <p1>¿Ya estás registrado?<a class="volver" href="{% url 'users:inicio_sesion' %}">Iniciar sesión</a></p1>                
 

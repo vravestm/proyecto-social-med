@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.getElementById("id_nacionalidad").addEventListener("change", function (e) {
     let seleccion = e.target.value;
-    // alert(seleccion);
     let divCiudad = document.getElementById("divCiudad");
     if (seleccion == "española") {
 
