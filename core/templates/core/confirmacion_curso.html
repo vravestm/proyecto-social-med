@@ -3,6 +3,7 @@
 
 {% block contenido %}
 
+{% if user.is_authenticated %}
 
 <div class="container-confirmacion-cursos">
     <div class="row">
@@ -57,5 +58,7 @@
         </div>
     </div>
 </div>
+
+{% endif %}
 
 {% endblock %}

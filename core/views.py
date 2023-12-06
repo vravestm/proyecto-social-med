@@ -2,8 +2,9 @@ import time
 
 from django.shortcuts import render
 from django.http import HttpResponse
-from t_social_med.enviarCorreo import funcionEnviarCorreo, enviarCorreoContacto
+from t_social_med.enviarCorreo import funcionEnviarCorreo, enviarCorreoContacto, funcionRecuperarPassword
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 
 
 def home(request):
@@ -37,9 +38,21 @@ def docentes(request):
 
 
 def olvidar_contrasena(request):
+    if request.method == 'POST':
+        destinatario = {
+            'email': request.POST.get('ingCorreo', ''),
+        }
+        funcionRecuperarPassword(destinatario)
+        return HttpResponse("Correo enviado.")
+    else:
+        return render(request, 'core/olvidar_contrasena.html')
+
     var1 = time.time()
     return render(request, 'core/olvidar_contrasena.html', {'var1': var1})
 
+def recuperar_clave(request):
+    var1 = time.time()
+    return render(request, 'core/recuperar_clave.html', {'var1': var1})
 
 
 # def informacion_curso(request):

@@ -594,27 +594,24 @@ footer {
 
 /* BOTÓN ENVIAR */
 
-.myButton {
+.myButton_registro {
     background-color: var(--naranja_principal);
-    border-radius: 2.3em;
-    display: inline-block;
-    cursor: pointer;
+    border-radius: 25px;
+    text-align: center;
     color: var(--blanco);
-    font-size: 1.1em;
-    padding: 0.75em 3.75em 0.5em;
-    text-decoration: none;
-    font-family: 'League Spartan', sans-serif;
-    border: none;
-    margin: auto;
-    margin-top: 2em;
-    margin-bottom: 100%;
+    font-weight: bold;
+    width: 140px;
+    height: 40px;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 15px;
+    border: transparent;
 }
 
-.myButton:hover {
+.myButton_registro:hover {
     background-color: var(--verde-principal);
 }
 
-.myButton:active {
+.myButton_registro :active {
     position: relative;
     top: 1px;
 }
@@ -952,7 +949,10 @@ footer {
     margin-top: 10%;
     margin-bottom: 10%;
 }
-
+.container__form {
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto;
+}
 .form__register {
     display: flex;
     flex-direction: column;
@@ -962,6 +962,17 @@ footer {
     margin-bottom: 10px;
 }
 
+.form__register .icon_is{
+    width: 29px;
+    height: auto;
+
+}
+
+.form__register .fa-envelope{
+    width: 29px;
+    height: 31px;
+
+}
 .carta-icon {
     width: 29px;
     height: auto;
@@ -973,7 +984,14 @@ footer {
     flex-direction: column;
     align-items: center;
 }
+/* Estilo para los placeholders en contenedores y dropdowns*/
 
+ .custom ::placeholder {
+    color: #A6A6A6;
+ }
+ .custom select::placeholder {
+    color: inherit; 
+ }
 /* CONTAINER CLASS FORM_REGISTER */
 .form__register .correo {
     width: 310px;
@@ -1259,6 +1277,15 @@ footer {
     border-radius: 2.3em;
     border: none;
     width: 17%;
+    font-size: 16px;
+}
+
+#btnPublicar:hover {
+    background-color: var(--verde-principal);
+}
+
+#btnPublicar:active {
+    background-color: var(--verde-principal);
 }
 
 .published_by {

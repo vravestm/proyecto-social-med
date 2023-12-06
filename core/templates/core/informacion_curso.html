@@ -3,6 +3,8 @@
 
 {% block contenido %}
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <section class="py-5 container-info-curso">
     <div class="container px-4 px-lg-5 my-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
@@ -56,7 +58,7 @@
 
                 <div class="d-flex-inscribirme">
                     <a href="/confirmacion_curso?valor={{object.id}}">
-                        <button class="btn btn-outline-dark flex-shrink-0 btn_suscribir" type="button"  >
+                        <button class="btn btn-outline-dark flex-shrink-0 boton1" type="button"  >
                             INSCRIBIRME
                         </button>
                     </a>
@@ -67,119 +69,20 @@
     </div>
 </section>
 
-<section>
-    <div class="comment-title cod-md-6">        
-        <h1 class="display-5 fw-bolder">COMENTARIOS</h1>
+<section class="text-center">
+    <div>
+        <a href="/enviarcomentario?valor={{object.id}}" class="btn btn-primary-cursos">
+            <i class="fa-solid fa-circle-plus"></i> Envianos tus comentarios
+        </a>
     </div>
-    <div class="container mt-5">
+</section>
 
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-        
-                <div class="cards">
-                    <div class="card-body informacion-curso">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h5 class="card-title mb-0 calificacion-title">Calificar</h5>
-        
-                            <div class="d-flex align-items-center stars">
-                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
-                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
-                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
-                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
-                                <i class="fas fa-star text-warning" ></i>
-                            </div>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="publicarNombre">
-                            <label class="form-check-label" for="publicarNombre">
-                                ¿Desea publicar su nombre?
-                            </label>
-                        </div>
-
-                        <div class="form-grupo mt-2">
-                            <textarea class="form-control custom-textarea" id="comentario" rows="3" maxlength="150" placeholder="Ingrese su comentario..."></textarea>
-                            <small class="text-muted" id="contadorCaracteres">0/150</small>
-                        </div>
-
-                        <button class="btn btn-primary btn-block mt-3 custom-btn text-center" href="" onclick="publicarComentario()">
-                            PUBLICAR
-                        </button>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+<section class="text-center">
+    <div>
+        <a href="{% url 'comentarios' %}" class="btn btn-primary-cursos">
+            <i class="fa-solid fa-circle-plus"></i> Ver Comentarios
+        </a>
     </div>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-        
-                <div class="cards">
-                    <div class="card-body informacion-curso">            
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h5 class="card-title mb-0 calificacion-title">Calificación</h5>
-        
-                            <div class="d-flex align-items-center stars">
-                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="1"></i>
-                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="2"></i>
-                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="3"></i>
-                                <i class="fas fa-star mr-1 text-warning mr-1" data-rating="4"></i>
-                                <i class="fas fa-star text-warning" data-rating="5" ></i>
-                            </div>
-                        </div>
-
-                        <div class="published_by d-flex flex-wrap align-items-center justify-content-start">
-                            <p class="mr-3 mb-0">Publicado por:</p>
-                            <p class="mb-0 publish-person">Claudia Merino</p>
-                        </div>
-
-                        <div class="form-grupo mt-2">
-                            <textarea class="form-control" id="comentario" rows="3" maxlength="150" placeholder="">El curso me pareció excelente, me ayudó mucho.</textarea>
-                        </div>
-            
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-        
-                <div class="cards">
-                    <div class="card-body informacion-curso">            
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h5 class="card-title mb-0 calificacion-title">Calificación</h5>
-        
-                            <div class="d-flex align-items-center stars">
-                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
-                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
-                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
-                                <i class="fas fa-star mr-1 text-warning mr-1"></i>
-                                <i class="fas fa-star text-warning" ></i>
-                            </div>
-                        </div>
-
-                        <div class="published_by d-flex flex-wrap align-items-center justify-content-start">
-                            <p class="mr-3 mb-0">Publicado por:</p>
-                            <p class="mb-0 publish-person">Anónimo</p>
-                        </div>
-
-                        <div class="form-grupo mt-2">
-                            <textarea class="form-control" id="comentario" rows="3" maxlength="150" placeholder="">Las mejores profesionales, muy atentas.</textarea>
-                        </div>
-            
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
 </section>
 
 <div class="d-flex justify-content-center mt-3">

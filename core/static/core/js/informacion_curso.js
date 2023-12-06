@@ -35,3 +35,15 @@ function toggleDesplegable(id) {
         console.log('Comentario:', comentario);
         console.log('¿Publicar Nombre?', publicarNombre);
     }
+
+$(document).ready(function() {
+      $('.stars i').on('click', function() {
+          // Obtener la calificación desde el atributo data-rating
+          var rating = $(this).data('rating');
+
+          // Remover y agregar la clase 'text-warning' según la calificación
+          $(this).siblings().removeClass('text-warning').css('color','#146448');
+          $(this).prevAll().addBack().addClass('text-warning');
+      });
+});
+
