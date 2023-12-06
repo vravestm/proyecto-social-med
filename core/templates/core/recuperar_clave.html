@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido%}
+
+<div class="forgotPassword">
+    <div class="forgotPassword-screen">
+        <div>
+            <div class="contact-form-wrapper d-flex justify-content-center">
+                <form action="{% url 'olvidar_contrasena' %}" method="post" class="contact-form">
+                    {% csrf_token %}
+                    <div class="contenedor_contacto">
+                        <div class="contenedor_logo">
+                            <img src="{% static 'core/img/logo.png' %}" class="img-fluid img_logo_is" alt="logo">
+                        </div>
+                        
+                        <div class="contenedor_txt_contrasena">
+                            <span class="olvidaste_contrasena_txt">
+                                <h1>RECUPERAR CONTRASEÑA</h1>
+                            </span>
+                        </div>
+
+                        <div class="correo__container forPassword">
+                            <i class="fa-2xl"></i>
+                            <input type="password" class="txt_box input_is" id="name" placeholder="Ingresa tu nueva contraseña" required>
+                        </div>
+
+                        <div class="correo__container forPassword">
+                            <i class="fa-2xl"></i>
+                            <input type="password" class="txt_box input_is" id="name" placeholder="Reingresa tu contraseña" required>
+                        </div>
+                    
+                        <div class="contenedor_boton">
+                            <input type="submit" value="CAMBIAR" class="btn_cambiarContrasena">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

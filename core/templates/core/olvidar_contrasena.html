@@ -7,7 +7,9 @@
     <div class="forgotPassword-screen">
         <div>
             <div class="contact-form-wrapper d-flex justify-content-center">
-                <form action="#" class="contact-form">
+                <!-- <form action="#" class="contact-form"> -->
+                <form action="{% url 'olvidar_contrasena' %}" method="post" class="contact-form">
+                    {% csrf_token %}
                     <div class="contenedor_contacto">
                         <div class="contenedor_logo">
                             <img src="{% static 'core/img/logo.png' %}" class="img-fluid img_logo_is" alt="logo">
@@ -20,8 +22,9 @@
                         </div>
 
                         <div class="correo__container">
-                            <i class="fa-regular fa-envelope fa-2xl"></i>
-                            <input type="text" class="txt_box input_is" id="name" placeholder="Ingresa tu correo electrónico" required>
+                            <i class="fa-solid fa-envelope fa-2xl" style="color: #f1862a;"></i>
+                            <!-- <i class="fa-solid fa-envelope fa-2xl icon_is"></i> -->
+                            <input name="ingCorreo" type="text" class="txt_box input_is" id="name" placeholder="Ingresa tu correo electrónico" required>
                         </div>
                     
                         <div class="contenedor_boton">

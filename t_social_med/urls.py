@@ -16,6 +16,7 @@ urlpatterns = [
     path('', include('users.urls', namespace='users')),
     path('olvidar_contrasena/', core_views.olvidar_contrasena,
          name='olvidar_contrasena'),
+    path('recuperar_clave/', core_views.recuperar_clave, name='recuperar_clave'),
     path('contacto/', core_views.contacto, name='contacto'),
     path('docentes/', core_views.docentes, name='docentes'),
     path('cursos/', cursos_views.cursos, name='cursos'),

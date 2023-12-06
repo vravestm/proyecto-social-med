@@ -69,27 +69,21 @@
     </div>
 </section>
 
-
-<section>
-    <a href="{% url 'comentarios' %}" class="btn btn-primary-cursos">
-        <i class="fa-solid fa-circle-plus"></i> Comentarios
-    </a>
+<section class="text-center">
+    <div>
+        <a href="/enviarcomentario?valor={{object.id}}" class="btn btn-primary-cursos">
+            <i class="fa-solid fa-circle-plus"></i> Envianos tus comentarios
+        </a>
+    </div>
 </section>
 
-<section>
-    <a href="/enviarcomentario?valor={{object.id}}" class="btn btn-primary-cursos">
-        <i class="fa-solid fa-circle-plus"></i> Enviar comentario
-    </a>
+<section class="text-center">
+    <div>
+        <a href="{% url 'comentarios' %}" class="btn btn-primary-cursos">
+            <i class="fa-solid fa-circle-plus"></i> Ver Comentarios
+        </a>
+    </div>
 </section>
-
-
-
-
-
-
-
-
-
 
 <div class="d-flex justify-content-center mt-3">
     <a href="/cursos/" class="btn btn-outline-dark volver-info-curso-btn">
