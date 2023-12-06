@@ -38,7 +38,7 @@ def registro(request):
         request.session['var1'] = var1
         request.session['usuario_autenticado'] = usuario_autenticado
         return redirect('Home')
-       # return redirect('Home', var1=var1, usuario_autenticado=usuario_autenticado)
+
     else:
         return render(request, 'users/form_registro.html', {'var1': var1})
 
@@ -59,7 +59,6 @@ def login_view(request):
             login(request, user)
             messages.success(request, 'Has iniciado sesión correctamente')
             return redirect('cursos')
-           # return render(request, 'core/informacion_curso.html', {'var1': '1234'})
 
         else:
             messages.warning(
@@ -77,62 +76,6 @@ def signup_view(request):
     if request.method == 'GET':
         print("entre aqui")
         return redirect('form_registro')
-
-    # provincias_file_path = os.path.join(settings.BASE_DIR, 'core',
-    #                                     'static', 'data', 'provincias.json')
-    # profesiones_file_path = os.path.join(
-    #     settings.BASE_DIR, 'core', 'static', 'data', 'profesiones.json')
-
-    # opciones_nacionalidad = [
-    #     ('española', 'Española'),
-    #     ('extranjera', 'Extranjera'),
-    # ]
-
-    # try:
-    #     with open(provincias_file_path) as provincias_file:
-    #         provincias_data = json.load(provincias_file)
-    #     print(provincias_data)
-    # except FileNotFoundError:
-    #     print("Archivo 'provincias.json' no encontrado")
-    #     provincias_data = []
-
-    # try:
-    #     with open(profesiones_file_path) as profesiones_file:
-    #         profesiones_data = json.load(profesiones_file)
-    #     print(profesiones_data)
-    # except FileNotFoundError:
-    #     print("Archivo 'profesiones.json' no encontrado")
-    #     profesiones_data = []
-
-    # opciones_ciudad = [
-    #     (ciudad['code'], ciudad['label']) for ciudad in provincias_data
-    # ]
-
-    # opciones_ocupacion = [
-    #     (ocupacion['code'], ocupacion['label']) for ocupacion in profesiones_data
-    # ]
-
-    # signup_form = UserSignUpForm(request.POST or None)
-
-    # signup_form.fields['nacionalidad'].widget.choices = opciones_nacionalidad
-    # signup_form.fields['ciudad'].widget.choices = opciones_ciudad
-    # signup_form.fields['ocupacion'].widget.choices = opciones_ocupacion
-
-    # # Agrega las opciones al formulario
-    # signup_form.fields['nacionalidad'].widget.choices = [
-    #     ('española', 'Española'),
-    #     ('extranjera', 'Extranjera'),
-    # ]
-
-    # signup_form.fields['ciudad'].widget.choices = [
-    #     (ciudad['code'], ciudad['label']) for ciudad in provincias_data
-    # ]
-
-    # signup_form.fields['ocupacion'].widget.choices = [
-    #     (ocupacion['code'], ocupacion['label']) for ocupacion in profesiones_data
-    # ]
-
-    # and signup_form.is_valid()
 
     if request.method == 'POST':
         signup_form = UserSignUpForm(request.POST or None)
@@ -174,15 +117,6 @@ def signup_view(request):
             print("formulario no valido")
             messages.warning(request, 'formulario no valido')
             return HttpResponse("Correo enviado correctamente. Gracias por contactarnos.")
-           # return redirect('form_registro')
-
-        # return render(request, 'users/form_registro.html', {
-        #     'var1': var1,
-        #     'signupForm': signup_form,
-        #     'opciones_nacionalidad': opciones_nacionalidad,
-        #     'opciones_ciudad': opciones_ciudad,
-        #     'opciones_ocupacion': opciones_ocupacion,
-        # })
 
 
 def logout_view(request):
