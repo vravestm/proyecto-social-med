@@ -1,1 +1,23 @@
 {% extends 'core/base.html' %}
+
+{% block contenido %}
+
+
+<div class="container-cursos">
+    <div class="row rowcursos">
+        {% for t in tal %}
+                <div class="card my-3 ">
+                    <img class="card-img-top" src="{{ t.image.url }}" height="450px" width="500px" ="Card image cap">
+                    <div class="card-body text-center">
+                        <p class="card-title">{{ t.titulo }}</p>
+                        <a href="{% url 'informacion_taller' t.id %}" class="btn btn-primary-cursos">
+                            <i class="fa-solid fa-circle-plus"></i> Información
+                        </a>
+                    </div>
+                </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
