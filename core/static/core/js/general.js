@@ -34,3 +34,17 @@ $(".btn_suscribir").on("click", function (event) {
 });
 
 
+
+
+$(".btnContact").on("click", function (event) {
+
+    event.preventDefault();
+
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Correo enviado correctamente",
+        showConfirmButton: false,
+        timer: 1500
+    });
+});

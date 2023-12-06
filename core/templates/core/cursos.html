@@ -3,10 +3,9 @@
 
 
 <div class="container-cursos">
-    <div class="row">
+    <div class="row rowcursos">
         {% for c in cur %}
-            <div class="col-md-4">
-                <div class="card my-3">
+                <div class="card my-3 ">
                     <img class="card-img-top" src="{{ c.image.url }}" height="450px" width="500px" ="Card image cap">
                     <div class="card-body text-center">
                         <p class="card-title">{{ c.titulo }}</p>
@@ -15,7 +14,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
         {% endfor %}
     </div>
 </div>

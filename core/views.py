@@ -22,14 +22,12 @@ def home(request):
 
     return render(request, 'core/home.html', {'var1': var1,'usuario_autenticado':usuario_autenticado})
 
-# @login_required(login_url='inicio_sesion')
 def contacto(request):
     if request.user.is_authenticated:
-        request.session['usuarionombre'] = request.user.first_name
+        request.session['usuarionombre'] = request.user.nombre
         request.session['usuarioCorreo'] = request.user.email
     var1 = time.time()
     return render(request, 'core/contacto.html', {'var1': var1})
-
 
 
 def docentes(request):
@@ -59,6 +57,8 @@ def recuperar_clave(request):
 #     var1 = time.time()
 #     return render(request, 'core/informacion_curso.html', {'var1': var1})
 
+
+
 def enviar_correo_contacto(request):
     if request.method == 'POST':
         datos_formulario = {
@@ -66,7 +66,20 @@ def enviar_correo_contacto(request):
             'email': request.POST.get('txtEmail', ''),
             'mensaje': request.POST.get('txtMsg', ''),
         }
-        enviarCorreoContacto(datos_formulario)
-        return HttpResponse("Correo enviado correctamente. Gracias por contactarnos.")
+
+        try:
+            enviarCorreoContacto(datos_formulario)
+            response_data = {
+                'status': 'success',
+                'message': 'Correo enviado correctamente. Gracias por contactarnos.',
+            }
+        except Exception as e:
+            response_data = {
+                'status': 'error',
+                'message': f'Error al enviar el correo: {str(e)}',
+            }
+
+        # Devolver la respuesta JSON
+        return JsonResponse(response_data)
     else:
         return render(request, 'core/contacto.html')
