@@ -21,8 +21,8 @@ def inicio_sesion(request):
 
 @login_required(login_url='Home')
 def perfil_usuario(request):
-    request.session['usuarionombre'] = request.user.first_name
-    request.session['usuarioap'] = request.user.last_name
+    request.session['usuarionombre'] = request.user.nombre
+    request.session['usuarioap'] = request.user.apellido
     var1 = time.time()
 
     return render(request, 'users/perfil_usuario.html', {'var1': var1})

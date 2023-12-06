@@ -1,33 +1,39 @@
 {% extends 'core/base.html' %}
 {% block contenido %}
 <div class="contenedor-flex">
-  <div id="container-contacto">
-    <h1>¡Comunícate con nosotras!</h1>
-    <p>Horarios de atención:</p>
-    <p>De lunes a jueves de 10:00 a 18:00 horas y los viernes de 10:00 a 15:00 horas.</p>
-  </div>
 
-  <div id="container-secundario-contacto">
-    <form method="post" action="{% url 'enviar_correo_contacto' %}">
-      <div class="col-md-6">
-        <div class="form-group">
-          <input type="text" name="txtName" class="form-control" placeholder="Nombre *" value="{{ request.session.usuarionombre }}"/>
-        </div>
-        <div class="form-group">
-          <input type="text" name="txtEmail" class="form-control" placeholder="Email *" value="{{ request.session.usuarioCorreo }}" readonly="readonly"/>
-        </div>
-        <div class="form-group">
-          <textarea name="txtMsg" class="form-control" placeholder="Mensaje o duda *" required style="width: 100%; height: 150px;"></textarea>
-        </div>
-        {% if user.is_authenticated %}
+    <div id="container-contacto">
+      <h1>¡Comunícate con nosotras!</h1>
+      <p>Horarios de atención:</p>
+      <p>De lunes a jueves de 10:00 a 18:00 horas y los viernes de 10:00 a 15:00 horas.</p>
+    </div>
+
+    <div id="container-secundario-contacto">
+      <form method="post" action="{% url 'enviar_correo_contacto' %}">
+        {% csrf_token %}
+        <div class="col-md-6">
           <div class="form-group">
-            <input type="submit" name="btnSubmit" class="btnContact" value="Enviar" />
+            <input type="text" name="txtName" class="form-control" placeholder="Nombre *" value="{{ request.session.usuarionombre }}"/>
           </div>
-        {% else %}
-          <div>
-            <p>Para enviar un mensaje, por favor <a href="{% url 'inicio_sesion' %}">inicia sesión</a>.</p>
+          <div class="form-group">
+            <input type="text" name="txtEmail" class="form-control" placeholder="Email *" value="{{ request.session.usuarioCorreo }}" readonly="readonly"/>
           </div>
-        {% endif %}
-  </div>
+          <div class="form-group">
+            <textarea name="txtMsg" class="form-control" placeholder="Mensaje o duda *" required style="width: 100%; height: 150px;"></textarea>
+          </div>
+          {% if user.is_authenticated %}
+            <div class="form-group">
+              <input type="submit" name="btnSubmit" class="btnContact" value="Enviar" />
+            </div>
+          {% else %}
+            <div>
+              <p>Para enviar un mensaje, por favor <a href="{% url 'inicio_sesion' %}">inicia sesión</a>.</p>
+            </div>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+
 </div>
 {% endblock %}
+

@@ -25,6 +25,8 @@ def funcionEnviarCorreo(data:dict):
     else:
         print(f'Error al enviar el correo a {destinatario[0]}')
 
+        
+
 def enviarCorreoContacto(datos_formulario: dict):
     try:
         subject = 'Asunto del Correo' 
@@ -34,7 +36,7 @@ def enviarCorreoContacto(datos_formulario: dict):
             'datos_formulario': datos_formulario,
         })
 
-        destinatario = 'yenerix.a@gmail.com'  
+        destinatario = 'tsocialmed@gmail.com'  
         message = EmailMultiAlternatives(
             subject=subject,
             body='',  

@@ -1,0 +1,52 @@
+@import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+
+:root {
+    --verde-principal: #146448;
+    --verde-footer: #4E7B6B;
+    --negro: black;
+    --naranja_principal: #F1862A;
+    --blanco: white;
+    --gris: #7F8C8D;
+    --navbar: #F4F0F0;
+}
+
+
+.no-box-shadow {
+    box-shadow: none !important;
+}
+
+
+.nav-header{
+    text-transform: uppercase;
+    font-size: smaller;
+}
+
+
+body:not(.layout-fixed) .main-sidebar .sidebar{
+    overflow: hidden;
+}
+
+
+
+[class*=sidebar-dark-]{
+   
+    width: 260px;
+}
+
+.main-sidebar .brand-text{
+    color: white;
+}
+
+.brand-link .brand-image {
+    color: #F4F0F0;
+}
+
+.sidebar-dark-orange .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-orange .nav-sidebar>.nav-item>.nav-link.active{
+    color: white;
+}
+
+.elevation-4{
+    box-shadow: none;
+}
