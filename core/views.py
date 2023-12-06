@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     request.session['usuario']=request.user.id #capturamos la id del usuario que se logee en la pagina
-    
+    usuario_autenticado = request.user.is_authenticated
     var1 = time.time()
 
     data = {
@@ -19,7 +19,7 @@ def home(request):
     # cometnar despues de la prueba
     # funcionEnviarCorreo(data)
 
-    return render(request, 'core/home.html', {'var1': var1})
+    return render(request, 'core/home.html', {'var1': var1,'usuario_autenticado':usuario_autenticado})
 
 # @login_required(login_url='inicio_sesion')
 def contacto(request):

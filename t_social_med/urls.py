@@ -10,7 +10,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', core_views.home, name='Home'),
+    path('',
+         core_views.home, name='Home'),
     path('', include('users.urls', namespace='users')),
     path('olvidar_contrasena/', core_views.olvidar_contrasena,
          name='olvidar_contrasena'),

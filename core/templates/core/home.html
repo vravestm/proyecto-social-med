@@ -13,9 +13,10 @@
             <p>La adquisición de conocimientos es clave en cualquier disciplina y la formación práctica es la que menos se presta.
             Así, desde T-Social | Med, queremos acompañarte en el aprendizaje a través de casos y formación práctica.</p>
         </div>
-
-        
+       
+        {% if not usuario_autenticado %}
         <a href="/form_registro/" id="botoncito" class="btn btn-inscripcion">Registrarse</a>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

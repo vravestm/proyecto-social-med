@@ -2,72 +2,75 @@
 {% load static %}
 {% block contenido%}
 <div class="container__prime">
-    <img src="{% static 'core/img/logo.png' %}" class="container__logo" alt="logo">
+    <img src="{% static 'core/img/logo.png' %}" class="img_logo_is" alt="logo">
     <div class="container__form">
-        <form action="" class="form">
+        <form action="{% url 'users:signup'%}" class="form" method="POST">
+            {% csrf_token %}
             <div class="form__register">
-                <div class="user-container">
-                    <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
-                    <input type="text" placeholder="Ingrese nombre usuario" class="text" required>
-                </div>
 
                 <div class="nombre-container">
                     <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
-                    <input type="text" placeholder="Ingrese nombres" class="text" required>
+                    <input type="text" name="{{ signupForm.nombre.name }}" placeholder="Ingrese nombre" class="text" required>
                 </div>
 
                 <div class="apellido-container">
                     <img src="{% static 'core/img/usuario1.png' %}" alt="carta" class="carta-icon">
-                    <input type="text" placeholder="Ingrese apellidos" class="text" required>
+                    <input type="text" name="{{ signupForm.apellido.name }}" placeholder="Ingrese apellido" class="text" required>
                 </div>
 
                 <div class="nacimiento-container">
                     <img src="{% static 'core/img/edad1.png' %}" alt="carta" class="carta-icon">
-                    <input type="date" placeholder="Ingrese fecha de nacimiento" class="date" required>
+                    <input type="date" name="{{ signupForm.fecha_nacimiento.name }}"  class="date" required>
                 </div>
                 <div class="correo-container">
                     <img src="{% static 'core/img/correo1.png' %}" alt="carta" class="carta-icon">
-                    <input type="email" placeholder="Ingrese correo electrónico" class="correo" required>
+                    <input type="email" name="{{ signupForm.email.name }}" placeholder="Ingrese correo electrónico" class="correo" required>
                 </div>
                 <div class="contraseña-container">
                     <img src="{% static 'core/img/candado1.png' %}" alt="carta" class="carta-icon">
-                    <input type="password" placeholder="Ingrese contraseña" class="password" required>
+                    <input type="password" name="{{ signupForm.password.name }}" placeholder="Ingrese contraseña" class="password" required>
+                </div>
+                <div class="contraseña-container">
+                    <img src="{% static 'core/img/candado1.png' %}" alt="carta" class="carta-icon">
+                    <input type="password" name="{{ signupForm.password2.name }}" placeholder="Confirmar contraseña" class="password" required>
                 </div>
 
                 <div class="telefono-container">
                     <img src="{% static 'core/img/telefono1.png' %}" alt="carta" class="carta-icon">
-                    <input type="number" placeholder="Ingrese numero de telefono" class="number" required>
+                    <input type="number" name="{{ signupForm.telefono.name }}" placeholder="Ingrese número de teléfono" class="number" required>
                 </div>
+
                 <div class="nacionalidad-container">
                     <img src="{% static 'core/img/localizador1.png' %}" alt="carta" class="carta-icon">
-                    <select name="nacionalidad" id="nacionalidad" required>
-                        <option value="" disabled selected>Seleccione su nacionalidad</option>
-                        <option value="española">Española</option>
-                        <option value="extranjera">Extranjera</option>
+                    {{ signupForm.nacionalidad }}
+                </div>
+
+                <div class="ciudad-container" id="divCiudad">
+                    <img src="{% static 'core/img/localizador1.png' %}" alt="carta" class="carta-icon">
+                    <select name="{{ signupForm.ciudad.name }}" id="ciudad" required>
+                        <option value="" disabled selected>Seleccione su provincia</option>
+                        {% for provincia in provincias_data %}
+                        <option value="{{ provincia.value }}">{{ provincia.label }}</option>
+                        {% endfor %}
                     </select>
                 </div>
-                <div class="ciudad-container">
-                    <img src="{% static 'core/img/localizador1.png' %}" alt="carta" class="carta-icon">
-                    <div id="provinciaDropdownContainer">
-                        <select id="provincias"required>
-                        </select>
-                    </div>
-                </div>
-                <div class="ocupacion-container">
+                <div class="ocupacion-container" id="divOcupacion">
                     <img src="{% static 'core/img/portafolio1.png' %}" alt="carta" class="carta-icon">
-                    <div id="ocupacionDropdownContainer">
-                        <select id="profesiones"required>
-                        </select>
-                    </div>
+                    <select name="{{ signupForm.ocupacion.name }}" id="profesiones" required>
+                        <option value="" disabled selected>Seleccione su ocupación</option>
+                        {% for ocupacion in ocupaciones_data %}
+                        <option value="{{ ocupacion.value }}">{{ ocupacion.label }}</option>
+                        {% endfor %}
+                    </select>
                 </div>
                 <p class="text_register">Al registrarme acepto que T-Social Med trate mis datos personales para la gestión de la inscripción, así como enviarme información relativa a la misma y cualquier otro relacionado con acciones formativas de mi interés.</p>
-                <button class="myButton">REGISTRARSE</button>             
+                <button class="myButton" type="submit">REGISTRARSE</button>             
 
                 <p1>¿Ya estás registrado?<a class="volver" href="{% url 'users:inicio_sesion' %}">Iniciar sesión</a></p1>                
 
         </form>
     </div>
 </div>
-<script src="{% static 'core/js/form_registro.js' %}"></script>
+<script src="{% static 'core/js/form_registro.js' %}?v={{var1}}"></script>
 
 {% endblock %}

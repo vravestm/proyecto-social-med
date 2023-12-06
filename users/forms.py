@@ -32,7 +32,7 @@ class UserSignUpForm(forms.Form):
         )
     )
 
-    first_name = forms.CharField(
+    nombre = forms.CharField(
         max_length=100,
         widget=forms.TextInput(
             attrs={
@@ -41,7 +41,7 @@ class UserSignUpForm(forms.Form):
             }
         ))
 
-    last_name = forms.CharField(
+    apellido = forms.CharField(
         max_length=100,
         widget=forms.TextInput(
             attrs={
@@ -49,6 +49,52 @@ class UserSignUpForm(forms.Form):
                 'class': 'form-control'
             }
         ))
+
+    fecha_nacimiento = forms.DateField(
+        widget=forms.DateInput(
+            attrs={
+                'type': 'date',
+                'class': 'form-control'
+            }
+        ))
+
+    telefono = forms.IntegerField(
+        widget=forms.TextInput(
+            attrs={
+                'type': 'integer',
+                'class': 'form-control'
+            }
+        ))
+
+    nacionalidad = forms.ChoiceField(
+        choices=[
+            ('', 'Seleccione...'),
+            ('española', 'Española'),
+            ('extranjera', 'Extranjera'),
+        ],
+        widget=forms.Select(
+            attrs={
+                'class': ''}),
+    )
+
+    ciudad = forms.CharField(
+        max_length=100,
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control'
+            }
+        )
+    )
+
+    ocupacion = forms.CharField(
+        max_length=100,
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control'
+            }
+        )
+    )
+
     password = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
