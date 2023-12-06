@@ -13,9 +13,9 @@ $(".btn_suscribir").on("click", function (event) {
     event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
 
     Swal.fire({
-        title: "¿Desea inscribirse a este curso?",
-        text: "",
-        icon: "warning",
+        title: "Confirmar inscripción",
+        text: "¿Esta seguro que desea inscribirse?",
+        icon: "question",
         showCancelButton: true,
         confirmButtonColor: "#186A3B",
         cancelButtonColor: "#d33",
