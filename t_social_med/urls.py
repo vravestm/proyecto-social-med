@@ -10,7 +10,6 @@ from cursos.views import enviarcomentario
 from users import views as users_views
 from django.conf import settings
 from django.conf.urls.static import static
-from cursos.views import descargar_inscritos_excel
 
 urlpatterns = [
     path('',
