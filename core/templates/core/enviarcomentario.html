@@ -8,7 +8,7 @@
 <form action="" method="post">
     {% csrf_token %}
     <div class="comment-title cod-md-6">        
-        <h1 class="display-5 fw-bolder">Envianos tus comentarios</h1>
+        <h1 class="display-5 fw-bolder">COMENTARIOS</h1>
     </div>
     <div class="container mt-5">
     
@@ -16,9 +16,9 @@
             <div class="col-md-8 mx-auto">
         
                 <div class="cards">
-                    <div class="card-body informacion-curso">
+                    <div class="card-body informacion-curso"  style="border-width: 2px;">
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h5 class="card-title mb-0 calificacion-title">Calificar</h5>
+                            <h5 class="card-title mb-0 calificacion-title"></h5>
         
                             <!-- <div class="d-flex align-items-center stars" id="stars1">
                                 <i class="fas fa-star mr-1 text-warning mr-1"></i>
@@ -29,18 +29,28 @@
                             </div> -->
                         </div>
     
-                        <div class="">
+                        <div class="form-grupo mt-2">
                             <label for="usuario"></label>
-                            <input type="text" class="field" name="nombre" value="" placeholder="Nombre">
+                            <input type="text" class="field form-control custom-textarea" name="nombre" value="{{ request.session.nombre }}" placeholder="Nombre" style="border-color:#146448; border-width:2px; padding:8px;" readonly>
+                        </div>
+                                            
+
+                        <div class="" style="margin-top: 2.5%; margin-bottom:-3%;">
+                            <label for="usuario">CALIFICACIÓN</label>
+                            <div class="stars" id="stars1">
+                                <i class="fas fa-star star" data-value="1"></i>
+                                <i class="fas fa-star star" data-value="2"></i>
+                                <i class="fas fa-star star" data-value="3"></i>
+                                <i class="fas fa-star star" data-value="4"></i>
+                                <i class="fas fa-star star" data-value="5"></i>
+                            </div>
+                            <input type="hidden" class="field" name="calific" id="calificacion" value="0">
                         </div>
     
-                        <div class="">
+                        <div class="form-grupo mt-2">
                             <label for="usuario"></label>
-                            <input type="text" class="field" name="comentario" value="" placeholder="Comentario">
-                        </div>
-                        <div class="">
-                            <label for="usuario">Calificación</label>
-                            <input type="number" class="field" name="calific" value="">
+                            <input type="text" class="field form-control custom-textarea" name="comentario" value="" placeholder="Comentario" id="comentario" rows="0" maxlength="150" style="border-color:#146448; border-width:2px; padding:8px;">
+                            <small class="text-muted" id="contadorCaracteres">0/150</small>
                         </div>
     
                         <button id="btnPublicar" class="btn btn-primary btn-block mt-3 custom-btn text-center" href="" onclick="publicarComentario()">
@@ -64,9 +74,25 @@
     </div>
 </form>
 
+<script src="{% static 'core/js/informacion_curso.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<script>
+    $(document).ready(function () {
+        $('.star').on('click', function () {
+            var value = $(this).data('value');
+            $('#calificacion').val(value);
+            $('.star').removeClass('text-warning').addClass('text-muted');
+            $(this).prevAll().addBack().removeClass('text-muted').addClass('text-warning');
+        });
 
-
+        // Agregamos esto para reflejar la calificación en las estrellas al cargar la página
+        var initialRating = $('#calificacion').val();
+        $('.star:lt(' + initialRating + ')').removeClass('text-muted').addClass('text-warning');
+    });
+</script>
 
 
 {% endblock %}

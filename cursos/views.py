@@ -77,19 +77,18 @@ class Coment(ListView):
 
 
 def enviarcomentario(request):
-
     a = request.GET.get('valor')
     v = [a]
 
     if request.method == 'POST':
         us = request.POST['usuario']
         c = request.POST['cur']
-        name = request.POST['nombre']
+        if request.user.is_authenticated:
+            name = request.session['nombre'] = request.user.nombre  
         cal = request.POST['calific']
         com = request.POST['comentario']
 
-        formulario = Comentario(user_id=us, curso_id=c,
-                                nombre=name, calificacion=cal, comentario=com)
+        formulario = Comentario(user_id=us, curso_id=c, nombre=name, calificacion=cal, comentario=com)
         formulario.save()
         return redirect('cursos')
 
