@@ -3,18 +3,16 @@
 
 {% block contenido %}
 
-
-
-<section>
+<section style="margin-top: 8%; margin-bottom: 4%;">
     
     {% for com in object_list %}
-    <div class="container mt-5">
+    <div class="container mt-4">
         <div class="row">
             <div class="col-md-8 mx-auto">
         
                 <div class="cards">
-                    <div class="card-body informacion-curso">            
-                        <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div class="card-body informacion-curso" style="margin-top: 2%; margin-bottom: 1%;">            
+                        <div class="d-flex align-items-center justify-content-between mb-1">
                             <h5 class="card-title mb-0 calificacion-title">Calificación</h5>
         
                             <div class="d-flex align-items-center stars">
@@ -26,27 +24,26 @@
                             </div>
                         </div>
 
-                        <div class="published_by d-flex flex-wrap align-items-center justify-content-start">
-                            <p class="mr-3 mb-0">Publicado por:</p>
+                        <div class="published_by d-flex flex-wrap align-items-center justify-content-start mb-1">
+                            <p class="mr-1 mb-0">Publicado por:</p>
                             <p class="mb-0 publish-person">{{ com.user }}</p>
                         </div>
 
-                        <div class="form-grupo mt-2">
-                            <p> {{ com.comentario }} </p>
+                        <div class="form-grupo mt-1 comentario-container" style="word-wrap: break-word; overflow: hidden;">
+                            <p class="comentario">{{ com.comentario }}</p>
+                            <p class="fecha-hora" style="color: #F1862A; position: absolute; bottom: 5px; right: 7%; font-size: 90%;">
+                                {{ com.fecha_publicacion|date:"F j, Y H:i"|capfirst }}
+                            </p>
                         </div>
-            
+                        
+                        
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
     {% endfor %}
 
-    
-
 </section>
-
 
 {% endblock %}
