@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 import time
 import json
 import os
+from django.contrib.staticfiles import finders
 from django.conf import settings
 from core.models import Usuarios
 
@@ -21,9 +22,14 @@ def inicio_sesion(request):
 
 @login_required(login_url='Home')
 def perfil_usuario(request):
-    request.session['usuarionombre'] = request.user.nombre
-    request.session['usuarioap'] = request.user.apellido
     var1 = time.time()
+    request.session['usuarioNombre'] = request.user.nombre
+    request.session['usuarioApellido'] = request.user.apellido
+    request.session['usuarioCorreo'] = request.user.email
+    request.session['usuarioTelefono'] = request.user.telefono
+    request.session['usuarioNacionalidad'] = request.user.nacionalidad
+    request.session['usuarioCiudad'] = request.user.ciudad
+    request.session['usuarioOcupacion'] = request.user.ocupacion
 
     return render(request, 'users/perfil_usuario.html', {'var1': var1})
 
@@ -70,6 +76,32 @@ def login_view(request):
         return redirect('Home')
 
 
+def obtener_label_ciudad(ciudad_code):
+    try:
+        # Utiliza finders para encontrar la ruta del archivo en la carpeta static
+        file_path = finders.find(f'core/data/provincias.json')
+        with open(file_path, 'r') as f:
+            ciudades_data = json.load(f)
+        for ciudad in ciudades_data:
+            if ciudad['code'] == ciudad_code:
+                return ciudad['label']
+    except FileNotFoundError:
+        return None
+
+
+def obtener_label_ocupacion(ocupacion_code):
+    try:
+        # Utiliza finders para encontrar la ruta del archivo en la carpeta static
+        file_path = finders.find(f'core/data/profesiones.json')
+        with open(file_path, 'r') as f:
+            ocupaciones_data = json.load(f)
+        for ocupacion in ocupaciones_data['ocupaciones']:
+            if ocupacion['code'] == ocupacion_code:
+                return ocupacion['label']
+    except FileNotFoundError:
+        return None
+
+
 def signup_view(request):
     var1 = time.time()
 
@@ -89,8 +121,18 @@ def signup_view(request):
             password = signup_form.cleaned_data.get('password')
             telefono = signup_form.cleaned_data.get('telefono')
             nacionalidad = signup_form.cleaned_data.get('nacionalidad')
-            ciudad = signup_form.cleaned_data.get('ciudad')
-            ocupacion = signup_form.cleaned_data.get('ocupacion')
+            ciudad_code = signup_form.cleaned_data.get('ciudad')
+            ocupacion_code = signup_form.cleaned_data.get('ocupacion')
+
+            ciudad_label = obtener_label_ciudad(ciudad_code)
+            ocupacion_label = obtener_label_ocupacion(ocupacion_code)
+
+            if ciudad_label is None or ocupacion_label is None:
+                return JsonResponse({'detail': 'Error al obtener etiquetas'})
+
+            if nacionalidad == 'extranjera':
+                # Si la nacionalidad es extranjera, puedes hacer que el campo ciudad sea opcional
+                ciudad = None
 
             try:
                 user = get_user_model().objects.create(
@@ -101,8 +143,8 @@ def signup_view(request):
                     password=make_password(password),
                     telefono=telefono,
                     nacionalidad=nacionalidad,
-                    ciudad=str(ciudad),
-                    ocupacion=str(ocupacion),
+                    ciudad=ciudad_label,
+                    ocupacion=ocupacion_label,
                     is_active=True
                 )
                 print(user)
@@ -116,7 +158,7 @@ def signup_view(request):
         else:
             print("formulario no valido")
             messages.warning(request, 'formulario no valido')
-            return HttpResponse("Correo enviado correctamente. Gracias por contactarnos.")
+            return redirect('form_registro')
 
 
 def logout_view(request):

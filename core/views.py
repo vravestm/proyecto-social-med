@@ -1,14 +1,16 @@
 import time
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from t_social_med.enviarCorreo import funcionEnviarCorreo, enviarCorreoContacto, funcionRecuperarPassword
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
+from django.contrib import messages
 
 
 def home(request):
-    request.session['usuario']=request.user.id #capturamos la id del usuario que se logee en la pagina
+    # capturamos la id del usuario que se logee en la pagina
+    request.session['usuario'] = request.user.id
     usuario_autenticado = request.user.is_authenticated
     var1 = time.time()
 
@@ -17,10 +19,9 @@ def home(request):
         'correoDestino': ['vravest@gmail.com'],
         'curso': 'manejo de la ira',
     }
-    # cometnar despues de la prueba
-    # funcionEnviarCorreo(data)
 
-    return render(request, 'core/home.html', {'var1': var1,'usuario_autenticado':usuario_autenticado})
+    return render(request, 'core/home.html', {'var1': var1, 'usuario_autenticado': usuario_autenticado})
+
 
 def contacto(request):
     if request.user.is_authenticated:
@@ -48,6 +49,7 @@ def olvidar_contrasena(request):
     var1 = time.time()
     return render(request, 'core/olvidar_contrasena.html', {'var1': var1})
 
+
 def recuperar_clave(request):
     var1 = time.time()
     return render(request, 'core/recuperar_clave.html', {'var1': var1})
@@ -56,7 +58,6 @@ def recuperar_clave(request):
 # def informacion_curso(request):
 #     var1 = time.time()
 #     return render(request, 'core/informacion_curso.html', {'var1': var1})
-
 
 
 def enviar_correo_contacto(request):
@@ -83,3 +84,26 @@ def enviar_correo_contacto(request):
         return JsonResponse(response_data)
     else:
         return render(request, 'core/contacto.html')
+
+
+@login_required
+def eliminar_cuenta(request):
+    if request.method == 'POST':
+        try:
+            # Aquí deberías implementar la lógica para eliminar la cuenta
+            user = request.user
+            user.delete()
+
+            # Envía una respuesta JSON indicando éxito
+            return JsonResponse({'title': 'Éxito', 'message': 'Tu cuenta ha sido eliminada exitosamente.', 'icon': 'success'})
+        except Exception as e:
+            # Maneja cualquier error que pueda ocurrir durante la eliminación
+            return JsonResponse({'title': 'Error', 'message': f'Ocurrió un error: {str(e)}', 'icon': 'error'})
+
+    # Crea un template 'eliminar_cuenta.html' para confirmar la eliminación
+    return render(request, 'users/eliminar_cuenta.html')
+
+
+def reportes(request):
+    var1 = time.time()
+    return render(request, 'core/reportes.html', {'var1': var1})

@@ -1,0 +1,8 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<a href="{% url 'descargar_inscritos_excel' curso.id %}">Descargar Lista de Inscritos (Excel)</a>
+
+{% endblock %}

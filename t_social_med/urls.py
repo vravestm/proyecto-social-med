@@ -10,6 +10,7 @@ from cursos.views import enviarcomentario
 from users import views as users_views
 from django.conf import settings
 from django.conf.urls.static import static
+from cursos.views import descargar_inscritos_excel
 
 urlpatterns = [
     path('',
@@ -23,16 +24,19 @@ urlpatterns = [
     path('cursos/', cursos_views.cursos, name='cursos'),
     path('talleres/', talleres_views.talleres, name='talleres'),
     path('prevencion/', prevencion_views.prevencion, name='prevencion'),
-    path('informacion_curso/<int:pk>/',Detalle.as_view(), name='informacion_curso'),
+    path('informacion_curso/<int:pk>/',
+         Detalle.as_view(), name='informacion_curso'),
     path('confirmacion_curso/', cursos_views.confirmacion,
          name='confirmacion_curso'),
     path('enviar_correo_contacto/', core_views.enviar_correo_contacto,
          name='enviar_correo_contacto'),
     path('inicio_sesion/', users_views.inicio_sesion, name='inicio_sesion'),
     path('form_registro/', users_views.registro, name='form_registro'),
+    path('eliminar_cuenta/', core_views.eliminar_cuenta, name='eliminar_cuenta'),
     path('registrar_datos/', users_views.signup_view, name='registrar_datos'),
-    path('comentarios/',Coment.as_view(), name='comentarios'),
-    path('enviarcomentario/',cursos_views.enviarcomentario,name='enviarcomentario'),
+    path('comentarios/', Coment.as_view(), name='comentarios'),
+    path('enviarcomentario/', cursos_views.enviarcomentario,
+         name='enviarcomentario'),
     path('admin/', admin.site.urls),
 
 

@@ -328,11 +328,19 @@ footer {
     align-content: flex-end;
 }
 
+.text-eliminar-cuenta {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none !important;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
 .cont_dos {
     border: 2px solid var(--naranja_principal);
     border-radius: 25px;
     width: 500px;
-    height: 750px;
+    height: 600px;
 }
 
 .cont_titulo {
@@ -369,6 +377,14 @@ footer {
     font-size: 15px;
     font-family: 'Glacial Indifference', sans-serif;
     padding: 0;
+}
+
+.select_perfil {
+    width: 310px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #1C8962;
+    border-radius: 10px;
 }
 
 .txt_box_perfil {

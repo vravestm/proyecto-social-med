@@ -88,7 +88,6 @@ function generarPeticion(curso) {
 
 
 
-
 $(".btnContact").on("click", function (event) {
 
     event.preventDefault();
@@ -101,3 +100,60 @@ $(".btnContact").on("click", function (event) {
         timer: 1500
     });
 });
+
+
+$(".btnEliminarCuenta").on("click", function (event) {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+    Swal.fire({
+        title: "Confirmar eliminación de cuenta",
+        text: "¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Eliminar",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            eliminarCuenta();
+        }
+    });
+});
+
+function eliminarCuenta() {
+    // Obtén el token CSRF del formulario
+    var csrfToken = $("input[name='csrfmiddlewaretoken']").val();
+
+    // Realiza la solicitud AJAX con el token CSRF
+    $.ajax({
+        url: "/eliminar_cuenta/",
+        method: "POST",
+        headers: {
+            "X-CSRFToken": csrfToken,
+        },
+        data: {
+            csrfmiddlewaretoken: csrfToken,
+        },
+        dataType: "json",
+        success: function (data) {
+            // Maneja la respuesta del servidor aquí
+            Swal.fire({
+                title: data.title,
+                text: data.message,
+                icon: data.icon,
+            }).then(() => {
+                if (data.icon === 'success') {
+                    // Redirige al usuario después de eliminar la cuenta
+                    window.location.href = '/'; // Ajusta la URL según sea necesario
+                }
+            });
+        },
+        error: function (xhr, status, error) {
+            // Maneja el error aquí
+            Swal.fire({
+                title: "Error",
+                text: "Ocurrió un error al intentar eliminar la cuenta. Por favor, inténtalo de nuevo más tarde.",
+                icon: "error",
+            });
+        },
+    });
+}
