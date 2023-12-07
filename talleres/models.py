@@ -3,10 +3,12 @@ from django.db import models
 
 class Talleres(models.Model):
     titulo = models.CharField(
-        max_length=80, verbose_name="Nombre del taller")
+        max_length=200, verbose_name="Nombre del taller")
     presentacion = models.TextField(verbose_name="Presentación del taller")
     competencias = models.TextField(
         verbose_name="Competencias que vas a adquirir")
+    image = models.ImageField(
+        upload_to='media/', verbose_name="Imagen", default='assets/default.jpg', null=True)
     objetivos = models.TextField(verbose_name="Objetivo")
     dirigido = models.TextField(verbose_name="Dirigido a")
     mod_dur_valor = models.TextField(

@@ -6,6 +6,7 @@ from talleres import views as talleres_views
 from prevencion import views as prevencion_views
 from cursos.views import Detalle
 from cursos.views import Coment
+from talleres.views import Detalletaller
 from cursos.views import enviarcomentario
 from users import views as users_views
 from django.conf import settings
@@ -27,6 +28,7 @@ urlpatterns = [
          Detalle.as_view(), name='informacion_curso'),
     path('confirmacion_curso/', cursos_views.confirmacion,
          name='confirmacion_curso'),
+     path('informacion_taller/<int:pk>/',Detalletaller.as_view(),name='informacion_taller'),
     path('enviar_correo_contacto/', core_views.enviar_correo_contacto,
          name='enviar_correo_contacto'),
     path('inicio_sesion/', users_views.inicio_sesion, name='inicio_sesion'),

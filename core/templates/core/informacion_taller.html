@@ -1,0 +1,80 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<section class="py-5 container-info-curso">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6">
+                <img class="card_imagen mb-5 mb-md-0" src="{{ object.image.url }}" alt="..."/>
+            </div>
+            <div class="col-md-5">
+                <h1 class="display-5 fw-bolder">{{ object }}</h1>
+                
+                <div class="capsula" onclick="toggleDesplegable('capsula1')">
+                    PRESENTACIÓN DEL TALLER
+                    <div class="contenido-desplegable" id="capsula1">
+                      <p>{{object.presentacion}}</p>
+                    </div>
+                </div>
+
+                <div class="capsula" onclick="toggleDesplegable('capsula2')">
+                    COMPETENCIAS QUE VAS A ADQUIRIR
+                    <div class="contenido-desplegable" id="capsula2">
+                      <p>
+                        {{object.competencias}}
+                    </div>
+                </div>
+
+                <div class="capsula" onclick="toggleDesplegable('capsula3')">
+                    OBJETIVOS
+                    <div class="contenido-desplegable" id="capsula3">
+                        <p>
+                            {{object.objetivos}}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="capsula" onclick="toggleDesplegable('capsula4')">
+                    DIRIGIDO A
+                    <div class="contenido-desplegable" id="capsula4">
+                      <p>{{object.dirigido}}</p>
+                    </div>
+                </div>
+
+                <div class="capsula" onclick="toggleDesplegable('capsula5')">
+                    MODALIDAD, DURACIÓN Y PRECIO
+                    <div class="contenido-desplegable" id="capsula5">
+                        <p>
+                            <li>
+                                {{object.mod_dur_valor}}
+                            </li>
+                        </p>                    
+                    </div>
+                </div>
+
+                <div class="d-flex-inscribirme">
+                    <a href="/confirmacion_curso?valor={{object.id}}">
+                        <button class="btn btn-outline-dark flex-shrink-0 boton1" type="button"  >
+                            INSCRIBIRME
+                        </button>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="{% static 'core/js/informacion_curso.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+{% endblock %}
