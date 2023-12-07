@@ -78,6 +78,9 @@ def login_view(request):
 
 def obtener_label_ciudad(ciudad_code):
     try:
+
+        if ciudad_code == "ninguna":
+            return ciudad_code
         # Utiliza finders para encontrar la ruta del archivo en la carpeta static
         file_path = finders.find(f'core/data/provincias.json')
         with open(file_path, 'r') as f:

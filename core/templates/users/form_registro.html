@@ -4,7 +4,7 @@
 <div class="container__prime_">
     <img src="{% static 'core/img/logo.png' %}" class="img_logo_is" alt="logo">
     <div class="container__form">
-        <form action="{% url 'users:signup'%}" class="form" method="POST">
+        <form action="{% url 'users:signup'%}" class="form" method="POST" onsubmit="return validarFormulario()">
             {% csrf_token %}
             <div class="form__register">
 
@@ -50,8 +50,8 @@
 
                 <div class="ciudad-container" id="divCiudad">
                     <i class="fa-solid fa-location-dot icon_is"></i>
-                    <select name="{{ signupForm.ciudad.name }}" id="ciudad" required>
-                        <option value="" disabled selected>Seleccione su provincia</option>
+                    <select name="{{ signupForm.ciudad.name }}" id="ciudad">
+                        <option value="" selected>Seleccione su provincia</option>
                         {% for provincia in provincias_data %}
                         <option value="{{ provincia.value }}">{{ provincia.label }}</option>
                         {% endfor %}
@@ -74,7 +74,7 @@
                     </label>
                 </div>
                 <p class="text_register">Al registrarme acepto que T-Social Med trate mis datos personales para la gestión de la inscripción, así como enviarme información relativa a la misma y cualquier otro relacionado con acciones formativas de mi interés.</p>
-                <button class="myButton_registro">REGISTRARSE</button>            
+                <button  class="myButton_registro">REGISTRARSE</button>            
 
                 <p1>¿Ya estás registrado?<a class="volver" href="{% url 'users:inicio_sesion' %}">Iniciar sesión</a></p1>                
 

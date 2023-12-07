@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(function (provincias) {
             let placeholder = document.getElementById("ciudad");
-            let out = "<option value='' disabled selected>Selecciona una ciudad</option>";
+            let out = "<option value='ninguna' selected>Selecciona una ciudad</option>";
             for (let provincia of provincias) {
                 out += `<option value="${provincia.code}">${provincia.label}</option>`;
             }
@@ -50,4 +50,29 @@ document.getElementById("id_nacionalidad").addEventListener("change", function (
     } else {
         divCiudad.style.display = "none";
     }
+
+
+
 });
+
+
+function validarFormulario() {
+    // Obtener el elemento checkbox
+    var checkbox = document.getElementById("flexCheckDefault");
+
+    // Verificar si el checkbox está marcado
+    if (checkbox.checked) {
+        // El checkbox está marcado, puedes realizar alguna acción o enviar el formulario
+        // alert("Formulario enviado correctamente");
+        return true;
+        // document.getElementById("miFormulario").submit(); // Descomenta esta línea para enviar el formulario
+    } else {
+        // El checkbox no está marcado, muestra un mensaje de error
+        Swal.fire({
+            title: "Aceptar términos",
+            text: "Debe aceptar los términos y condiciones para registrarse.",
+            icon: "info"
+        });
+        return false;
+    }
+}
