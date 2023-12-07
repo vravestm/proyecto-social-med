@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.db import models
 # aca se importa el username interno de django
 from django.contrib.auth.models import User
@@ -32,7 +33,7 @@ class Cursos(models.Model):
 class Inscripcion(models.Model):
     id = models.AutoField(primary_key=True)
     date = models.DateTimeField(
-        verbose_name="Fecha de inscripcion", default=datetime.now, blank=True)
+        verbose_name="Fecha de inscripcion", default=timezone.now, blank=True)
     user = models.ForeignKey(
         UserProfile, verbose_name="Usuario", on_delete=models.CASCADE, null=False)
     curso = models.ForeignKey(
@@ -48,9 +49,9 @@ class Inscripcion(models.Model):
 
 class Comentario(models.Model):
     curso = models.ForeignKey(Cursos, on_delete=models.CASCADE)
-    user = models.ForeignKey(UserProfile,on_delete=models.CASCADE)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=255)
-    calificacion = models.IntegerField()  
+    calificacion = models.IntegerField()
     comentario = models.TextField()
     fecha_publicacion = models.DateTimeField(auto_now_add=True)
 
