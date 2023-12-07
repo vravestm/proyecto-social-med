@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 {% load static %}
 {% block contenido%}
-<div class="container__prime">
+<div class="container__prime_">
     <img src="{% static 'core/img/logo.png' %}" class="img_logo_is" alt="logo">
     <div class="container__form">
         <form action="{% url 'users:signup'%}" class="form" method="POST">
@@ -65,6 +65,13 @@
                         <option value="{{ ocupacion.value }}">{{ ocupacion.label }}</option>
                         {% endfor %}
                     </select>
+                </div>
+                <div class="form-check onlinecheckbox">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <a data-bs-toggle="modal" data-bs-target="#tycModal">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      He leído y acepto los <a> términos y condiciones.</a>
+                    </label>
                 </div>
                 <p class="text_register">Al registrarme acepto que T-Social Med trate mis datos personales para la gestión de la inscripción, así como enviarme información relativa a la misma y cualquier otro relacionado con acciones formativas de mi interés.</p>
                 <button class="myButton_registro">REGISTRARSE</button>            

@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-2_=sc8c4!*l58#wo4eq$7k_rh71z5w3qxmk&ee=76laent5%q!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.1.15']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1',
+                 '192.168.1.15', 'tsocialmed.pythonanywhere.com']
 
 
 # Application definition
@@ -157,7 +158,7 @@ EMAIL_USE_TLS = True
 JAZZMIN_SETTINGS = {
 
 
-    'site_logo': "core/img/logominiatura.png" ,
+    'site_logo': "core/img/logominiatura.png",
     "show_ui_builder": False,
     "site_logo_classes": "img-square no-box-shadow",
     'custom_css': 'jazzmin/custom.css',

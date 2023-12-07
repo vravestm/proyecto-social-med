@@ -50,12 +50,13 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('email address'), unique=True)
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
-    # profile_pic = models.ImageField(upload_to='users/', default='users/usuario.png')
     fecha_nacimiento = models.DateField(default=date(1900, 1, 1))
     password = models.CharField(max_length=100)
     telefono = models.IntegerField(default=0)
     nacionalidad = models.CharField(max_length=100, default="")
     ciudad = models.CharField(max_length=100, default="")
+    profile_pic = models.ImageField(
+        upload_to='users/', default='users/usuario.png')
     ocupacion = models.CharField(max_length=100, default="")
 
     slug = models.SlugField(max_length=255, unique=True)

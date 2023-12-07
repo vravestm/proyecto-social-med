@@ -1,6 +1,5 @@
 {% extends 'core/base.html' %}
 {% load static %}
-
 {% block contenido %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -57,11 +56,19 @@
                 </div>
 
                 <div class="d-flex-inscribirme">
-                    <a href="/confirmacion_curso?valor={{object.id}}">
-                        <button class="btn btn-outline-dark flex-shrink-0 boton1" type="button"  >
+                    {% comment %} <a href="/confirmacion_curso?valor={{object.id}}">  </a> {% endcomment %}
+                    {% csrf_token %}
+                    {% if  esta_inscrito %}
+                        <button class="btn btn-secondary flex-shrink-0 boton1" data-curso="{{ object.id }}" type="button">
+                            YA ESTÁS INSCRITO
+                        </button>
+                    {% else %}
+                        <button class="btn btn-outline-dark flex-shrink-0 boton1 btn_suscribir" data-curso="{{ object.id }}" type="button">
                             INSCRIBIRME
                         </button>
-                    </a>
+                    {% endif %}
+            
+                  
                     
                 </div>
             </div>
@@ -92,7 +99,7 @@
 </div>
 
 <script src="{% static 'core/js/informacion_curso.js' %}"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
