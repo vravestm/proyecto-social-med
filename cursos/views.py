@@ -7,7 +7,7 @@ from .models import Comentario
 from django.contrib.auth.decorators import login_required
 from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404
-from openpyxl import Workbook
+# from openpyxl import Workbook
 
 
 def cursos(request):
@@ -84,11 +84,12 @@ def enviarcomentario(request):
         us = request.POST['usuario']
         c = request.POST['cur']
         if request.user.is_authenticated:
-            name = request.session['nombre'] = request.user.nombre  
+            name = request.session['nombre'] = request.user.nombre
         cal = request.POST['calific']
         com = request.POST['comentario']
 
-        formulario = Comentario(user_id=us, curso_id=c, nombre=name, calificacion=cal, comentario=com)
+        formulario = Comentario(user_id=us, curso_id=c,
+                                nombre=name, calificacion=cal, comentario=com)
         formulario.save()
         return redirect('cursos')
 

@@ -5,16 +5,11 @@ $(document).ready(function () {
     });
 });
 
-<<<<<<< Updated upstream
 
 $(".btn_suscribir").on("click", function (event) {
 
     event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
     let codigoCurso = $(this).attr("data-curso")
-=======
-// FUNCION INSCRIPCION CURSO
-$(".btn_suscribir").on("click", function () {
->>>>>>> Stashed changes
     Swal.fire({
         title: "Confirmar inscripción",
         text: "¿Esta seguro que desea inscribirse?",
