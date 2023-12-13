@@ -180,3 +180,5 @@ cursos/migrations/__pycache__/__init__.cpython-311.pyc
 db.tsocialmed
 db.tsocialmed
 db.tsocialmed
+
+.env
