@@ -7,6 +7,7 @@ from .models import Comentario
 from django.contrib.auth.decorators import login_required
 from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404
+from django.db.models import Q
 # from openpyxl import Workbook
 
 
@@ -16,7 +17,9 @@ def cursos(request):
         busqueda = request.POST.get('txt_busqueda', '')
         print(busqueda)
         if busqueda:
-            cur = Cursos.objects.filter(titulo__icontains=busqueda)
+            cur = Cursos.objects.filter(
+                Q(titulo__icontains=busqueda) | Q(presentacion__icontains=busqueda)
+            )
         else:
             # If no search term is provided, get all objects
             cur = Cursos.objects.all()
