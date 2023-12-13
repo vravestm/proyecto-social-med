@@ -13,9 +13,15 @@ from django.shortcuts import get_object_or_404
 def cursos(request):
     if request.user.is_authenticated:
         request.session['usuario'] = request.user.id
-        cur = Cursos.objects.all()
+        busqueda = request.POST.get('txt_busqueda', '')
+        print(busqueda)
+        if busqueda:
+            cur = Cursos.objects.filter(titulo__icontains=busqueda)
+        else:
+            # If no search term is provided, get all objects
+            cur = Cursos.objects.all()
 
-        return render(request, 'core/cursos.html', {'cur': cur})
+        return render(request, 'core/cursos.html', {'cur': cur, 'busqueda': busqueda})
     else:
         return redirect('inicio_sesion')
 

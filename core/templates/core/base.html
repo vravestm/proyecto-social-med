@@ -10,7 +10,7 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-   
+
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
@@ -68,22 +68,25 @@
                             <li><a class="dropdown-item" href="/prevencion/">Prevención</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="nav-item"><a class="nav-link me-lg-3" href="/contacto/">Contacto</a></li>
 
 
                     <!-- Barra de búsqueda-->
                     <li class="nav-item">
-                        <div class="bg-light rounded rounded-pill shadow-sm barra_busqueda">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button id="button-addon2" type="submit" class="btn btn-link color_lupa">
-                                        <i class="fa fa-search"></i></button>
+                        <form action="/cursos/" method="POST">
+                            {% csrf_token %}
+                            <div class="bg-light rounded rounded-pill shadow-sm barra_busqueda">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button id="button-addon2" type="submit" class="btn btn-link color_lupa">
+                                            <i class="fa fa-search"></i></button>
+                                    </div>
+                                    <input name="txt_busqueda" type="search" placeholder="Buscar"
+                                        aria-describedby="button-addon2" class="form-control border-0 bg-light">
                                 </div>
-                                <input type="search" placeholder="Buscar" aria-describedby="button-addon2"
-                                    class="form-control border-0 bg-light">
                             </div>
-                        </div>
+                        </form>
                     </li>
                     <!-- Fin barra de búsqueda-->
 
@@ -109,7 +112,7 @@
                         <li><a class="dropdown-item nav-link-2" href="{% url 'users:perfil_usuario' %}">Perfil de
                                 usuario</a></li>
                         <li><a class="dropdown-item nav-link-2" href="{% url 'users:logout' %}">Cerrar Sesión</a></li>
-                        
+
                     </ul>
                 </div>
                 {% else %}
