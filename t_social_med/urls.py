@@ -35,6 +35,7 @@ urlpatterns = [
     path('form_registro/', users_views.registro, name='form_registro'),
     path('eliminar_cuenta/', core_views.eliminar_cuenta, name='eliminar_cuenta'),
     path('registrar_datos/', users_views.signup_view, name='registrar_datos'),
+    path('aviso_cookies/', core_views.aviso_cookies, name='aviso_cookies'),
     path('comentarios/', Coment.as_view(), name='comentarios'),
     path('enviarcomentario/', cursos_views.enviarcomentario,
          name='enviarcomentario'),

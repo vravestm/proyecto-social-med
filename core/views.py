@@ -5,7 +5,9 @@ from django.http import HttpResponse
 from t_social_med.enviarCorreo import funcionEnviarCorreo, enviarCorreoContacto, funcionRecuperarPassword
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
-from django.contrib import messages
+from django.conf import settings
+from django.shortcuts import render
+
 
 
 def home(request):
@@ -60,6 +62,8 @@ def recuperar_clave(request):
 #     return render(request, 'core/informacion_curso.html', {'var1': var1})
 
 
+
+
 def enviar_correo_contacto(request):
     if request.method == 'POST':
         datos_formulario = {
@@ -67,43 +71,39 @@ def enviar_correo_contacto(request):
             'email': request.POST.get('txtEmail', ''),
             'mensaje': request.POST.get('txtMsg', ''),
         }
-
-        try:
-            enviarCorreoContacto(datos_formulario)
-            response_data = {
-                'status': 'success',
-                'message': 'Correo enviado correctamente. Gracias por contactarnos.',
-            }
-        except Exception as e:
-            response_data = {
-                'status': 'error',
-                'message': f'Error al enviar el correo: {str(e)}',
-            }
-
-        # Devolver la respuesta JSON
-        return JsonResponse(response_data)
+        enviarCorreoContacto(datos_formulario)
+        return JsonResponse({'message': 'Correo enviado correctamente. Gracias por contactarnos.'})
     else:
         return render(request, 'core/contacto.html')
 
+    
 
 @login_required
 def eliminar_cuenta(request):
     if request.method == 'POST':
         try:
-            # Aquí deberías implementar la lógica para eliminar la cuenta
             user = request.user
             user.delete()
 
             # Envía una respuesta JSON indicando éxito
             return JsonResponse({'title': 'Éxito', 'message': 'Tu cuenta ha sido eliminada exitosamente.', 'icon': 'success'})
         except Exception as e:
-            # Maneja cualquier error que pueda ocurrir durante la eliminación
             return JsonResponse({'title': 'Error', 'message': f'Ocurrió un error: {str(e)}', 'icon': 'error'})
 
-    # Crea un template 'eliminar_cuenta.html' para confirmar la eliminación
     return render(request, 'users/eliminar_cuenta.html')
 
 
 def reportes(request):
     var1 = time.time()
     return render(request, 'core/reportes.html', {'var1': var1})
+
+
+
+
+def aviso_cookies(request):
+    var1 = time.time()
+    return render(request, 'core/aviso_cookies.html', {'var1': var1})
+
+
+
+

@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
+from t_social_med.enviarCorreo import enviarCorreoConfirmacionInscripcion
 # from openpyxl import Workbook
 
 
@@ -47,10 +48,8 @@ class Detalle(DetailView):  # Esta clase permite que se vea el detalle del curso
 
 
 @login_required(login_url='inicio_sesion')
-def confirmacion(request):  # Confirmacion para inscribirse dentro del curso
-
+def confirmacion(request):
     if request.method == 'GET':
-
         a = request.GET.get('valor')
         v = [a]
         return render(request, 'core/confirmacion_curso.html', {'variable': v})
@@ -77,7 +76,14 @@ def confirmacion(request):  # Confirmacion para inscribirse dentro del curso
 
         formulario = Inscripcion(user_id=us, curso_id=c)
         formulario.save()
-        return JsonResponse({"resp": "inscripcion_ok", "mensaje": "Te haz inscrito correctamente."}, status="200")
+
+        # Obtener el correo del usuario
+        correo_usuario = request.user.email
+
+        # Luego de guardar la inscripción, enviar el correo de confirmación
+        enviarCorreoConfirmacionInscripcion(correo_usuario, curso.titulo, correo_usuario)
+
+        return JsonResponse({"resp": "inscripcion_ok", "mensaje": "Te has inscrito correctamente."}, status="200")
 
 
 class Coment(ListView):

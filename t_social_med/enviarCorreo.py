@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
+from django.contrib.auth.decorators import login_required
+
 
 
 def funcionEnviarCorreo(data:dict):
@@ -29,17 +31,17 @@ def funcionEnviarCorreo(data:dict):
 
 def enviarCorreoContacto(datos_formulario: dict):
     try:
-        subject = 'Asunto del Correo' 
-        template = get_template('core/enviarCorreoContacto.html') 
+        subject = 'Nuevo mensaje de contacto: {}'.format(datos_formulario.get('nombre', ''))
+        template = get_template('core/enviarCorreoContacto.html')
 
         contenido = template.render({
             'datos_formulario': datos_formulario,
         })
 
-        destinatario = 'tsocialmed@gmail.com'  
+        destinatario = 'tsocialmed@gmail.com'
         message = EmailMultiAlternatives(
             subject=subject,
-            body='',  
+            body='',
             from_email=settings.EMAIL_HOST_USER,
             to=[destinatario],
         )
@@ -51,6 +53,7 @@ def enviarCorreoContacto(datos_formulario: dict):
     except Exception as e:
         print(f'Error al enviar el correo: {str(e)}')
         raise e
+
     
 
 
@@ -75,3 +78,25 @@ def funcionRecuperarPassword(data: dict):
         print(f'Correo enviado exitosamente a {destinatario[0]}')
     else:
         print(f'Error al enviar el correo a {destinatario[0]}')
+
+
+
+
+def enviarCorreoConfirmacionInscripcion(destinatario, curso_titulo, nombre):
+    subject = 'Confirmación de inscripción a {}'.format(curso_titulo)
+    template = get_template('core/correo_confirmacion_inscripcion.html')
+
+    contenido = template.render({
+        'curso_titulo': curso_titulo,
+        'nombre_usuario': nombre
+    })
+
+    message = EmailMultiAlternatives(
+        subject=subject,
+        body='',
+        from_email=settings.EMAIL_HOST_USER,
+        to=[destinatario]  
+    )
+
+    message.attach_alternative(contenido, 'text/html')
+    message.send()

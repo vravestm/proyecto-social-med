@@ -87,18 +87,20 @@ function generarPeticion(curso) {
 
 
 $(".btnContact").on("click", function (event) {
-
     event.preventDefault();
 
-    Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Correo enviado correctamente",
-        showConfirmButton: false,
-        timer: 1500
+    $.post($(this).closest("form").attr("action"), $(this).closest("form").serialize(), function(data) {
+        if (data.message === "Correo enviado correctamente. Gracias por contactarnos.") {
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Correo enviado correctamente",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
     });
 });
-
 
 $(".btnEliminarCuenta").on("click", function (event) {
     event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace

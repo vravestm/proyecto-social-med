@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Correo de Contacto</title>
-</head>
+
 
 <body>
-    <h1>¡Nuevo mensaje de contacto!</h1>
-    <p><strong>Nombre:</strong> {{ datos_formulario.nombre }}</p>
-    <p><strong>Email:</strong> {{ datos_formulario.email }}</p>
-    <p><strong>Mensaje:</strong> {{ datos_formulario.mensaje }}</p>
+    <div>
+        <p><strong>{{ datos_formulario.nombre }}</strong> ha enviado un mensaje a T Social | Med.</p>
+        <p>Su dirección de correo electrónico es: {{ datos_formulario.email }}</p>
+        <p>Mensaje: <strong>{{ datos_formulario.mensaje }}</strong></p>
+        <p>¡No dudes en contactarte con él/ella!</p>
+    </div>
 </body>
-
 </html>
