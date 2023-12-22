@@ -1380,6 +1380,7 @@ footer {
     display: flex;
     padding-top: 12px;
     flex-direction: column;
+    min-height: 450px;
 }
 
 .container-cursos .card-img-top {

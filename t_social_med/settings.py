@@ -165,6 +165,9 @@ JAZZMIN_SETTINGS = {
     'custom_css': 'jazzmin/custom.css',
     "welcome_sign": "Panel de Administración",
     "copyright": "T-Social Med",
+    "topmenu_links": [
+        {"name": "Inicio", "url": "/", "new_window": False},
+    ]
 }
 
 JAZZMIN_UI_TWEAKS = {
@@ -197,4 +200,5 @@ JAZZMIN_UI_TWEAKS = {
         "danger": "btn-danger",
         "success": "btn-success"
     }
+    
 }
