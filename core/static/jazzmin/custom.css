@@ -50,3 +50,12 @@ body:not(.layout-fixed) .main-sidebar .sidebar{
 .elevation-4{
     box-shadow: none;
 }
+
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
