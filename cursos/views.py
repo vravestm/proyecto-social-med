@@ -89,6 +89,10 @@ def confirmacion(request):
 class Coment(ListView):
     model = Comentario
     template_name = 'core/comentarios.html'
+    context_object_name = 'comentarios'
+
+    def get_queryset(self):
+        return Comentario.objects.all().order_by('-fecha_publicacion')
 
 
 def enviarcomentario(request):
