@@ -59,6 +59,21 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
+    <!-- AVISO COOKIES -->
+    <div class="aviso-cookies" id="aviso-cookies">
+		<img class="galleta" src="{% static 'core/img/cookie.svg' %}" alt="Galleta">
+		<h3 class="titulo">Cookies</h3>
+		<p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
+		<button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+		<a class="enlace" href="/aviso_cookies/">Aviso de Cookies</a>
+	</div>
+	<div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+
+	<script src="{% static 'core/js/aviso_cookies.js' %}"></script>
+     <!-- FIN AVISO COOKIES -->
+
+
+
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container-fluid">
@@ -168,17 +183,7 @@
     </section>
     <!-- Fin Contenido-->
 
-    <div class="aviso-cookies" id="aviso-cookies">
-		<img class="galleta" src="{% static 'core/img/cookie.svg' %}" alt="Galleta">
-		<h3 class="titulo">Cookies</h3>
-		<p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
-		<button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
-		<a class="enlace" href="/aviso_cookies/">Aviso de Cookies</a>
-	</div>
-	<div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
-
-	<script src="{% static 'core/js/aviso_cookies.js' %}"></script>
-
+   
     <!-- Footer-->
     <footer class="text-center py-4">
         <div class="container px-5">
