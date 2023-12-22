@@ -736,7 +736,7 @@ footer {
     width: 120%;
     max-width: none;
     border-radius: 59% 41% 39% 61% / 61% 50% 50% 39%;
-    margin-left: -10%;
+    margin-left: -25%;
 }
 
 .col-md-5 {
@@ -1373,7 +1373,7 @@ footer {
 .container-cursos .card {
     border: 2px solid var(--naranja_principal);
     border-radius: 15px;
-    width: 250px;
+    width: 300px;
     height: 100%;
     max-height: 600px;
     margin: 105px;
@@ -1383,7 +1383,7 @@ footer {
 }
 
 .container-cursos .card-img-top {
-    max-width: 220px;
+    max-width: 300px;
     max-height: 300px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
