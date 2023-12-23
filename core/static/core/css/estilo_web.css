@@ -534,7 +534,7 @@ footer {
 }
 
 .forgotPassword-screen {
-    margin-top: 5%;
+    margin-top: 50%;
     margin-bottom: 5%;
 }
 
@@ -683,6 +683,9 @@ footer {
 
 /* FIN BOTÓN VOLVER */
 
+.icon_envelope_pass {
+    color: var(--naranja_principal);
+}
 /**/
 /*** FIN CSS OLVIDAR_CONTRASENA***/
 
@@ -778,6 +781,18 @@ footer {
     text-align: right;
     border-radius: 10px;
     padding: 10px;
+}
+
+.btnComentar a{
+    border-radius: 10px;
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+}
+
+.btnComentarios a{
+    border-radius: 10px;
+    margin-top: 0.5%;
+    margin-bottom: 1%;
 }
 
 /* FIN CSS INFORMACION_CURSO */
@@ -1288,13 +1303,15 @@ footer {
     font-size: 200%;
     text-align: center;
     color: var(--verde-principal);
-    margin-top: 9cqi;
+    margin-top: 9%;
+    margin-bottom: 5%;
 }
 
 .informacion-curso {
-    border: 1px solid var(--verde-principal);
+    border: 2px solid var(--verde-principal);
     border-radius: 10px;
     font-family: 'League Spartan', sans-serif;
+    border-radius: 2px;
 }
 
 .calificacion-title {
@@ -1303,7 +1320,7 @@ footer {
 
 .stars {
     margin-right: 80%;
-    margin-bottom: 0.5%;
+    margin-top: -1%;
 }
 
 .form-check {
@@ -1356,6 +1373,12 @@ footer {
 .volver-info-curso-btn i {
     display: block;
     font-size: 19px;
+}
+
+.custom-textarea {
+    border-color: var(--verde-principal);
+    border-width: 2px;
+    padding: 8px;
 }
 
 /* FIN CSS COMENTARIOS */
@@ -1413,7 +1436,7 @@ footer {
     text-transform: uppercase;
     font-weight: bold;
     margin-top: auto;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px 15px 15px 15px;
 }
 
 .btn-primary-cursos:hover {

@@ -23,17 +23,22 @@ function toggleDesplegable(id) {
 var textarea = document.getElementById('comentario');
 var contador = document.getElementById('contadorCaracteres');
 
-// textarea.addEventListener('input', function () {
-//     var conteo = textarea.value.length;
-//     contador.innerText = conteo + '/150';
-// });
+textarea.addEventListener('input', function () {
+    var conteo = textarea.value.length;
+    contador.innerText = conteo + '/150';
+});
 
 function publicarComentario() {
   var comentario = textarea.value;
   var publicarNombre = document.getElementById('publicarNombre').checked;
+  var calificacion = $('calificacion').val();
+
+  var calificacionContainer = document.getElementById('publicarNombre').checked;
+  calificacionContainer.innerHTML = 'Calificación:' + calificacion + 'estrellas';
 
   console.log('Comentario:', comentario);
   console.log('¿Publicar Nombre?', publicarNombre);
+  console.log('Calificación:', calificacion);
 }
 
 $(document).ready(function () {
@@ -47,3 +52,14 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $('star').on('click', function () {
+    var value = $(this).data('value');
+    $('#calificacion').val(value);
+    $('star').removeClass('text-warning').addClass('text-muted');
+    $(this).prevAll.addBack().removeClass('text-muted').addClass('text-warning');
+  });
+
+  var initialRacing = $('calificacion').val();
+  $('.star:lt(' + initialRacing + ')').removeClass('text-muted').addClass('text-warning');
+});
